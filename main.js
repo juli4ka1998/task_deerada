@@ -80,12 +80,14 @@ const scrollThere = (targetElement, speed) => {
 // Mouse wheel event
 $(window).on('mousewheel',  e => {
 	// Get position of each section
-	let div1y = $('#slider-section').offset().top,
-		div2y = $('#about-section').offset().top,
-		div3y = $('#portfolio-section').offset().top,
-		div4y = $('#team-section').offset().top,
-		div5y = $('#contacts-section').offset().top,
-		lastScrollTop = $(this).scrollTop(),
+	let sections = document.querySelectorAll('#slider-section, #about-section, #portfolio-section, #team-section, #contacts-section');
+
+	let positions = [];
+	for (let i = 0; i < sections.length; i++) {
+		positions[i] = sections[i].offsetTop;
+	}
+
+	let  lastScrollTop = $(this).scrollTop(),
 		scrollDirection,
 		targetUp,
 		targetDown,
@@ -99,36 +101,16 @@ $(window).on('mousewheel',  e => {
 	}
 
 	// Find scroll position
-	if (lastScrollTop === div1y) {
-		targetUp = $('#slider-section');
-		targetDown = $('#about-section');
-	} else if (lastScrollTop === div2y) {
-		targetUp = $('#slider-section');
-		targetDown = $('#portfolio-section');
-	} else if (lastScrollTop === div3y) {
-		targetUp = $('#about-section');
-		targetDown = $('#team-section');
-	} else if (lastScrollTop === div4y) {
-		targetUp = $('#portfolio-section');
-		targetDown = $('#contacts-section');
-	} else if (lastScrollTop === div5y) {
-		targetUp = $('#team-section');
-		targetDown = $('#contacts-section');
-	} else if (lastScrollTop < div2y) {
-		targetUp = $('#slider-section');
-		targetDown = $('#about-section');
-	} else if (lastScrollTop < div3y) {
-		targetUp = $('#about-section');
-		targetDown = $('#portfolio-section');
-	} else if (lastScrollTop < div4y) {
-		targetUp = $('#portfolio-section');
-		targetDown = $('#team-section');
-	} else if (lastScrollTop < div5y) {
-		targetUp = $('#team-section');
-		targetDown = $('#contacts-section');
-	} else if (lastScrollTop > div5y) {
-		targetUp = $('#contacts-section');
-		targetDown = $('#contacts-section');
+	for (let i = 0; i < positions.length; i++) {
+		if (lastScrollTop === positions[i] && i !== 0 && i !== positions.length -1) {
+				targetUp = $(sections[i-1]);
+				targetDown = $(sections[i+1]);
+			break;
+		} else if ((lastScrollTop === positions[i] && i === 0) || (lastScrollTop > positions[i] && lastScrollTop < positions[i+1])) {
+			targetUp =  $(sections[i]);
+			targetDown = $(sections[i+1]);
+			break;
+		}
 	}
 
 	// Choose direction
@@ -139,7 +121,6 @@ $(window).on('mousewheel',  e => {
 	}
 
 	scrollThere(targetElement, 1);
-
 });
 
 
