@@ -70,11 +70,13 @@ menuBtn.addEventListener("click", () => {
 
 // Animate page when scrolling
 const scrollThere = (targetElement, speed) => {
-	$('html, body').stop().animate(
-		{ scrollTop: targetElement.offset().top },
-		speed,
-		'linear'
-	);
+	if(document.querySelector(".menu").style.display !== "flex") {
+		$('html, body').stop().animate(
+			{scrollTop: targetElement.offset().top},
+			speed,
+			'linear'
+		);
+	}
 };
 
 // Mouse wheel event

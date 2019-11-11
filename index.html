@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Deerada</title>
-    <link rel="stylesheet" href="main-pref.css">
+    <link rel="stylesheet" href="main.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
@@ -62,7 +62,9 @@
     </header>
     <div id="slider-section">
         <div class="slider-section__header">
-            <div class="static-line1"></div>
+<!--            <div class="static-line-container">-->
+                <div class="static-line1"></div>
+<!--            </div>-->
             <div class="static-line2"></div>
         </div>
         <div class="slider">
@@ -70,10 +72,10 @@
                 <span>01</span>
             </div>
             <button class="arr-left">
-                <img src="images/arr-left.png">
+                <img src="images/arr-left.png" alt="Left">
             </button>
             <button class="arr-right">
-                <img src="images/arr-right.png">
+                <img src="images/arr-right.png" alt="Right">
             </button>
             <div class="slide" >
                 <div class="slide-title">розробка</div>
@@ -81,40 +83,40 @@
                     <div class="slogan line1"></div>
                     <div class="slogan">lorem ipsum dolor sit amet</div>
                 </div>
-                <div class="slide-decoration decoration-line1">
-                </div>
-                <div class="slide-decoration">
-                </div>
+<!--                <div class="slide-decoration decoration-line1">-->
+<!--                </div>-->
+<!--                <div class="slide-decoration">-->
+<!--                </div>-->
                 <div class="slide-image">
-                    <img src="images/deer.png">
+                    <img src="images/deer.png" alt="deer">
                 </div>
             </div>
             <div class="slide">
-                <div class="slide-title">дизайн</div>
+                <div class="slide-title title-design">дизайн</div>
                 <div class="slide-text">
                     <div class="slogan line1"></div>
                     <div class="slogan">lorem ipsum dolor sit amet</div>
                 </div>
-                <div class="slide-decoration decoration-line1">
-                </div>
-                <div class="slide-decoration">
-                </div>
+<!--                <div class="slide-decoration decoration-line1">-->
+<!--                </div>-->
+<!--                <div class="slide-decoration">-->
+<!--                </div>-->
                 <div class="slide-image">
-                    <img src="images/tiger.png">
+                    <img src="images/tiger.png" alt="tiger">
                 </div>
             </div>
             <div class="slide" >
-                <div class="slide-title">просування</div>
+                <div class="slide-title title-promotion">просування</div>
                 <div class="slide-text">
                     <div class="slogan line1"></div>
                     <div class="slogan">lorem ipsum dolor sit amet</div>
                 </div>
-                <div class="slide-decoration decoration-line1">
-                </div>
-                <div class="slide-decoration">
-                </div>
+<!--                <div class="slide-decoration decoration-line1">-->
+<!--                </div>-->
+<!--                <div class="slide-decoration">-->
+<!--                </div>-->
                 <div class="slide-image">
-                    <img src="images/elephant.png">
+                    <img src="images/elephant.png" alt="elephant">
                 </div>
             </div>
             <button class="go-down">
@@ -142,10 +144,10 @@
             elementum neque at dignissim. Ut mi est, mollis ac venenatis at, imperdiet et ipsum.</p>
         <div class="about-section__images">
             <div class="about-section__image">
-                <img src="images/development.png">
-                <!--<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="246" height="250" viewBox="0 0 246 250" style="height: 23%; position: absolute; left: 6.2rem">-->
-                    <!--<image id="Прямокутник_9" data-name="Прямокутник 9" width="246" height="250" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD6AgMAAADvvlIgAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAADFBMVEX///+0yFq0yFoAAAA/bGQYAAAAAnRSTlMAAHaTzTgAAAABYktHRAMRDEzyAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wkHFDI6/JAfKwAAAONJREFUaN7t27ENgzAQhWGnoE+Bl8gUHsEFyXypmTKEBIcu8rPFGfl/EuVHdXeyBefm+em+mbOTqC0fl+eem0fiPuTrPc/HK1cYHA6Hw+FwOBy+SxTOwXB4xzzA4YfzU7cMHA6Hw+FwOBwOh8PhcDgcDm+Hn/qTFhwOh8Ph/3iUX1GDK38RJ+675u7SLZ865rGUD4Y8GHNfwsWthWpc1RX4aMzlkn/zqyl3es22wL0pl3UDXK+aGnzomHs4vEs+KTPrx6XL3NawQZuYKw+frVCRbynkwtipyfPXYmvzW8Em8vH8Bf78GhjCNEVAAAAAAElFTkSuQmCC"/>-->
-                <!--</svg>-->
+                <img src="icons/development.svg">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="250" viewBox="0 0 246 250" style="height: calc(250 / 1920 * 100vw); position: absolute; top:calc(12 / 1920 * 100vw); left: calc(55 / 1920 * 100vw)">
+                    <image width="246" height="250" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD6AgMAAADvvlIgAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAADFBMVEX///+0yFq0yFoAAAA/bGQYAAAAAnRSTlMAAHaTzTgAAAABYktHRAMRDEzyAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wkHFDI6/JAfKwAAAONJREFUaN7t27ENgzAQhWGnoE+Bl8gUHsEFyXypmTKEBIcu8rPFGfl/EuVHdXeyBefm+em+mbOTqC0fl+eem0fiPuTrPc/HK1cYHA6Hw+FwOBy+SxTOwXB4xzzA4YfzU7cMHA6Hw+FwOBwOh8PhcDgcDm+Hn/qTFhwOh8Ph/3iUX1GDK38RJ+675u7SLZ865rGUD4Y8GHNfwsWthWpc1RX4aMzlkn/zqyl3es22wL0pl3UDXK+aGnzomHs4vEs+KTPrx6XL3NawQZuYKw+frVCRbynkwtipyfPXYmvzW8Em8vH8Bf78GhjCNEVAAAAAAElFTkSuQmCC"/>
+                </svg>
                 <div>
                     <h3>розробка</h3>
                     <ul>
@@ -156,7 +158,8 @@
                 </div>
             </div>
             <div class="about-section__image">
-                <img src="images/design.png">
+                <img src="icons/design.svg" alt="design">
+
                 <div>
                     <h3>дизайн</h3>
                     <ul>
@@ -167,7 +170,7 @@
                 </div>
             </div>
             <div class="about-section__image">
-                <img src="images/promotion.png">
+                <img src="icons/promotion.svg">
                 <div>
                     <h3>просування</h3>
                     <ul>
