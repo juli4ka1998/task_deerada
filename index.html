@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Deerada</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="main.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
 </head>
 <body>
 <div class="menu">
@@ -52,7 +56,9 @@
             <a href="#contacts-section" class="section">контакти</a>
         </nav>
         <div class="logo">
-            <a href="#slider-section"><div></div></a>
+            <a href="#slider-section">
+                <img src="images/logo.png" alt="logo">
+            </a>
         </div>
         <button class="menu-btn">
             <span class="menu-btn__bar menu-btn__line1"></span>
@@ -60,22 +66,20 @@
             <span class="menu-btn__bar menu-btn__line3"></span>
         </button>
     </header>
-    <div id="slider-section">
-        <div class="slider-section__header">
-<!--            <div class="static-line-container">-->
-                <div class="static-line1"></div>
-<!--            </div>-->
+    <div id="slider-section" class="content">
+        <div class="section-header">
+            <div class="static-line1"></div>
             <div class="static-line2"></div>
         </div>
         <div class="slider">
             <div class="slide-number">
                 <span>01</span>
             </div>
-            <button class="arr-left">
-                <img src="images/arr-left.png" alt="Left">
+            <button class="arrow-left">
+                <img src="icons/arrow_left.svg" alt="Left">
             </button>
-            <button class="arr-right">
-                <img src="images/arr-right.png" alt="Right">
+            <button class="arrow-right">
+                <img src="icons/arrow_right.svg" alt="Right">
             </button>
             <div class="slide" >
                 <div class="slide-title">розробка</div>
@@ -83,10 +87,6 @@
                     <div class="slogan line1"></div>
                     <div class="slogan">lorem ipsum dolor sit amet</div>
                 </div>
-<!--                <div class="slide-decoration decoration-line1">-->
-<!--                </div>-->
-<!--                <div class="slide-decoration">-->
-<!--                </div>-->
                 <div class="slide-image">
                     <img src="images/deer.png" alt="deer">
                 </div>
@@ -97,10 +97,6 @@
                     <div class="slogan line1"></div>
                     <div class="slogan">lorem ipsum dolor sit amet</div>
                 </div>
-<!--                <div class="slide-decoration decoration-line1">-->
-<!--                </div>-->
-<!--                <div class="slide-decoration">-->
-<!--                </div>-->
                 <div class="slide-image">
                     <img src="images/tiger.png" alt="tiger">
                 </div>
@@ -111,17 +107,13 @@
                     <div class="slogan line1"></div>
                     <div class="slogan">lorem ipsum dolor sit amet</div>
                 </div>
-<!--                <div class="slide-decoration decoration-line1">-->
-<!--                </div>-->
-<!--                <div class="slide-decoration">-->
-<!--                </div>-->
                 <div class="slide-image">
                     <img src="images/elephant.png" alt="elephant">
                 </div>
             </div>
-            <button class="go-down">
+            <button class="arrow-down">
                 <a href="#about-section">
-                    <img src="images/arr-bottom.png">
+                    <img src="icons/arrow_long.svg" alt="">
                 </a>
             </button>
         </div>
@@ -135,7 +127,7 @@
             </span>
         </div>
     </div>
-    <div id="about-section">
+    <div id="about-section" class="content">
         <h1>про нас</h1>
         <h2>хто <span>ми</span> такі?</h2>
         <div class="about-section__decor"></div>
@@ -143,11 +135,9 @@
             et ipsum. Donec tellus lacus, ornare ut tellus a, vestibulum blandit erat. Suspendisse potenti. Integer lacinia
             elementum neque at dignissim. Ut mi est, mollis ac venenatis at, imperdiet et ipsum.</p>
         <div class="about-section__images">
-            <div class="about-section__image">
-                <img src="icons/development.svg">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="250" viewBox="0 0 246 250" style="height: calc(250 / 1920 * 100vw); position: absolute; top:calc(12 / 1920 * 100vw); left: calc(55 / 1920 * 100vw)">
-                    <image width="246" height="250" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD6AgMAAADvvlIgAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAADFBMVEX///+0yFq0yFoAAAA/bGQYAAAAAnRSTlMAAHaTzTgAAAABYktHRAMRDEzyAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wkHFDI6/JAfKwAAAONJREFUaN7t27ENgzAQhWGnoE+Bl8gUHsEFyXypmTKEBIcu8rPFGfl/EuVHdXeyBefm+em+mbOTqC0fl+eem0fiPuTrPc/HK1cYHA6Hw+FwOBy+SxTOwXB4xzzA4YfzU7cMHA6Hw+FwOBwOh8PhcDgcDm+Hn/qTFhwOh8Ph/3iUX1GDK38RJ+675u7SLZ865rGUD4Y8GHNfwsWthWpc1RX4aMzlkn/zqyl3es22wL0pl3UDXK+aGnzomHs4vEs+KTPrx6XL3NawQZuYKw+frVCRbynkwtipyfPXYmvzW8Em8vH8Bf78GhjCNEVAAAAAAElFTkSuQmCC"/>
-                </svg>
+            <div class="icon-1 about-section__image">
+                <img src="icons/development.svg" alt="development">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 202 250"><title>dev_rectangle</title><g id="Шар_2" data-name="Шар 2"><g id="Шар_2-2" data-name="Шар 2"><path d="M0,0V3H199V247H13v3H202V0Z" style="fill:#b4c85a"/></g></g></svg>
                 <div>
                     <h3>розробка</h3>
                     <ul>
@@ -157,9 +147,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="about-section__image">
+            <div class="icon-2 about-section__image">
                 <img src="icons/design.svg" alt="design">
-
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250"><title>des_rectangle</title><g id="Шар_2" data-name="Шар 2"><g id="Шар_2-2" data-name="Шар 2"><path d="M0,3V37H3V3H43V0H0Z" style="fill:#b4c85a"/><path d="M113,0V3H247V247H110v3H250V0Z" style="fill:#b4c85a"/></g></g></svg>
                 <div>
                     <h3>дизайн</h3>
                     <ul>
@@ -169,8 +159,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="about-section__image">
-                <img src="icons/promotion.svg">
+            <div class="icon-3 about-section__image">
+                <img src="icons/promotion.svg" alt="">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 189 250"><title>prom_rectangle</title><g id="Шар_2" data-name="Шар 2"><g id="Шар_2-2" data-name="Шар 2"><path d="M0,250H28v-3H0Z" style="fill:#b4c85a"/><path d="M39,0V3H186V247H57v3H189V0Z" style="fill:#b4c85a"/></g></g></svg>
                 <div>
                     <h3>просування</h3>
                     <ul>
@@ -183,64 +174,104 @@
         </div>
 
     </div>
-    <div id="portfolio-section">
+    <div id="portfolio-section" class="content">
         <div class="portfolio-section__description">
-            <div class="portfolio-section__decor"></div>
-            <p>проекти</p>
-            <h1>Галицька кухня</h1>
-            <p class="portfolio-section__description--p">Creating a website, which enabled
-                users to order dishes from
-                restaurant.</p>
-            <p>wordpress development, mobile platform, logo design</p>
-            <button class="portfolio-section__btn">
-                <span>дивитись кейс</span>
-                <img src="images/arr-right.png">
-            </button>
+<!--            <div class="portfolio-text">-->
+                <div class="portfolio-section__decor"></div>
+                <p>проекти</p>
+                <h1>Галицька кухня</h1>
+                <p class="portfolio-section__description--p">Creating a website, which enabled
+                    users to order dishes from
+                    restaurant.</p>
+                <p>wordpress development, mobile platform, logo design</p>
+                <button class="portfolio-section__btn">
+                    <span>дивитись кейс</span>
+                    <img src="images/arr-right.png">
+                </button>
+<!--            </div>-->
         </div>
         <div class="portfolio-section__img">
-            <img src="images/dish.png">
+            <img src="images/dish.png" alt="">
+        </div>
+        <div class="portfolio-nav">
+            <a href="#" class="active">г</a>
+            <a href="#">к</a>
+            <a href="#">т</a>
+            <a href="#">м</a>
+            <a href="#">оutfits store</a>
         </div>
     </div>
-    <div id="team-section">
+    <div id="team-section" class="content">
         <h1>люди</h1>
         <h2>наша <span>команда</span></h2>
         <div class="team-section">
-            <div class="team-section__content">
-                <div class="person-info">
-                    <p>Валентин</p>
-                    <div class="team-section__decor"></div>
-                    <span>wordpress developer</span>
-                </div>
-                <div class="team-section__image">
-                    <img src="images/developer.png">
-                    <div>
-                        <p>show eyes</p>
+            <div class="team-carousel owl-carousel">
+                <div class="person">
+                    <div class="person-info">
+                        <span class="name">Валентин</span>
+                        <div class="team-section__decor"></div>
+                        <span class="job">wordpress developer</span>
+                    </div>
+                    <div class="team-section__image">
+                        <img src="images/developer.png" alt="">
+                        <div>
+                            <p>show eyes</p>
+                        </div>
                     </div>
                 </div>
-                <div class="person-info">
-                    <p>Валентин</p>
-                    <div class="team-section__decor"></div>
-                    <span>wordpress developer</span>
-                </div>
-                <div class="team-section__image">
-                    <img src="images/developer.png">
-                    <div>
-                        <p>show eyes</p>
+                <div class="person">
+                    <div class="person-info">
+                        <span class="name">Валентин</span>
+                        <div class="team-section__decor"></div>
+                        <span class="job">wordpress developer</span>
+                    </div>
+                    <div class="team-section__image">
+                        <img src="images/developer.png" alt="">
+                        <div>
+                            <p>show eyes</p>
+                        </div>
                     </div>
                 </div>
+                <div class="person">
+                    <div class="person-info">
+                        <span class="name">Валентин</span>
+                        <div class="team-section__decor"></div>
+                        <span class="job">wordpress developer</span>
+                    </div>
+                    <div class="team-section__image">
+                        <img src="images/developer.png" alt="">
+                        <div>
+                            <p>show eyes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="person">
+                    <div class="person-info">
+                        <span class="name">Валентин</span>
+                        <div class="team-section__decor"></div>
+                        <span class="job">wordpress developer</span>
+                    </div>
+                    <div class="team-section__image">
+                        <img src="images/developer.png" alt="">
+                        <div>
+                            <p>show eyes</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="team-section__btns">
-                <button class="arr-left">
-                    <img src="images/arr-left.png">
-                </button>
-                <button class="arr-right">
-                    <img src="images/arr-right.png">
-                </button>
-            </div>
+<!--            <div class="team-section__btns">-->
+<!--                <button class="arr-left">-->
+<!--                    <img src="images/arr-left.png">-->
+<!--                </button>-->
+<!--                <button class="arr-right">-->
+<!--                    <img src="images/arr-right.png">-->
+<!--                </button>-->
+<!--            </div>-->
         </div>
 
     </div>
-    <div id="contacts-section">
+    <div id="contacts-section" class="content">
         <h1>контакти</h1>
         <h2>зв'яжись з нами</h2>
         <div class="contacts-section__decor"></div>
@@ -273,6 +304,8 @@
         </div>
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

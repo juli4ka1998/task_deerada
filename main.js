@@ -40,8 +40,8 @@ changeSlide("next");
 setInterval(() => {changeSlide("next")}, 3000);
 
 // Get buttons
-let rightBtn = document.querySelector(".arr-right");
-let leftBtn = document.querySelector(".arr-left");
+let rightBtn = document.querySelector("#slider-section .arrow-right");
+let leftBtn = document.querySelector("#slider-section .arrow-left");
 
 // Add event listener to buttons
 rightBtn.addEventListener('click', () => {changeSlide("next")});
@@ -73,8 +73,7 @@ const scrollThere = (targetElement, speed) => {
 	if(document.querySelector(".menu").style.display !== "flex") {
 		$('html, body').stop().animate(
 			{scrollTop: targetElement.offset().top},
-			speed,
-			'linear'
+			speed
 		);
 	}
 };
@@ -104,13 +103,17 @@ $(window).on('mousewheel',  e => {
 
 	// Find scroll position
 	for (let i = 0; i < positions.length; i++) {
-		if (lastScrollTop === positions[i] && i !== 0 && i !== positions.length -1) {
+		if (lastScrollTop === positions[i] && i !== 0 && i !== positions.length - 1) {
 				targetUp = $(sections[i-1]);
 				targetDown = $(sections[i+1]);
 			break;
 		} else if ((lastScrollTop === positions[i] && i === 0) || (lastScrollTop > positions[i] && lastScrollTop < positions[i+1])) {
 			targetUp =  $(sections[i]);
 			targetDown = $(sections[i+1]);
+			break;
+		} else if ((lastScrollTop === positions[i] && i === positions.length - 1)) {
+			targetUp =  $(sections[i-1]);
+			targetDown = $(sections[i]);
 			break;
 		}
 	}
@@ -122,7 +125,7 @@ $(window).on('mousewheel',  e => {
 		targetElement = targetUp;
 	}
 
-	scrollThere(targetElement, 1);
+	scrollThere(targetElement, 100);
 });
 
 
@@ -132,14 +135,15 @@ const changeHeader = () => {
 
 	// Get header items
 	let sections = document.querySelector('.sections');
-	let logo = document.querySelector('.logo div');
+	let logo = document.querySelector('.logo img');
 	let menuBtnItems = document.querySelectorAll('.menu-btn__bar');
 
 	// Check if it is the slider section or not
 	if(this.scrollY <= 10) {
 		//Change header items to light theme
 		sections.style.color = "white";
-		logo.style.backgroundImage = 'url("images/logo.png")';
+		// logo.style.backgroundImage = 'url("images/logo.png")';
+		logo.src = "images/logo.png";
 		Array.from(menuBtnItems).forEach(el => {
 			el.style.backgroundColor = 'white';
 		});
@@ -147,7 +151,8 @@ const changeHeader = () => {
 	} else {
 		//Change header items to dark theme
 		sections.style.color = "black";
-		logo.style.backgroundImage = 'url("images/logo_dark.png")';
+		// logo.style.backgroundImage = 'url("images/logo_dark.png")';
+		logo.src = "images/logo_dark.png";
 		Array.from(menuBtnItems).forEach(el => {
 			el.style.backgroundColor = 'black';
 		});
@@ -170,3 +175,15 @@ Array.from(divs).forEach(el => {
 });
 
 
+$('.owl-carousel').owlCarousel({
+	loop:true,
+	dots: false,
+	margin:0,
+	slideBy: 2,
+	nav:true,
+	navText: [
+		'<div class="arrow-left"><img src="icons/arrow_left.svg" alt="left-arrow"></div>',
+		'<div class="arrow-right"><img src="icons/arrow_right.svg" alt="right-arrow"></div>'
+	],
+	items:2
+});
