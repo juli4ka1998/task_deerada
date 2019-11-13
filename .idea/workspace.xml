@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1382b0be-e7a1-45c7-b1a0-805400331c98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/icons/des_rectangle.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/icons/dev_rectangle.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/icons/prom_rectangle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/brief.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/brief.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/design-page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/design.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
@@ -21,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -71,7 +71,8 @@
       <workItem from="1567749979976" duration="4592000" />
       <workItem from="1567836844592" duration="28775000" />
       <workItem from="1573461746639" duration="21243000" />
-      <workItem from="1573542371476" duration="26017000" />
+      <workItem from="1573542371476" duration="26127000" />
+      <workItem from="1573632647851" duration="26555000" />
     </task>
     <task id="LOCAL-00001" summary="Change positioning elements in main, about and portfolio sections">
       <created>1573490134369</created>
@@ -80,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573490134369</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Create slider in team section, update portfolio and about sections">
+      <created>1573572391048</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573572391048</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +109,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Change positioning elements in main, about and portfolio sections" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change positioning elements in main, about and portfolio sections" />
+    <MESSAGE value="Create slider in team section, update portfolio and about sections" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create slider in team section, update portfolio and about sections" />
   </component>
 </project>

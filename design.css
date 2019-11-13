@@ -1,0 +1,90 @@
+.main-header .sections {
+    color: #000;
+}
+
+.main-header .menu-btn__bar {
+    background: #000;
+}
+
+body {
+    background: #f2bb3a;
+}
+
+#design-section {
+    height: auto;
+    position: relative;
+}
+
+#design-section .left-title{
+    position: absolute;
+    z-index: -1;
+    opacity: 0.1;
+    top: calc(375 / 1920 * 100vw);
+    left: calc(-165 / 1920 * 100vw);
+    letter-spacing: calc(-9 / 1920 * 100vw);
+    transform: rotate(-90deg);
+    font-size: calc(200 / 1920 * 100vw);
+}
+
+#design-section .design-info {
+    margin-top: calc(70 / 1920 * 100vw);
+    display: flex;
+    align-items: center;
+}
+
+#design-section .design-desc {
+    flex: 0 0 60%;
+}
+
+#design-section .title {
+    font-size: calc(48 / 1920 * 100vw);
+    /*margin: 0;*/
+    padding-left: calc(120 / 1920 * 100vw);
+    margin-bottom: calc(25 / 1920 * 100vw);
+}
+
+#design-section .text-decor {
+    vertical-align: top;
+    margin-top: calc(20 / 1920 * 100vw);
+    background: #000;
+}
+
+#design-section .design-text {
+    display: inline-block;
+    width: 80%;
+    line-height: 2.3;
+    /*margin-top: calc(10 / 1920 * 100vw);*/
+    margin-left: calc(20 / 1920 * 100vw);
+}
+
+#design-section .design-text p {
+    margin-bottom: calc(10 / 1920 * 100vw);
+}
+
+#design-section .contact-us {
+    flex: 0 0 40%;
+}
+
+#design-section .form-data {
+    padding: calc(40 / 1920 * 100vw);
+    width: calc(480 / 1920 * 100vw);
+    border: calc(3 / 1920 * 100vw) solid #000;
+    position: relative;
+    margin-left: auto;
+    margin-right: calc(160 / 1920 * 100vw);
+}
+
+#design-section .form-label {
+    line-height: 1;
+    font-size: calc(24 / 1920 * 100vw);
+    margin-bottom: calc(5 / 1920 * 100vw);
+}
+
+#design-section .input-container:last-of-type {
+    margin-bottom: calc(10 / 1920 * 100vw);
+}
+
+#design-section .go-right {
+    bottom: calc(50 / 1920 * 100vw);
+    right: calc(40 / 1920 * 100vw);
+}
