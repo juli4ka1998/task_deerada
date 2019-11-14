@@ -6,6 +6,10 @@
     background: #000;
 }
 
+* {
+    color: #000;
+}
+
 label {
     margin: 0;
 }
@@ -39,6 +43,7 @@ label {
 }
 
 .brief-container .brief-form {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     margin-top: calc(40 / 1920 * 100vw);
@@ -60,7 +65,7 @@ label {
 }
 
 .brief-container .questions {
-    flex: 0 0 37%;
+    flex: 0 0 39%;
     padding-right: calc(20 / 1920 * 100vw);
     margin-top: calc(60 / 1920 * 100vw);
 }
@@ -71,7 +76,7 @@ label {
 }
 
 .brief-container .form-items {
-    flex: 0 0 63%;
+    flex: 0 0 61%;
     padding-left: calc(20 / 1920 * 100vw);
     margin-top: calc(60 / 1920 * 100vw);
 }
@@ -88,6 +93,7 @@ label {
 .brief-container .form-items .checkmark-container {
     display: flex;
     flex-direction: row-reverse;
+    flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
@@ -113,10 +119,156 @@ label {
 }
 
 .brief-container .form-items .checkmark-container input.hidden-item:checked ~ .checkmark {
-    background: #b29eca;
+    /*background: #b29eca;*/
 }
 
-/*.rtr:focus ~ .checkmark {*/
-/*    background: #b29eca;*/
+.brief-container .form-items .brief-input {
+    flex: 0 0 50%;
+    background: transparent;
+    height: 100%;
+    border: none;
+    text-align: right;
+}
+
+.brief-container input:focus,
+#slider-range span:focus,
+.brief-container .notes:focus {
+    outline: none;
+}
+
+.brief-container .form-items ::placeholder {
+    color: #000;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.brief-container .form-items .notes {
+    resize: none;
+    background-color: transparent;
+    border: none;
+    background-attachment: local;
+    background-image: repeating-linear-gradient(
+        transparent,
+        transparent calc(50 / 1920 * 100vw),
+        #000 calc(50 / 1920 * 100vw),
+        #000 calc(53 / 1920 * 100vw),
+        transparent calc(50 / 1920 * 100vw));
+    line-height: calc(52 / 1920 * 100vw);
+    width: 100%;
+    height: calc(160 / 1920 * 100vw);
+}
+
+/* {*/
+/*    outline: none;*/
 /*}*/
+
+.brief-container .form-items .file-label {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.brief-container .form-items .file-input {
+    display: none;
+}
+
+.brief-container .form-items .go-btn {
+    z-index: -1;
+}
+
+.brief-container .form-items .personal-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.brief-container .form-items .personal-info .brief-input{
+    flex: 0 0 70%;
+}
+
+.brief-container .big-btn {
+    width: 100%;
+    height: calc(100 / 1920 * 100vw);
+    margin-top: calc(100 / 1920 * 100vw);
+    border: none;
+    font-size: calc(48 / 1920 * 100vw);
+    margin-bottom: calc(100 / 1920 * 100vw);
+}
+
+.brief-container .form-items .budget-items .item-container {
+    border: none;
+}
+
+.brief-container .form-items .amount-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 calc(50% - 20 / 1920 * 100vw);
+    height: calc(50 / 1920 * 100vw);
+    border-bottom: calc(3 / 1920 * 100vw) solid black;
+    cursor: pointer;
+}
+
+.brief-container .form-items .slider-container {
+    position: relative;
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: calc(40 / 1920 * 100vw);
+    margin-top: calc(-15 / 1920 * 100vw);
+}
+
+
+#slider-range {
+    height: calc(7 / 1920 * 100vw);
+    border: none;
+    background: #d4d4d4;
+    display: block;
+    flex: 0 0 100%;
+    margin-top: calc(35 / 1920 * 100vw);
+    margin-bottom: calc(20 / 1920 * 100vw);
+}
+
+#slider-range span{
+    width: calc(20 / 1920 * 100vw);
+    height: calc(20 / 1920 * 100vw);
+    background: #ececec;
+    border: calc(3 / 1920 * 100vw) solid black;
+    border-radius: 50%;
+    margin-left: calc(-10 / 1920 * 100vw);
+    position: absolute;
+    top: calc(-8 / 1920 * 100vw);
+    cursor: pointer;
+}
+
+#slider-range div {
+    /*background: #b29eca;*/
+}
+
+#amount, #amount1 {
+    position: relative;
+    background: transparent;
+    border: none;
+    text-align: right;
+    width: 50%;
+    padding: 0;
+    height: 100%;
+}
+
+.social {
+    top: calc(60 / 1920 * 100vw);
+    right: calc(-100 / 1920 * 100vw);
+    width: calc(420 / 1920 * 100vw);
+    height: calc(450 / 1920 * 100vw);
+}
 

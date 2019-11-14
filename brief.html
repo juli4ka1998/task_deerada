@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Deerada</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
@@ -75,6 +77,11 @@
             </div>
         </div>
         <div class="brief-form">
+            <div class="social">
+                <a href="https://www.facebook.com/">facebook</a>
+                <a href="https://twitter.com">twitter</a>
+                <a href="https://www.instagram.com">instagram</a>
+            </div>
             <div class="questions">
                 <div class="separator"></div>
                 <p class="question">яка послуга вас цікавить?</p>
@@ -136,17 +143,30 @@
             </div>
             <div class="form-items">
                 <div class="separator"><span class="brief-color"></span></div>
-                <div class="item-container">
-                    <label class="checkmark-container">Дизайн логотипу
-                        <input type="checkbox" class="hidden-item">
-                        <span class="checkmark"></span>
-                    </label>
+                <div class="budget-items">
+                    <div class="item-container">
+                        <label class="checkmark-container">
+                            Приблизно
+                            <input type="radio" class="hidden-item" name="budget" id="radio-nearly-budget">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="slider-container">
+                        <label class="amount-label">від
+                            <input type="text" id="amount">
+                        </label>
+                        <label class="amount-label">до
+                            <input type="text" id="amount1">
+                        </label>
+                        <div id="slider-range"></div>
+                    </div>
                 </div>
                 <div class="item-container">
-                    <label class="checkmark-container">Дизайн фірмового стилю
-                        <input type="checkbox" class="hidden-item">
+                    <label class="checkmark-container">Конкретна сума
+                        <input type="radio" class="hidden-item" name="budget" id="radio-budget">
                         <span class="checkmark"></span>
                     </label>
+                    <input type="number" placeholder="введіть суму" id="input-budget" class="brief-input">
                 </div>
             </div>
             <div class="questions">
@@ -165,10 +185,10 @@
                 <div class="item-container">
                     <label class="checkmark-container">
                         Необхідно зробити до
-                        <input type="radio" name="deadline" id="box" class="hidden-item" onclick="if(this.checked){ document.getElementById('name3').focus();}">
+                        <input type="radio" name="deadline" id="radio-deadline" class="hidden-item">
                         <span class="checkmark"></span>
-                        <input type="text" class="rtr" id="name3"  onclick="if(this.onfocus){ document.getElementById('box').checked}">
                     </label>
+                    <input type="text" placeholder="введіть дату дедлайну" id="input-deadline" class="brief-input">
                 </div>
                 <div class="item-container">
                     <label class="checkmark-container">Не поспішаємо
@@ -177,13 +197,186 @@
                     </label>
                 </div>
             </div>
+            <div class="questions">
+                <div class="separator"></div>
+                <p class="question">додаткові побажання</p>
+            </div>
+            <div class="form-items">
+                <div class="separator"><span class="brief-color"></span></div>
+                <textarea class="notes" placeholder="Розкажіть детальніше про свій проект"></textarea>
+            </div>
+            <div class="questions">
+                <div class="separator"></div>
+                <p class="question">завантажте матеріали (якщо такі є)</p>
+            </div>
+            <div class="form-items">
+                <div class="separator"><span class="brief-color"></span></div>
+                <div class="item-container">
+                    <label class="file-label">
+                        <input type="file" class="file-input" id="file-upload">
+                        <span>Ви ще не вибрали файл</span>
+                    </label>
+                    <button class="go-btn">
+                        <span>вибрати</span>
+                        <img src="icons/arrow_right.svg" alt="right">
+                    </button>
+                </div>
+            </div>
+            <div class="questions">
+                <div class="separator"></div>
+                <p class="question">особисті дані</p>
+            </div>
+            <div class="form-items">
+                <div class="separator"><span class="brief-color"></span></div>
+                <div class="item-container">
+                    <label class="personal-info">
+                        Контактна особа (П.І.Б.)
+                        <input type="text" class="brief-input">
+                    </label>
+                </div>
+                <div class="item-container">
+                    <label class="personal-info">
+                        Сфера діяльності
+                        <input type="text" class="brief-input">
+                    </label>
+                </div>
+                <div class="item-container">
+                    <label class="personal-info">
+                        Ваш сайт (якщо є)
+                        <input type="text" class="brief-input">
+                    </label>
+                </div>
+                <div class="item-container">
+                    <label class="personal-info">
+                        Де вас шукати?
+                        <input type="text" class="brief-input">
+                    </label>
+                </div>
+                <div class="item-container">
+                    <label class="personal-info">
+                        Ваш номер телефону
+                        <input type="number" class="brief-input">
+                    </label>
+                </div>
+                <div class="item-container">
+                    <label class="personal-info">
+                        Ваш e-mail
+                        <input type="email" class="brief-input">
+                    </label>
+                </div>
+            </div>
+            <div class="questions">
+                <div class="separator"></div>
+                <p class="question">звідки ви дізналися про нас?</p>
+            </div>
+            <div class="form-items">
+                <div class="separator"><span class="brief-color"></span></div>
+                <div class="item-container">
+                    <label class="checkmark-container">Пошукова система
+                        <input type="radio" name="find-us" class="hidden-item">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="item-container">
+                    <label class="checkmark-container">Соціальні мережі
+                        <input type="radio" name="find-us" class="hidden-item">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="item-container">
+                    <label class="checkmark-container">Рекомендації
+                        <input type="radio" name="find-us" class="hidden-item">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="item-container">
+                    <label class="checkmark-container">
+                        Інше
+                        <input type="radio" name="find-us" id="radio-other" class="hidden-item">
+                        <span class="checkmark"></span>
+                    </label>
+                    <input type="text" placeholder="вкажіть" id="input-other" class="brief-input">
+                </div>
+            </div>
+
+            <button class="big-btn brief-color">надіслати</button>
         </div>
     </div>
 
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="test.js"></script>
+<script>
+
+    function checkItem(el) {
+	    $(el).siblings().addClass('brief-color');
+	    $("input.hidden-item:not(:checked)").siblings().removeClass('brief-color');
+    }
+
+    function ifItemClicked(input, radio) {
+	    $(input).click(function () {
+		    if($(this).is(':focus')) {
+			    $(radio).prop('checked', true);
+			    checkItem(radio);
+		    }
+	    });
+	    $(radio).click(function () {
+		    if($(this).is(':checked'))
+			    $(input).focus();
+	    });
+    }
+    ifItemClicked('#input-deadline', '#radio-deadline');
+    ifItemClicked('#input-budget', '#radio-budget');
+    ifItemClicked('#input-other', '#radio-other');
+    ifItemClicked('#amount, #amount1', '#radio-nearly-budget');
+
+    // file upload
+    $('#file-upload').change(function() {
+    	var file = $('#file-upload')[0].files[0];
+    	if(file)
+          $('#file-upload ~ span').text(file.name);
+    });
+
+
+		$( function() {
+          $("input.hidden-item").click(function () {
+	          if($(this).is(':checked'))
+	          	checkItem(this);
+	          else
+                $(this).siblings().removeClass('brief-color');
+          });
+
+
+
+			$( "#slider-range" ).slider({
+				range: true,
+				min: 0,
+                step:10,
+				max: 3000,
+				values: [ 100, 1050 ],
+				slide: function( event, ui ) {
+					$( "#amount" ).val( ui.values[ 0 ]);
+					$( "#amount1" ).val(ui.values[ 1 ] );
+                    $('#radio-nearly-budget').prop('checked', true);
+                    checkItem('#radio-nearly-budget');
+				}
+			});
+			$( "#amount" ).val(  $( "#slider-range" ).slider( "values", 0 ) );
+			$( "#amount1" ).val( $( "#slider-range" ).slider( "values", 1 ) );
+            $( "#slider-range div" ).addClass('brief-color');
+		} );
+
+
+		$('#amount, #amount1').on('input',function(e){
+          $( "#slider-range" ).slider({
+            values: [$( "#amount" ).val(), $( "#amount1" ).val()]
+          });
+		});
+
+
+</script>
 </body>
 </html>
 

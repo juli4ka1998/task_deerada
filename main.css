@@ -808,20 +808,42 @@ button:focus {
     line-height: 1.5;
 }
 
-#portfolio-section .go-btn {
-    /*width: 40%;*/
+.go-btn {
     text-align: left;
     border: none;
     background: transparent;
-    /*margin-top: calc(340 / 1920 * 100vw);*/
-    margin-left: calc(120 / 1920 * 100vw);
     cursor: pointer;
     position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+.go-btn span{
+    display: inline-block;
+}
+
+.go-btn img{
+    margin-left: calc(10 / 1920 * 100vw);
+    width: calc(46 / 1920 * 100vw);
+    display: inline-block;
+
+}
+
+#portfolio-section .go-btn {
+    /*width: 40%;*/
+    /*text-align: left;*/
+    /*border: none;*/
+    /*background: transparent;*/
+    /*margin-top: calc(340 / 1920 * 100vw);*/
+    margin-left: calc(120 / 1920 * 100vw);
+    /*cursor: pointer;*/
+    /*position: absolute;*/
     bottom: calc(100 / 1920 * 100vw);
+    right: auto;
 
 }
 #portfolio-section .go-btn span{
-    display: inline-block;
+    /*display: inline-block;*/
     font-size: calc(24 / 1920 * 100vw);
 
 }
@@ -829,7 +851,7 @@ button:focus {
 #portfolio-section .go-btn img{
     margin-left: calc(30 / 1920 * 100vw);
     width: calc(35 / 1920 * 100vw);
-    display: inline-block;
+    /*display: inline-block;*/
 
 }
 
@@ -1161,20 +1183,36 @@ button:focus {
 /*    color: black;*/
 /*}*/
 
-#contacts-section .social {
+.social {
     writing-mode: vertical-rl;
     position: absolute;
     /*right: 20%;*/
     /*top: 20%;*/
-    height: 100vh;
+    /*height: 100vh;*/
     right: 0;
     top: 0;
     width: calc(860 / 1920 * 100vw);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: calc(315 / 1920 * 100vw) 0;
+    /*padding: calc(315 / 1920 * 100vw) 0;*/
     font-size: calc(20 / 1920 * 100vw);
+}
+
+#contacts-section .social {
+    /*writing-mode: vertical-rl;*/
+    /*position: absolute;*/
+    /*right: 20%;*/
+    /*top: 20%;*/
+    height: 100vh;
+    /*right: 0;*/
+    /*top: 0;*/
+    /*width: calc(860 / 1920 * 100vw);*/
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+    padding: calc(315 / 1920 * 100vw) 0;
+    /*font-size: calc(20 / 1920 * 100vw);*/
 }
 
 /*.social span {*/
