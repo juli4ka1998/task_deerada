@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1382b0be-e7a1-45c7-b1a0-805400331c98" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/css/shared.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/close.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/cross.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/left-arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/right-arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/shared.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/fullpage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/fullpage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief.css" beforeDir="false" afterPath="$PROJECT_DIR$/brief.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FuturisXC.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/FuturisXC.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brief.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/brief.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/brief.html" beforeDir="false" afterPath="$PROJECT_DIR$/brief.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/design-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/design.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,13 +45,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\progects\deerada\lib" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\progects\deerada\js" />
+      <recent name="D:\progects\deerada\fonts" />
+      <recent name="D:\progects\deerada\css" />
       <recent name="D:\Julia_work\Task\images" />
     </key>
   </component>
@@ -69,7 +89,8 @@
       <workItem from="1573461746639" duration="21243000" />
       <workItem from="1573542371476" duration="26127000" />
       <workItem from="1573632647851" duration="26651000" />
-      <workItem from="1573717548678" duration="25929000" />
+      <workItem from="1573717548678" duration="26081000" />
+      <workItem from="1573805791027" duration="19033000" />
     </task>
     <task id="LOCAL-00001" summary="Change positioning elements in main, about and portfolio sections">
       <created>1573490134369</created>
@@ -92,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573663515430</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Create slider and inputs in the brief page">
+      <created>1573745372439</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573745372439</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +143,7 @@
     <MESSAGE value="Change positioning elements in main, about and portfolio sections" />
     <MESSAGE value="Create slider in team section, update portfolio and about sections" />
     <MESSAGE value="Create brief page and design page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create brief page and design page" />
+    <MESSAGE value="Create slider and inputs in the brief page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create slider and inputs in the brief page" />
   </component>
 </project>

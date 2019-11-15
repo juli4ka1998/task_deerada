@@ -9,56 +9,78 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="brief.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/brief.css">
 </head>
 <body>
 <div class="menu">
     <div class="close-icon">
-        <img src="images/close.png">
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 31.112 31.112" style="enable-background:new 0 0 31.112 31.112;" xml:space="preserve">
+            <polygon points="31.112,1.414 29.698,0 15.556,14.142 1.414,0 0,1.414 14.142,15.556 0,29.698 1.414,31.112 15.556,16.97
+                29.698,31.112 31.112,29.698 16.97,15.556 "/>
+        </svg>
     </div>
     <h1 class="menu-title">чим займаємось в <span>deerada</span>?</h1>
     <div class="menu-content">
         <div class="menu-services">
-            <ul>
-                <li class="menu-services-item">розробка сайтів</li>
-                <li>просування сайтів</li>
-                <li>маркетинг соціальних мереж</li>
-                <li>підтримка сайтів</li>
-                <li>просування в instagram</li>
-                <li>налаштування рекламних
-                    кампаній</li>
-                <li>реклама в instagram</li>
-            </ul>
-        </div>
-        <div class="menu-arrows">
-            <img class="menu-arrow" src="images/menu-arrow1.png">
-            <img  class="menu-arrow" src="images/menu-arrow2.png">
-            <img  class="menu-arrow" src="images/menu-arrow3.png">
-        </div>
-        <div class="menu-sub">
-            <ul>
-                <li>розробка інтернет-магазину</li>
-                <li>розробка landing page</li>
-                <li>створення корпоративних сайтів</li>
-                <li>розробка веб-додатків</li>
-                <li>верстка email-шаблонів</li>
-                <li>розробка браузерних розширень</li>
-            </ul>
+            <nav>
+                <div class="menu-item-container">
+                    <a href="#" class="menu-services-item "><span>розробка сайтів</span></a>
+                    <div class="menu-sub">
+                        <ul>
+                            <li>розробка інтернет-магазину</li>
+                            <li>розробка landing page</li>
+                            <li>створення корпоративних сайтів</li>
+                            <li>розробка веб-додатків</li>
+                            <li>верстка email-шаблонів</li>
+                            <li>розробка браузерних розширень</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu-item-container">
+                    <a href="#" class="menu-services-item "><span>просування сайтів</span></a>
+                    <div class="menu-sub">
+                        <ul>
+                            <li>створення корпоративних сайтів</li>
+                            <li>верстка email-шаблонів</li>
+                            <li>розробка браузерних розширень</li>
+                            <li>розробка веб-додатків</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu-item-container">
+                    <a href="#" class="menu-services-item "><span>маркетинг соціальних мереж</span></a>
+                    <div class="menu-sub">
+                        <ul>
+                            <li>розробка веб-додатків</li>
+                            <li>розробка інтернет-магазину</li>
+                            <li>розробка landing page</li>
+                            <li>розробка браузерних розширень</li>
+                            <li>створення корпоративних сайтів</li>
+                            <li>верстка email-шаблонів</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#"><span>підтримка сайтів</span></a>
+                <a href="#"><span>просування в instagram</span></a>
+                <a href="#"><span>налаштування рекламних кампаній</span></a>
+                <a href="#"><span>реклама в instagram</span></a>
+            </nav>
         </div>
     </div>
 
 </div>
 <div class="main-content">
     <header class="main-header">
-        <nav class="sections">
-            <a href="#about-section" class="section">про нас</a>
-            <a href="#portfolio-section" class="section">портфоліо</a>
-            <a href="#team-section" class="section">команда</a>
-            <a href="#contacts-section" class="section">контакти</a>
-        </nav>
+        <div class="back">
+            <button class="go-btn">
+                <img src="icons/arrow_left.svg" alt="">
+                <span>назад</span>
+            </button>
+        </div>
         <div class="logo">
-            <a href="#slider-section">
+            <a href="index.html">
                 <img src="images/logo_dark.png" alt="logo">
             </a>
         </div>
@@ -216,9 +238,13 @@
                         <input type="file" class="file-input" id="file-upload">
                         <span>Ви ще не вибрали файл</span>
                     </label>
-                    <button class="go-btn">
+                    <button class="file-upload-btn go-btn">
                         <span>вибрати</span>
                         <img src="icons/arrow_right.svg" alt="right">
+                    </button>
+                    <button class="hidden file-delete-btn go-btn">
+                        <span>видалити</span>
+                        <img src="icons/cross.svg" alt="cross">
                     </button>
                 </div>
             </div>
@@ -306,8 +332,9 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script src="test.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>-->
+<script src="js/shared.js"></script>
+<script src="js/test.js"></script>
 <script>
 
     function checkItem(el) {
@@ -335,9 +362,19 @@
     // file upload
     $('#file-upload').change(function() {
     	var file = $('#file-upload')[0].files[0];
-    	if(file)
+    	if(file) {
           $('#file-upload ~ span').text(file.name);
+          $('.file-upload-btn ').addClass('hidden');
+          $('.file-delete-btn').removeClass('hidden');
+        }
     });
+
+    $('.file-delete-btn').click(function() {
+	    $('#file-upload').val('');
+	    $('#file-upload ~ span').text("Ви ще не вибрали файл");
+        $('.file-upload-btn, .file-delete-btn').toggleClass('hidden');
+    });
+
 
 
 		$( function() {

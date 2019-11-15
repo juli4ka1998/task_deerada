@@ -47,25 +47,6 @@ let leftBtn = document.querySelector("#slider-section .arrow-left");
 rightBtn.addEventListener('click', () => {changeSlide("next")});
 leftBtn.addEventListener('click', () => {changeSlide("prev")});
 
-
-// MENU
-
-// Add event listener to close button
-let closeBtn = document.querySelector(".close-icon");
-closeBtn.addEventListener("click", () => {
-	// Hide menu and display main content
-	document.querySelector(".menu").style.display = "none";
-	document.querySelector(".main-content").style.display = "block";
-});
-
-// Add event listener to menu button
-let menuBtn = document.querySelector(".menu-btn");
-menuBtn.addEventListener("click", () => {
-	// Hide content and show menu
-	document.querySelector(".menu").style.display = "flex";
-	document.querySelector(".main-content").style.display = "none";
-});
-
 // SCROLL SECTIONS
 
 // Animate page when scrolling
@@ -73,7 +54,7 @@ const scrollThere = (targetElement, speed) => {
 	if(document.querySelector(".menu").style.display !== "flex") {
 		$('html, body').stop().animate(
 			{scrollTop: targetElement.offset().top},
-			speed
+			speed, "linear"
 		);
 	}
 };
@@ -125,44 +106,10 @@ $(window).on('mousewheel',  e => {
 		targetElement = targetUp;
 	}
 
-	scrollThere(targetElement, 100);
+	scrollThere(targetElement, 500);
 });
 
 
-// HEADER
-
-const changeHeader = () => {
-
-	// Get header items
-	let sections = document.querySelector('.sections');
-	let logo = document.querySelector('.logo img');
-	let menuBtnItems = document.querySelectorAll('.menu-btn__bar');
-
-	// Check if it is the slider section or not
-	if(this.scrollY <= 10) {
-		//Change header items to light theme
-		sections.style.color = "white";
-		// logo.style.backgroundImage = 'url("images/logo.png")';
-		logo.src = "images/logo.png";
-		Array.from(menuBtnItems).forEach(el => {
-			el.style.backgroundColor = 'white';
-		});
-
-	} else {
-		//Change header items to dark theme
-		sections.style.color = "black";
-		// logo.style.backgroundImage = 'url("images/logo_dark.png")';
-		logo.src = "images/logo_dark.png";
-		Array.from(menuBtnItems).forEach(el => {
-			el.style.backgroundColor = 'black';
-		});
-	}
-};
-
-changeHeader();
-window.onscroll = () => {
-	changeHeader();
-};
 
 // ABOUT SECTIONS DIVS
 
@@ -175,17 +122,17 @@ Array.from(divs).forEach(el => {
 });
 
 
-$('.owl-carousel').owlCarousel({
+// Team-section carousel
+$('.team-carousel').owlCarousel({
 	loop:true,
 	dots: false,
 	margin:0,
 	slideBy: 2,
 	nav:true,
 	navText: [
-		'<div class="arrow-left"><img src="icons/arrow_left.svg" alt="left-arrow"></div>',
-		'<div class="arrow-right"><img src="icons/arrow_right.svg" alt="right-arrow"></div>'
+		'<div class="arrow-left"><img src="./icons/arrow_left.svg" alt="left-arrow"></div>',
+		'<div class="arrow-right"><img src="./icons/arrow_right.svg" alt="right-arrow"></div>'
 	],
 	items:2
 });
-
 

@@ -6,6 +6,10 @@
     background: #000;
 }
 
+.main-header {
+    position: absolute;
+}
+
 * {
     color: #000;
 }
@@ -14,12 +18,27 @@ label {
     margin: 0;
 }
 
+.social {
+    top: calc(60 / 1920 * 100vw);
+    right: calc(-100 / 1920 * 100vw);
+    width: calc(420 / 1920 * 100vw);
+    height: calc(450 / 1920 * 100vw);
+}
+
+.file-delete-btn {
+    height: 100%;
+    z-index: 100 !important;
+}
+
+.file-delete-btn img {
+    width: calc(30 / 1920 * 100vw);
+}
+
 .brief-container {
     margin-top: calc(100 / 1920 * 100vw);
 }
 
 .brief-container .title-container {
-    /*width: 35%;*/
     display: flex;
     align-items: center;
 }
@@ -31,7 +50,6 @@ label {
 }
 
 .brief-container .title {
-    /*width: calc(500 / 1920 * 100vw);*/
     font-size: calc(48 / 1920 * 100vw);
     margin-bottom: calc(20 / 1920 * 100vw);
 }
@@ -72,7 +90,6 @@ label {
 
 .brief-container .questions .question {
    font-size: calc(24 / 1920 * 100vw);
-    /*margin-top: calc(10 / 1920 * 100vw);*/
 }
 
 .brief-container .form-items {
@@ -118,9 +135,9 @@ label {
     margin-right: calc(20 / 1920 * 100vw);
 }
 
-.brief-container .form-items .checkmark-container input.hidden-item:checked ~ .checkmark {
-    /*background: #b29eca;*/
-}
+/*.brief-container .form-items .checkmark-container input.hidden-item:checked ~ .checkmark {*/
+/*    !*background: #b29eca;*!*/
+/*}*/
 
 .brief-container .form-items .brief-input {
     flex: 0 0 50%;
@@ -161,10 +178,6 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100%;
     height: calc(160 / 1920 * 100vw);
 }
-
-/* {*/
-/*    outline: none;*/
-/*}*/
 
 .brief-container .form-items .file-label {
     height: 100%;
@@ -229,7 +242,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
-#slider-range {
+.brief-container .form-items #slider-range {
     height: calc(7 / 1920 * 100vw);
     border: none;
     background: #d4d4d4;
@@ -239,7 +252,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin-bottom: calc(20 / 1920 * 100vw);
 }
 
-#slider-range span{
+.brief-container .form-items #slider-range span{
     width: calc(20 / 1920 * 100vw);
     height: calc(20 / 1920 * 100vw);
     background: #ececec;
@@ -251,11 +264,11 @@ input[type=number]::-webkit-outer-spin-button {
     cursor: pointer;
 }
 
-#slider-range div {
-    /*background: #b29eca;*/
-}
+/*#slider-range div {*/
+/*    !*background: #b29eca;*!*/
+/*}*/
 
-#amount, #amount1 {
+.brief-container .form-items #amount, #amount1 {
     position: relative;
     background: transparent;
     border: none;
@@ -265,10 +278,4 @@ input[type=number]::-webkit-outer-spin-button {
     height: 100%;
 }
 
-.social {
-    top: calc(60 / 1920 * 100vw);
-    right: calc(-100 / 1920 * 100vw);
-    width: calc(420 / 1920 * 100vw);
-    height: calc(450 / 1920 * 100vw);
-}
 
