@@ -14,6 +14,7 @@ body {
     display: flex;
     font-size: calc(16 / 1920 * 100vw);
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 * {
@@ -64,6 +65,7 @@ button:focus {
     display: inline-block;
     margin-right: calc(30 / 1920 * 100vw);
     color: inherit;
+    transition: opacity 0.1s linear;
 }
 
 .main-header .section:hover {
@@ -74,7 +76,12 @@ button:focus {
     height: calc(50 / 1920 * 100vw);
     position: absolute;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%) rotate(0deg);
+    transition: transform .7s linear;
+}
+
+.main-header .logo:hover {
+    transform:translate(-50%) rotate(360deg);
 }
 
 .main-header .logo img {
@@ -89,6 +96,10 @@ button:focus {
     background: transparent;
     cursor: pointer;
     align-self: flex-end;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .main-header .menu-btn:focus {
@@ -96,11 +107,12 @@ button:focus {
 }
 
 .main-header .menu-btn__bar {
-    width: 100%;
+    width: calc(35 / 1920 * 100vw);
     height: calc(3 / 1920 * 100vw);;
     display: block;
     background: #fff;
-    margin-bottom: calc(8 / 1920 * 100vw);
+    /*margin-bottom: calc(8 / 1920 * 100vw);*/
+    transition: transform .5s linear;
 }
 
 .main-header .menu-btn__line2 {
@@ -110,7 +122,7 @@ button:focus {
 }
 
 .main-header .menu-btn__line3 {
-    width: 85.7%;
+    /*width: 85.7%;*/
     margin-left:auto;
     margin-right:0;
 }
@@ -120,12 +132,33 @@ button:focus {
     width: 100%;
 }
 
+.main-header .menu-btn-clicked .menu-btn__line2 {
+    display: none;
+}
+
+.main-header .menu-btn-clicked .menu-btn__bar {
+    width: calc(31 / 1920 * 100vw);
+    transform: rotate(-45deg);
+    transform-origin: right;
+    /*position: absolute;*/
+}
+
+.main-header .menu-btn-clicked .menu-btn__line3 {
+    transform: rotate(45deg);
+}
+
 .arrow-left,
 .arrow-right {
     width: calc(46 / 1920 * 100vw);
     border: none;
     background: transparent;
     z-index: 200;
+    transition: opacity 0.1s linear;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    opacity: 0.5;
 }
 
 .arrow-left img,

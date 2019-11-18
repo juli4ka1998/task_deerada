@@ -16,14 +16,23 @@
     background-color: rgb(236, 236, 236);
     position: relative;
     top: auto;
+    z-index: 1;
+    /*overflow: hidden;*/
 }
 
-#slider-section .slider-slide {
+#slider-section .slides {
     height: 100%;
+    width: 100%;
     position: relative;
-    animation-name: fade;
-    animation-duration: 1s;
     overflow: hidden;
+}
+
+#slider-section .slide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
 }
 
 #slider-section .slide-title {
@@ -33,6 +42,12 @@
     left: calc(112 / 1920 * 100vw);
     top: calc(50% - (170 / 1920 * 100vw));
     z-index: 2;
+    display: block;
+    width: 0;
+    transition: width .8s ease-in-out;
+    transition-delay: .8s;
+    overflow: hidden;
+    height: calc(390 / 1920 * 100vw);
 }
 
 #slider-section .slide-title:before,
@@ -42,14 +57,17 @@
     width: calc(175 / 1920 * 100vw);
     height: calc(3 / 1920 * 100vw);
     position: absolute;
-    bottom: calc(-75 / 1920 * 100vw);
-    left: calc(7 / 1920 * 100vw);
+    bottom: calc(25 / 1920 * 100vw);
+    left: calc(157 / 1920 * 100vw);
+    transition: left .5s linear;
+    transition-delay: 1.2s;
 }
 
 #slider-section .slide-title:after {
-    bottom: calc(-40 / 1920 * 100vw);
-    left: calc(157 / 1920 * 100vw);
+    bottom: calc(60 / 1920 * 100vw);
+    left: calc(7 / 1920 * 100vw);
     width: calc(390 / 1920 * 100vw);
+    /*transition: left 1s linear;*/
 }
 
 #slider-section .title-design {
@@ -57,12 +75,14 @@
 }
 
 #slider-section .title-design:before {
-    left: 0;
+    /*left: 0;*/
+    margin-left: calc(-7 / 1920 * 100vw);
 }
 
 #slider-section .title-design:after {
     width: calc(185 / 1920 * 100vw);
-    left: calc(150 / 1920 * 100vw);
+    margin-left: calc(-7 / 1920 * 100vw);
+    /*left: calc(150 / 1920 * 100vw);*/
 }
 
 #slider-section .title-promotion:after {
@@ -74,6 +94,9 @@
     display: inline-block;
     height: 100%;
     position: relative;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    transition-delay: .3s;
 }
 
 #slider-section .slide-image img {
@@ -106,6 +129,9 @@
     left: calc(120 / 1920 * 100vw);
     top: calc(50% - calc(170 / 1920 * 100vw));
     z-index: 2;
+    opacity: 0;
+    transition: opacity .8s ease-in-out;
+    transition-delay: .8s;
 }
 
 #slider-section .slogan {
@@ -118,9 +144,15 @@
     height: calc(3 / 1920 * 100vw);
     margin-left: calc(7 / 1920 * 100vw);
     margin-right: 0;
-    animation-name: draw;
-    animation-duration: 2s;
-    animation-delay: 1s;
+    /*transition: width .8 ease-in-out, margin-right .8 ease-in-out;*/
+    transition-property: width, margin-right;
+    transition-duration: .8s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1.2s;
+    /*animation-name: draw;*/
+    /*animation-duration: 2s;*/
+    /*animation-delay: 1s;*/
+    /*animation-fill-mode: forwards;*/
 }
 
 #slider-section .arrow-left {
@@ -141,13 +173,26 @@
     background: transparent;
     z-index: 200;
     height: calc(80 / 1920 * 100vw);
-    bottom: calc(20 / 1920 * 100vw);
+    /*bottom: calc(20 / 1920 * 100vw);*/
     left: calc(50% - (calc(25 / 1920 * 100vw)) / 2);
+    animation: 0.7s jump infinite linear;
 }
 
-#slider-section .arrow-down img{
+@keyframes jump {
+    from {
+        bottom: calc(20 / 1920 * 100vw);
+        /*opacity: 1;*/
+    }
+    to {
+        bottom: calc(30 / 1920 * 100vw);
+        opacity: 0.5;
+    }
+}
+
+#slider-section .arrow-down img {
     height: 100%;
 }
+
 
 #slider-section .slide-number {
     width: calc(120 / 1920 * 100vw);
@@ -180,9 +225,10 @@
 #slider-section .static-line2 {
     position: absolute;
     top: calc(285 / 1920 * 100vw);
-    right: calc(60 / 1920 * 100vw);
+    right: calc(55 / 1920 * 100vw);
     width: calc(2 / 1920 * 100vw);
     bottom: calc(175 / 1920 * 100vw);
+    height: calc(70 / 1920 * 100vw);
     background: #fff;
     z-index: 100;
 }
@@ -558,9 +604,79 @@
     padding: calc(315 / 1920 * 100vw) 0;
 }
 
+.hide-element-left {
+    animation: go-left .8s linear forwards !important;
+}
+
+.hide-element-right {
+    animation: go-right .8s linear forwards !important;
+}
+
+.show-next-element {
+    animation: fade .8s linear forwards !important;
+}
+
+.show-prev-element {
+    animation: rr .8s linear forwards !important;
+}
+
+.show-next-element .slide-image,
+.show-next-element .slide-text {
+    opacity: 1 !important;
+}
+
+.show-next-element .slide-title {
+    width: 100% !important;
+}
+
+.show-next-element .line1 {
+    width: calc(50 / 1920 * 100vw) !important;
+    margin-right: calc(20 / 1920 * 100vw) !important;
+}
+
+.show-next-element .slide-title:before {
+    left: calc(7 / 1920 * 100vw) !important;
+}
+
+.show-next-element .slide-title:after {
+    left: calc(157 / 1920 * 100vw) !important;
+}
+
 @keyframes fade {
-    from {opacity: 0.4}
-    to {opacity: 1}
+    from {
+        right: -100%;
+    }
+    to {
+        right: 0;
+    }
+}
+
+
+@keyframes rr {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+@keyframes go-left {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes go-right {
+    from {
+        right: 0;
+    }
+    to {
+        right: -100%;
+    }
 }
 
 @keyframes draw {

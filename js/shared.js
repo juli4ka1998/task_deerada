@@ -11,6 +11,8 @@ closeBtn.addEventListener("click", () => {
 // Add event listener to menu button
 let menuBtn = document.querySelector(".menu-btn");
 menuBtn.addEventListener("click", () => {
+	menuBtn.classList.add("menu-btn-clicked");
+
 	// Hide content and show menu
 	document.querySelector(".menu").style.display = "flex";
 	document.querySelector(".main-content").style.display = "none";
