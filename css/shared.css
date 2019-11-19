@@ -175,24 +175,48 @@ button:focus {
     letter-spacing: calc(-9 / 1920 * 100vw);
 }
 
-.sub-title{
+.sub-title {
     display: block;
     position: absolute;
     top: calc(225 / 1920 * 100vw);
     left: calc(222 / 1920 * 100vw);
     font-size: calc(48 / 1920 * 100vw);
     z-index: 1000;
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: showItem 3.5s linear forwards;
+    animation-delay: 1s;
 }
 
 .sub-title span{
     color: #b4c85a;
 }
 
+@keyframes showItem {
+    to {
+        max-width: 100%;
+        opacity: 1;
+    }
+}
+
 .text-decor {
     display: inline-block;
-    width: calc(100 / 1920 * 100vw);
+    width: calc(1 / 1920 * 100vw);
     height: calc(3 / 1920 * 100vw);
+    /*margin-right: calc(10 / 1920 * 100vw);*/
     background: #b4c85a;
+    animation: drawLine .7s linear forwards;
+    animation-delay: .5s;
+}
+
+@keyframes drawLine {
+    from {
+        width: calc(1 / 1920 * 100vw);
+    }
+    to {
+        width: calc(100 / 1920 * 100vw);
+    }
 }
 
 .input-container {
@@ -290,6 +314,18 @@ button:focus {
     font-size: calc(20 / 1920 * 100vw);
 }
 
+.facebook:hover {
+    color: #4267b2;
+}
+
+.twitter:hover {
+    color: #1da0f1;
+}
+
+.instagram:hover {
+    color: #813eb3;
+}
+
 .brief-color {
     background: #b29eca;
 }
@@ -306,7 +342,8 @@ button:focus {
     left: 0;
     top: 0;
     width: 100%;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     background-color: rgb(44, 44, 44);
     color: rgb(236, 236, 236);
     flex-direction: column;
@@ -359,7 +396,7 @@ button:focus {
     position: relative;
 }
 
-.menu .menu-services a {
+.menu .menu-services .main-item {
     line-height: 1.1;
     padding: calc(15 / 1920 * 100vw) 0;
     display: block;
@@ -367,6 +404,16 @@ button:focus {
     opacity: 0.5;
     position: relative;
     transition: opacity 0.3s linear;
+}
+
+.menu .menu-sub a {
+    /*line-height: 1.1;*/
+    /*padding: 0;*/
+    /*display: inline-block;*/
+    color: inherit;
+    opacity: 1;
+    /*position: relative;*/
+    /*transition: opacity 0.3s linear;*/
 }
 
 .menu .menu-services a span {
@@ -412,4 +459,25 @@ button:focus {
     display: none;
     font-size: calc(24 / 1920 * 100vw);
     width: calc(900 / 1920 * 100vw);
+}
+
+
+.hide-person {
+     opacity: 0;
+     /*animation: hide .2s linear forwards;*/
+ }
+
+@keyframes hide {
+    to {
+        opacity: 0;
+    }
+}
+
+.active {
+    opacity: 1 !important;
+    animation: none;
+}
+
+.pp {
+    /*animation-duration: 1s;*/
 }

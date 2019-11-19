@@ -305,19 +305,26 @@
     height: calc(250 / 1920 * 100vw);
     position: absolute;
     top: calc(12 / 1920 * 100vw);
-    left: calc(97 / 1920 * 100vw);
+    left: calc(50 / 1920 * 100vw);
+}
+
+#about-section .icon .polygon {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 1.5s linear forwards;
+    animation-delay: 1.5s;
 }
 
 #about-section .icon-1 svg {
-    left: calc(98 / 1920 * 100vw);
+    /*left: calc(98 / 1920 * 100vw);*/
 }
 
 #about-section .icon-2 svg {
-    left: calc(49 / 1920 * 100vw);
+    /*left: calc(49 / 1920 * 100vw);*/
 }
 
 #about-section .icon-3 svg {
-    left: calc(108 / 1920 * 100vw);
+    /*left: calc(108 / 1920 * 100vw);*/
 }
 
 #about-section .icon div {
@@ -337,12 +344,23 @@
 
 #about-section .icon ul {
     list-style: none;
+    margin-bottom: 0;
+    margin-left: calc(-15 / 1920 * 100vw);;
 }
 
 #about-section .icon li {
     font-size: calc(16 / 1920 * 100vw);
     position: relative;
     line-height: 1.5;
+    width: 0;
+    opacity: 0;
+    display: block;
+    overflow: hidden;
+    animation: showLi .6s ease-in-out forwards;
+    white-space: nowrap;
+    height: calc(20 / 1920 * 100vw);
+    animation-delay: 1s;
+    padding-left: calc(15 / 1920 * 100vw);
 }
 
 #about-section .icon li::before {
@@ -354,7 +372,19 @@
     width: calc(5 / 1920 * 100vw);
     height: calc(5 / 1920 * 100vw);
     border-radius: 50%;
-    left: calc(-15 / 1920 * 100vw);
+    left: calc(0 / 1920 * 100vw);
+}
+
+#about-section .icon li:nth-child(1) {
+    animation-delay: .2s;
+}
+
+#about-section .icon li:nth-child(2) {
+    animation-delay: .6s;
+}
+
+#about-section .icon li:nth-child(3) {
+    animation-delay: 1s;
 }
 
 #portfolio-section {
@@ -392,6 +422,17 @@
     margin-top: calc(40 / 1920 * 100vw);
     margin-left: calc(120 / 1920 * 100vw);
     font-size: calc(16 / 1920 * 100vw);
+    cursor: default;
+    transition: opacity 1s linear;
+}
+
+#portfolio-section .technologies span {
+    opacity: 1;
+    transition: opacity .1s linear;
+}
+
+#portfolio-section .technologies span:hover{
+    opacity: 0.5;
 }
 
 #portfolio-section .portfolio-title {
@@ -473,6 +514,7 @@
     margin-right: calc(-120 / 1920 * 100vw);
     align-items: flex-end;
     justify-content: space-between;
+    flex-direction: row-reverse;
 }
 
 #team-section .team-carousel .arrow-right,
@@ -514,7 +556,10 @@
     height: calc(3 / 1920 * 100vw);
     flex-basis: 0;
     flex-grow: 1;
-    max-width: 100%;
+    max-width: 0;
+    animation: showItem 1s ease-in-out forwards;
+    animation-delay: .5s;
+    /*max-width: 100%;*/
     margin: 0 calc(10 / 1920 * 100vw);
     background: #b4c85a;
 }
@@ -524,25 +569,31 @@
     align-self: flex-end;
     position: relative;
     margin-left: calc(-235 / 1920 * 100vw);
+    overflow: hidden;
 }
 
 #team-section .photo img {
     width: 100%;
 }
 
-#team-section .photo div {
+#team-section .photo .show-eyes {
     position: absolute;
-    width: 75%;
-    height: 25%;
+    width: calc(280 / 1920 * 100vw);;
+    height: calc(90 / 1920 * 100vw);
     background: #000;
     right: 0;
-    top: 25%;
+    top: calc(90 / 1920 * 100vw);
     color: #fff;
-    padding-left: 8%;
+    padding-left: calc(20 / 1920 * 100vw);
     cursor: pointer;
+    transition: right 0.5s linear;
 }
 
-#team-section .photo div span {
+#team-section .photo:hover .show-eyes {
+    right: calc(-280 / 1920 * 100vw);
+}
+
+#team-section .photo .show-eyes span {
     font-size: calc(16 / 1920 * 100vw);;
     display: inline-block;
     margin: 12% auto;
@@ -579,6 +630,14 @@
     margin-top: calc(90 / 1920 * 100vw);
     margin-bottom: calc(140 / 1920 * 100vw);
     line-height: 1.8;
+}
+
+#contacts-section .contacts-info a {
+    transition: color .1s linear;
+}
+
+#contacts-section .contacts-info a:hover {
+    color: #b4c85a;
 }
 
 #contacts-section .form-data {
@@ -694,4 +753,15 @@
     }
 }
 
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
 
+@keyframes showLi {
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}

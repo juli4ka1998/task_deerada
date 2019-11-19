@@ -149,25 +149,57 @@ const scrollThere = (targetElement, speed) => {
 // ABOUT SECTIONS DIVS
 
 // Hide divs when click
-let divs = document.querySelectorAll(".team-section__image div");
-Array.from(divs).forEach(el => {
-	el.addEventListener("click", () => {
-		el.style.display = "none";
-	})
-});
+// let divs = document.querySelectorAll(".team-section__image div");
+// Array.from(divs).forEach(el => {
+// 	el.addEventListener("click", () => {
+// 		el.style.display = "none";
+// 	})
+// });
 
 
 // Team-section carousel
-$('.team-carousel').owlCarousel({
+let owl = $('.team-carousel');
+owl.owlCarousel({
+	animateIn: 'fadeIn',
+	animateOut: 'fadeOut',
 	loop:true,
 	dots: false,
 	margin:0,
-	slideBy: 2,
+	// autoPlay: true,
+	// slideBy: 1,
+	// slideSpeed: 1000,
+	smartSpeed: 1000,
+	mouseDrag: false,
 	nav:true,
 	navText: [
-		'<div class="arrow-left"><img src="./icons/arrow_left.svg" alt="left-arrow"></div>',
-		'<div class="arrow-right"><img src="./icons/arrow_right.svg" alt="right-arrow"></div>'
+		'<div class="arrow-right"><img src="./icons/arrow_right.svg" alt="right-arrow"></div>',
+		'<div class="arrow-left"><img src="./icons/arrow_left.svg" alt="left-arrow"></div>'
 	],
 	items:2
 });
 
+owl.on('change.owl.carousel', function(event) {
+	// console.log(event.target);
+	$('.team-carousel .owl-item').addClass("hide-person");
+	// $('.team-carousel .owl-item.active').removeClass("hide-person");
+	// $('.team-carousel .owl-item.active ~ .active').addClass("hide-person");
+	// $('.team-carousel .owl-item.cloned').addClass("pp");
+
+
+	// $('.team-carousel .owl-item.active:not(.active + .active) ').addClass("hide-person");
+	// $('.team-carousel .owl-item.cloned').addClass("hide-person");
+});
+
+// $('.team-carousel .owl-next').click(function () {
+// 	console.log("left");
+// 	// $('.team-carousel .owl-item').removeClass("hide-person");
+// 	$('.team-carousel .owl-item.active:not(.active + .active) ').addClass("hide-person");
+// 	$('.team-carousel .owl-item.cloned').addClass("hide-person");
+// });
+//
+// $('.team-carousel .owl-prev').click(function () {
+// 	console.log("right");
+	// $('.team-carousel .owl-item').removeClass("hide-person");
+	// $('.team-carousel .owl-item.active ~ .active').addClass("hide-person");
+	// $('.team-carousel .owl-item.cloned').addClass("hide-person");
+// });

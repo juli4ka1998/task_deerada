@@ -19,9 +19,9 @@ menuBtn.addEventListener("click", () => {
 });
 
 // Show sub-menu
-$('.menu-services a').hover(function () {
+$('.menu-services .main-item').hover(function () {
 	$(".menu-sub").fadeOut(200);
-	$(".menu-services a").removeClass('active-item ');
+	$(".menu-services .main-item").removeClass('active-item ');
 	$(this).addClass('active-item ');
 }, function () {});
 
