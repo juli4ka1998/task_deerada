@@ -9,6 +9,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
 }
 
 #slider-section .slider {
@@ -399,13 +400,31 @@
 #portfolio-section .img-container {
     margin-top: calc(20 / 1920 * 100vw);
     width: calc((960 / 1920 * 100vw) - (100vw - 100%));
+    height: calc(860 / 1920 * 100vw);
     position: relative;
+    overflow: hidden;
  }
 
 #portfolio-section .img-container img {
-    width: 100%;
-    object-fit: contain;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: calc(-120 / 1920 * 100vw);
+    left: -50vw;
+    object-position: 100% 0%;
 }
+
+/*Show case*/
+/*#portfolio-section .img-container:hover {*/
+/*    position: static;*/
+/*}*/
+
+/*#portfolio-section .img-container:hover img {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*}*/
 
 #portfolio-section .text-decor {
     margin-top: calc(80 / 1920 * 100vw);
@@ -457,8 +476,13 @@
     margin-left: calc(120 / 1920 * 100vw);
     bottom: calc(100 / 1920 * 100vw);
     right: auto;
-
+    transition: margin-left .2s linear;
 }
+
+#portfolio-section .go-btn:hover {
+    margin-left: calc(130 / 1920 * 100vw);
+}
+
 #portfolio-section .go-btn span {
     font-size: calc(24 / 1920 * 100vw);
 
@@ -477,14 +501,35 @@
     font-size: calc(24 / 1920 * 100vw);
     line-height: 2.8;
     justify-content: center;
-    height: 100vh;
+    /*height: 100vh;*/
+    height: calc(860 / 1920 * 100vw);
     right: calc(60 / 1920 * 100vw);
-    top: 0;
+    top: calc(120 / 1920 * 100vw);
     text-transform: uppercase;
 }
 
 #portfolio-section .portfolio-nav a {
     position: relative;
+    text-align: right;
+    white-space: nowrap;
+    /*display: inline-flex;*/
+}
+
+#portfolio-section .portfolio-nav-item {
+    /*display: none;*/
+    display: inline-flex;
+    align-items: center;
+    /*max-width: 0;*/
+    width: 0;
+    overflow: hidden;
+    transition: max-width 0.3s linear, width 0.3s linear;
+    white-space: nowrap;
+}
+
+#portfolio-section .portfolio-nav a:hover .portfolio-nav-item {
+    /*display: block;*/
+    /*max-width: 100%;*/
+    width: 100%;
 }
 
 #portfolio-section .portfolio-nav a.active:after {

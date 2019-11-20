@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1382b0be-e7a1-45c7-b1a0-805400331c98" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/brief.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/brief.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/shared.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/shared.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/dish.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/dish.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/shared.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/shared.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,7 +80,8 @@
       <workItem from="1573717548678" duration="26081000" />
       <workItem from="1573805791027" duration="19146000" />
       <workItem from="1574066476330" duration="19976000" />
-      <workItem from="1574151797195" duration="23376000" />
+      <workItem from="1574151797195" duration="23833000" />
+      <workItem from="1574238782120" duration="25577000" />
     </task>
     <task id="LOCAL-00001" summary="Change positioning elements in main, about and portfolio sections">
       <created>1573490134369</created>
@@ -125,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574095012536</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Create about sections effects, effects for team section slider">
+      <created>1574178919397</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1574178919397</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +158,7 @@
     <MESSAGE value="Create slider and inputs in the brief page" />
     <MESSAGE value="Create menu" />
     <MESSAGE value="Create slider effects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create slider effects" />
+    <MESSAGE value="Create about sections effects, effects for team section slider" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create about sections effects, effects for team section slider" />
   </component>
 </project>
