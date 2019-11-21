@@ -40,16 +40,11 @@ let changeSlide = (type) => {
 		slide[slideIndex - 1].classList.add("show-prev-element");
 	}
 
-	// if(slide[slideIndex-2]) {
-	// 	slide[slideIndex - 2].style.display = "none";
-	// 	console.log(5);
-	// }
 	// Show slide and its info
 	slide[slideIndex - 1].classList.remove("hide-element-right");
 	slide[slideIndex - 1].classList.remove("hide-element-left");
 
-	// slide[slideIndex-1].style.display = "block";
-	slide[slideIndex-1].style.opacity = "1";
+	// slide[slideIndex-1].style.opacity = "1";
 	infoName.innerHTML = slide[slideIndex-1].firstElementChild.innerHTML;
 	number.innerHTML = `0${slideIndex}`;
 	infoNumber.innerHTML = `0${slideIndex}`;

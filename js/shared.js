@@ -27,8 +27,11 @@ menuBtn.addEventListener("click", () => {
 
 		document.querySelector(".menu").style.display = "flex";
 		$(".main-header").css({
-			"z-index": "auto"
+			"z-index": "auto",
+			position: "absolute",
+			top: "+=" + currentPosition
 		});
+
 		$(".menu").delay(400).animate({
 			top: $(document).scrollTop(),
 			// opacity: 1
@@ -39,7 +42,8 @@ menuBtn.addEventListener("click", () => {
 			});
 			$(document).scrollTop(0);
 			$(".main-header").css({
-				position: "absolute"
+				// position: "absolute"
+				top: "-=" + currentPosition
 			});
 		});
 	} else {
@@ -47,10 +51,11 @@ menuBtn.addEventListener("click", () => {
 		$(".menu").css({
 			top: currentPosition
 		});
-		// $(".main-header").css({
-		// 	position: "fixed"
-		//
-		// });
+		$(".main-header").css({
+			// position: "fixed"
+			top: "+=" + currentPosition
+
+		});
 		$(document).scrollTop(currentPosition);
 		$(".menu").delay(400).animate({
 			top: "-140%",
@@ -59,7 +64,8 @@ menuBtn.addEventListener("click", () => {
 			document.querySelector(".menu").style.display = "none";
 			$(".main-header").css({
 				position: "fixed",
-				"z-index": "300"
+				"z-index": "300",
+				top: "-=" + currentPosition
 			});
 		});
 	}
@@ -107,6 +113,7 @@ const changeHeader = () => {
 		logo.src = "images/logo_dark.png";
 		Array.from(menuBtnItems).forEach(el => {
 			el.style.backgroundColor = 'black';
+			// el.style.transitionDelay = '0s';
 		});
 	}
 };

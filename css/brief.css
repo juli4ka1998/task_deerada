@@ -215,10 +215,23 @@ input[type=number]::-webkit-outer-spin-button {
     border: none;
     font-size: calc(48 / 1920 * 100vw);
     margin-bottom: calc(100 / 1920 * 100vw);
-    transition: opacity .3s ease-in-out;
+    transition: background-color .3s ease-in-out;
+    position: relative;
+    background: transparent;
 }
 
-.brief-container .big-btn:hover {
+.brief-container .big-btn span {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity .3s ease-in-out;
+    z-index: -1;
+}
+
+.brief-container .big-btn:hover span {
     opacity: 0.7;
 }
 

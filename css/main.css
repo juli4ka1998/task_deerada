@@ -18,7 +18,6 @@
     position: relative;
     top: auto;
     z-index: 1;
-    /*overflow: hidden;*/
 }
 
 #slider-section .slides {
@@ -33,7 +32,7 @@
     width: 100%;
     position: absolute;
     z-index: 0;
-    opacity: 0;
+    /*opacity: 0;*/
 }
 
 #slider-section .slide-title {
@@ -68,7 +67,6 @@
     bottom: calc(60 / 1920 * 100vw);
     left: calc(7 / 1920 * 100vw);
     width: calc(390 / 1920 * 100vw);
-    /*transition: left 1s linear;*/
 }
 
 #slider-section .title-design {
@@ -76,14 +74,12 @@
 }
 
 #slider-section .title-design:before {
-    /*left: 0;*/
     margin-left: calc(-7 / 1920 * 100vw);
 }
 
 #slider-section .title-design:after {
     width: calc(185 / 1920 * 100vw);
     margin-left: calc(-7 / 1920 * 100vw);
-    /*left: calc(150 / 1920 * 100vw);*/
 }
 
 #slider-section .title-promotion:after {
@@ -145,15 +141,10 @@
     height: calc(3 / 1920 * 100vw);
     margin-left: calc(7 / 1920 * 100vw);
     margin-right: 0;
-    /*transition: width .8 ease-in-out, margin-right .8 ease-in-out;*/
     transition-property: width, margin-right;
     transition-duration: .8s;
     transition-timing-function: ease-in-out;
     transition-delay: 1.2s;
-    /*animation-name: draw;*/
-    /*animation-duration: 2s;*/
-    /*animation-delay: 1s;*/
-    /*animation-fill-mode: forwards;*/
 }
 
 #slider-section .arrow-left {
@@ -174,20 +165,8 @@
     background: transparent;
     z-index: 200;
     height: calc(80 / 1920 * 100vw);
-    /*bottom: calc(20 / 1920 * 100vw);*/
     left: calc(50% - (calc(25 / 1920 * 100vw)) / 2);
     animation: 0.7s jump infinite linear;
-}
-
-@keyframes jump {
-    from {
-        bottom: calc(20 / 1920 * 100vw);
-        /*opacity: 1;*/
-    }
-    to {
-        bottom: calc(30 / 1920 * 100vw);
-        opacity: 0.5;
-    }
 }
 
 #slider-section .arrow-down img {
@@ -312,21 +291,10 @@
 #about-section .icon .polygon {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: dash 1.5s linear forwards;
+    animation: drawPolygon 1.5s linear forwards;
     animation-delay: 1.5s;
 }
 
-#about-section .icon-1 svg {
-    /*left: calc(98 / 1920 * 100vw);*/
-}
-
-#about-section .icon-2 svg {
-    /*left: calc(49 / 1920 * 100vw);*/
-}
-
-#about-section .icon-3 svg {
-    /*left: calc(108 / 1920 * 100vw);*/
-}
 
 #about-section .icon div {
     display: inline-block;
@@ -353,11 +321,11 @@
     font-size: calc(16 / 1920 * 100vw);
     position: relative;
     line-height: 1.5;
-    width: 0;
+    max-width: 0;
     opacity: 0;
     display: block;
     overflow: hidden;
-    animation: showLi .6s ease-in-out forwards;
+    animation: showItem .6s ease-in-out forwards;
     white-space: nowrap;
     height: calc(20 / 1920 * 100vw);
     animation-delay: 1s;
@@ -501,7 +469,6 @@
     font-size: calc(24 / 1920 * 100vw);
     line-height: 2.8;
     justify-content: center;
-    /*height: 100vh;*/
     height: calc(860 / 1920 * 100vw);
     right: calc(60 / 1920 * 100vw);
     top: calc(120 / 1920 * 100vw);
@@ -512,14 +479,11 @@
     position: relative;
     text-align: right;
     white-space: nowrap;
-    /*display: inline-flex;*/
 }
 
 #portfolio-section .portfolio-nav-item {
-    /*display: none;*/
     display: inline-flex;
     align-items: center;
-    /*max-width: 0;*/
     width: 0;
     overflow: hidden;
     transition: max-width 0.3s linear, width 0.3s linear;
@@ -527,8 +491,6 @@
 }
 
 #portfolio-section .portfolio-nav a:hover .portfolio-nav-item {
-    /*display: block;*/
-    /*max-width: 100%;*/
     width: 100%;
 }
 
@@ -604,7 +566,6 @@
     max-width: 0;
     animation: showItem 1s ease-in-out forwards;
     animation-delay: .5s;
-    /*max-width: 100%;*/
     margin: 0 calc(10 / 1920 * 100vw);
     background: #b4c85a;
 }
@@ -659,7 +620,7 @@
 }
 
 #contacts-section .text-decor {
-    width: calc(80 / 1920 * 100vw);
+    animation: drawSmallLine .7s linear forwards 0.5s;
 }
 
 #contacts-section .mini-title {
@@ -702,7 +663,6 @@
     margin-top: calc(45 / 1920 * 100vw);
 }
 
-
 #contacts-section .social {
     height: 100vh;
     padding: calc(315 / 1920 * 100vw) 0;
@@ -717,51 +677,67 @@
 }
 
 .show-next-element {
-    animation: fade .8s linear forwards !important;
+    animation: from-right .8s linear forwards !important;
 }
 
 .show-prev-element {
-    animation: rr .8s linear forwards !important;
+    animation: from-left .8s linear forwards !important;
 }
 
 .show-next-element .slide-image,
-.show-next-element .slide-text {
+.show-next-element .slide-text,
+.show-prev-element .slide-image,
+.show-prev-element .slide-text {
     opacity: 1 !important;
 }
 
-.show-next-element .slide-title {
+.show-next-element .slide-title,
+.show-prev-element .slide-title {
     width: 100% !important;
 }
 
-.show-next-element .line1 {
+.show-next-element .line1,
+.show-prev-element .line1 {
     width: calc(50 / 1920 * 100vw) !important;
     margin-right: calc(20 / 1920 * 100vw) !important;
 }
 
-.show-next-element .slide-title:before {
+.show-next-element .slide-title:before,
+.show-prev-element .slide-title:before {
     left: calc(7 / 1920 * 100vw) !important;
 }
 
-.show-next-element .slide-title:after {
+.show-next-element .slide-title:after,
+.show-prev-element .slide-title:after {
     left: calc(157 / 1920 * 100vw) !important;
 }
 
-@keyframes fade {
+
+@keyframes jump {
     from {
-        right: -100%;
+        bottom: calc(20 / 1920 * 100vw);
     }
     to {
-        right: 0;
+        bottom: calc(30 / 1920 * 100vw);
+        opacity: 0.5;
     }
 }
 
-
-@keyframes rr {
+@keyframes from-left {
     from {
         left: -100%;
     }
     to {
         left: 0;
+    }
+}
+
+@keyframes from-right {
+    from {
+        right: -100%;
+    }
+    to {
+        right: 0;
     }
 }
 
@@ -783,30 +759,17 @@
     }
 }
 
-@keyframes draw {
-    0% {
-        width: calc(3 / 1920 * 100vw);
-        margin-right: 0;
-    }
-    50% {
-        width: calc(50 / 1920 * 100vw);
-        margin-right: calc(20 / 1920 * 100vw);
-    }
-    100% {
-        width: calc(50 / 1920 * 100vw);
-        margin-right: calc(20 / 1920 * 100vw);
-    }
-}
-
-@keyframes dash {
+@keyframes drawPolygon {
     to {
         stroke-dashoffset: 0;
     }
 }
 
-@keyframes showLi {
+@keyframes drawSmallLine {
+    from {
+        width: calc(3 / 1920 * 100vw);
+    }
     to {
-        width: 100%;
-        opacity: 1;
+        width: calc(80 / 1920 * 100vw);
     }
 }
