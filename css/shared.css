@@ -27,6 +27,10 @@ a, p {
     margin: 0;
 }
 
+label {
+    margin: 0;
+}
+
 a:hover {
     text-decoration: none;
     color: #000;
@@ -112,7 +116,11 @@ button:focus {
     height: calc(3 / 1920 * 100vw);;
     display: block;
     background: #fff;
-    transition: transform .3s linear, background .3s ease-in .4s, width .1s ease-in-out;
+    transition: transform .3s linear, background .3s ease-in .4s;
+}
+
+.main-header .menu-btn-show {
+    transition: width .1s ease-in-out;
 }
 
 .main-header .menu-btn__line2 {
@@ -185,38 +193,21 @@ button:focus {
     max-width: 0;
     overflow: hidden;
     white-space: nowrap;
-    animation: showItem 3.5s linear forwards;
-    animation-delay: 1s;
+    /*animation: showItem 3.5s linear forwards;*/
+    /*animation-delay: 1s;*/
 }
 
-.sub-title span{
+.sub-title span {
     color: #b4c85a;
-}
-
-@keyframes showItem {
-    to {
-        max-width: 100%;
-        opacity: 1;
-    }
 }
 
 .text-decor {
     display: inline-block;
-    width: calc(1 / 1920 * 100vw);
+    width: calc(3 / 1920 * 100vw);
     height: calc(3 / 1920 * 100vw);
-    /*margin-right: calc(10 / 1920 * 100vw);*/
     background: #b4c85a;
-    animation: drawLine .7s linear forwards;
-    animation-delay: .5s;
-}
-
-@keyframes drawLine {
-    from {
-        width: calc(3 / 1920 * 100vw);
-    }
-    to {
-        width: calc(100 / 1920 * 100vw);
-    }
+    /*animation: drawLine .7s linear forwards;*/
+    /*animation-delay: .5s;*/
 }
 
 .input-container {
@@ -227,7 +218,6 @@ button:focus {
 
 .input-container label {
     font-size: calc(16 / 1920 * 100vw);
-    /*width: 100%;*/
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -298,9 +288,6 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-    /*border: 0;*/
-    /*-webkit-text-fill-color: #ccc;*/
-    /*-webkit-box-shadow: 0 0 0px 1000px transparent inset;*/
     transition: background-color 5000s ease-in-out 0s;
     background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%);
 }
@@ -399,15 +386,17 @@ select:-webkit-autofill:focus {
     display: none !important;
 }
 
+/*.show-flex {*/
+/*    display: flex !important;*/
+/*}*/
+
 .menu {
-    display: none;
+    display: flex;
     padding: calc(100 / 1920 * 100vw);
     position: absolute;
     z-index: 500;
     left: 0;
-    /*opacity: 0;*/
     top: -140%;
-    /*z-index: -1;*/
     width: 100%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -415,38 +404,24 @@ select:-webkit-autofill:focus {
     color: rgb(236, 236, 236);
     flex-direction: column;
     flex-wrap: wrap;
-    /*animation: slideDown .3s linear forwards;*/
-    /*animation-delay: 0.5s;*/
 }
 
-/*@keyframes slideDown {*/
-/*    from {*/
-/*        top: -120%;*/
-/*        opacity: 1;*/
-/*    }*/
-/*    to {*/
-/*        top:0;*/
-/*        !*z-index: 100;*!*/
-/*        opacity: 1;*/
-/*    }*/
+/*.menu .close-icon {*/
+/*    position: absolute;*/
+/*    top: calc(45 / 1920 * 100vw);*/
+/*    right: calc(100 / 1920 * 100vw);*/
+/*    z-index: 220;*/
+/*    width: calc(26 / 1920 * 100vw);*/
+/*    cursor: pointer;*/
 /*}*/
 
-.menu .close-icon {
-    position: absolute;
-    top: calc(45 / 1920 * 100vw);
-    right: calc(100 / 1920 * 100vw);
-    z-index: 220;
-    width: calc(26 / 1920 * 100vw);
-    cursor: pointer;
-}
-
-.menu .close-icon svg {
-    width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    fill: #ececec;
-}
+/*.menu .close-icon svg {*/
+/*    width: 100%;*/
+/*    display: block;*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    fill: #ececec;*/
+/*}*/
 
 .menu .menu-title {
     font-size: calc(200 / 1920 * 100vw);
@@ -503,25 +478,18 @@ select:-webkit-autofill:focus {
 }
 
 .menu .menu-sub a {
-    /*line-height: 1.1;*/
-    /*padding: 0;*/
-    /*display: inline-block;*/
     color: inherit;
     opacity: 1;
-    /*position: relative;*/
-    /*transition: opacity 0.3s linear;*/
 }
 
 .menu .menu-services a span {
     border-bottom: none;
     border-bottom: calc(3 / 1920 * 100vw) solid transparent;
-    /*transition: opacity 0.3s linear;*/
     position: relative;
     transition: max-width 0.3s linear;
     display: inline-block;
     white-space: nowrap;
     max-width: calc(3 / 1920 * 100vw);
-    /*position: absolute;*/
 }
 
 .menu .menu-services br + span {
@@ -529,24 +497,12 @@ select:-webkit-autofill:focus {
     max-width: 0;
 }
 
-/*.menu .menu-services a span:after {*/
-/*    width: 100%;*/
-/*    content: '';*/
-/*    position: absolute;*/
-/*    bottom: 0;*/
-/*    left: 0;*/
-/*    border-bottom: calc(3 / 1920 * 100vw) solid red;*/
-/*    !*transition: border-bottom-color 1s linear;*!*/
-/*}*/
-
 .menu .menu-services .active-item {
     opacity: 1 !important;
 }
 
 .menu .menu-services .active-item span {
     border-color: #ececec;
-    /*border-bottom: calc(3 / 1920 * 100vw) solid #ececec;*/
-    /*white-space: initial;*/
     max-width: 100%;
 }
 
@@ -582,16 +538,8 @@ select:-webkit-autofill:focus {
     width: calc(900 / 1920 * 100vw);
 }
 
-
 .hide-person {
      opacity: 0;
-     /*animation: hide .2s linear forwards;*/
- }
-
-@keyframes hide {
-    to {
-        opacity: 0;
-    }
 }
 
 .active {
@@ -599,12 +547,52 @@ select:-webkit-autofill:focus {
     animation: none;
 }
 
-.pp {
-    /*animation-duration: 1s;*/
-}
-
 .header-menu {
     position: absolute !important;
     justify-content: flex-end;
+}
 
+.current-item .text-decor {
+    animation: drawLine .5s linear forwards;
+    /*animation-delay: ;*/
+}
+
+.current-item .sub-title {
+    animation: showItem 2.5s linear forwards;
+    /*animation-delay: 1s;*/
+}
+
+.current-item .icon .polygon {
+    animation: drawPolygon 1s linear forwards 1s;
+    /*animation-delay: 1.5s;*/
+}
+
+.current-item .icon li {
+    animation: showItem .3s ease-in-out forwards .2s;
+}
+
+.current-item .person-info__decor {
+    animation: showItem .8s ease-in-out forwards;
+}
+
+@keyframes hide {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes showItem {
+    to {
+        max-width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes drawLine {
+    from {
+        width: calc(3 / 1920 * 100vw);
+    }
+    to {
+        width: calc(100 / 1920 * 100vw);
+    }
 }

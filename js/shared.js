@@ -8,74 +8,80 @@
 // 	document.querySelector(".main-content").style.display = "block";
 // });
 
-let currentPosition = 100;
+let currentPosition = 0;
+
 // Add event listener to menu button
-let menuBtn = document.querySelector(".menu-btn");
-menuBtn.addEventListener("click", () => {
-	menuBtn.classList.toggle("menu-btn-clicked");
+let menuBtn = $(".menu-btn");
+let menuBtnBar = $(".menu-btn__bar");
+let menu = $(".menu");
+let header = $(".main-header");
+let content = $(".main-content");
+menuBtn.click(function () {
+		//Change menu-btn
+		menuBtn.toggleClass("menu-btn-clicked");
 
-	// $(".main-header").addClass("header-menu");
-	// console.log($(".menu-btn").siblings());
-	// $(".menu-btn").siblings().addClass("hidden");
-	// $(".main-header").children[1].style.display = "none";
+		if(menuBtn.hasClass("menu-btn-clicked")){
+			// Hide content and show menu
+			menuBtnBar.removeClass("menu-btn-show");
+			currentPosition = $(document).scrollTop();
 
-	// Hide content and show menu
-	// setTimeout(document.querySelector(".menu").style.display = "flex", 500);
-
-	if(menuBtn.classList.contains("menu-btn-clicked")){
-		currentPosition = $(document).scrollTop();
-
-		document.querySelector(".menu").style.display = "flex";
-		$(".main-header").css({
-			"z-index": "auto",
-			position: "absolute",
-			top: "+=" + currentPosition
-		});
-
-		$(".menu").delay(400).animate({
-			top: $(document).scrollTop(),
-			// opacity: 1
-		}, 300, "linear", function () {
-			$(".main-content").addClass("hidden");
-			$(".menu").css({
-				top: 0
+			menu.removeClass("hidden");
+			header.css({
+				zIndex: "auto",
+				position: "absolute",
+				top: "+=" + currentPosition
 			});
-			$(document).scrollTop(0);
-			$(".main-header").css({
-				// position: "absolute"
-				top: "-=" + currentPosition
-			});
-		});
-	} else {
-		$(".main-content").removeClass("hidden");
-		$(".menu").css({
-			top: currentPosition
-		});
-		$(".main-header").css({
-			// position: "fixed"
-			top: "+=" + currentPosition
 
-		});
-		$(document).scrollTop(currentPosition);
-		$(".menu").delay(400).animate({
-			top: "-140%",
-			// opacity: 1
-		}, 300, "linear", function () {
-			document.querySelector(".menu").style.display = "none";
-			$(".main-header").css({
-				position: "fixed",
-				"z-index": "300",
-				top: "-=" + currentPosition
-			});
-		});
-	}
+			menu.delay(400).animate({
+				top: currentPosition,
+			}, 500, "linear", function () {
+				content.addClass("hidden");
 
-	// document.querySelector(".main-content").style.display = "none";
+				menu.css({
+					top: 0
+				});
+
+				$(document).scrollTop(0);
+
+				header.css({
+					top: "-=" + currentPosition
+				});
+			});
+		} else {
+			// Hide menu and display main content
+
+			content.removeClass("hidden");
+
+			menu.css({
+				top: currentPosition
+			});
+
+			header.css({
+				top: "+=" + currentPosition
+			});
+
+			$(document).scrollTop(currentPosition);
+
+			menu.delay(400).animate({
+				top: "-140%",
+			}, 500, "linear", function () {
+				menu.addClass("hidden");
+
+				header.css({
+					position: "fixed",
+					"z-index": "300",
+					top: "-=" + currentPosition
+				});
+
+				menuBtnBar.addClass("menu-btn-show");
+
+			});
+		}
 
 });
 
 // Show sub-menu
-$('.menu-services .main-item').hover(function () {
+$(".menu-services .main-item").hover(function () {
 	$(".menu-sub").fadeOut(200);
 	$(".menu-services .main-item").removeClass('active-item ');
 	$(this).addClass('active-item ');
@@ -100,7 +106,6 @@ const changeHeader = () => {
 	if(this.scrollY <= 10) {
 		//Change header items to light theme
 		sections.style.color = "white";
-		// logo.style.backgroundImage = 'url("images/logo.png")';
 		logo.src = "images/logo.png";
 		Array.from(menuBtnItems).forEach(el => {
 			el.style.backgroundColor = 'white';
@@ -109,11 +114,9 @@ const changeHeader = () => {
 	} else {
 		//Change header items to dark theme
 		sections.style.color = "black";
-		// logo.style.backgroundImage = 'url("images/logo_dark.png")';
 		logo.src = "images/logo_dark.png";
 		Array.from(menuBtnItems).forEach(el => {
 			el.style.backgroundColor = 'black';
-			// el.style.transitionDelay = '0s';
 		});
 	}
 };

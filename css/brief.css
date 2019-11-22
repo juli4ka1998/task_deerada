@@ -14,10 +14,6 @@
     color: #000;
 }
 
-label {
-    margin: 0;
-}
-
 .social {
     top: calc(60 / 1920 * 100vw);
     right: calc(-100 / 1920 * 100vw);
