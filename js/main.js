@@ -146,8 +146,8 @@ const scrollThere = (targetElement, speed) => {
 
 
 // Team-section carousel
-let owl = $('.team-carousel');
-owl.owlCarousel({
+let owl1 = $('.team-carousel');
+owl1.owlCarousel({
 	animateIn: 'fadeIn',
 	animateOut: 'fadeOut',
 	loop:true,
@@ -163,7 +163,7 @@ owl.owlCarousel({
 	items:2
 });
 
-owl.on('change.owl.carousel', function(event) {
+owl1.on('change.owl.carousel', function(event) {
 	$('.team-carousel .owl-item').addClass("hide-person");
 });
 
@@ -218,3 +218,37 @@ $(".slide img").hover(function(e){
 	}
 	console.log(x + ' ' + y);
 });
+
+
+// HEADER
+
+const changeHeader = () => {
+
+	// Get header items
+	let sections = document.querySelector('.sections');
+	let logo = document.querySelector('.logo img');
+	let menuBtnItems = document.querySelectorAll('.menu-btn__bar');
+
+	// Check if it is the slider section or not
+	if(this.scrollY <= 10) {
+		//Change header items to light theme
+		sections.style.color = "white";
+		logo.src = "images/logo.png";
+		Array.from(menuBtnItems).forEach(el => {
+			el.style.backgroundColor = 'white';
+		});
+
+	} else {
+		//Change header items to dark theme
+		sections.style.color = "black";
+		logo.src = "images/logo_dark.png";
+		Array.from(menuBtnItems).forEach(el => {
+			el.style.backgroundColor = 'black';
+		});
+	}
+};
+
+changeHeader();
+window.onscroll = () => {
+	changeHeader();
+};

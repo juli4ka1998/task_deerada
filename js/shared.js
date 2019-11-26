@@ -93,36 +93,39 @@ $('.menu-services-item').hover(function () {
 }, function () {});
 
 
-// HEADER
+let owlPlan = $('.plan-carousel');
+owlPlan.owlCarousel({
+	loop:true,
+	dots: false,
+	margin: 30,
+	smartSpeed: 900,
+	// mouseDrag: false,
+	// nav:true,
+	// navText: [
+	// 	'<div class="arrow-right"><img src="./icons/arrow_right.svg" alt="right-arrow"></div>',
+	// 	'<div class="arrow-left"><img src="./icons/arrow_left.svg" alt="left-arrow"></div>'
+	// ],
+	items:2
+});
 
-const changeHeader = () => {
+let owlCases = $('.cases-carousel');
+owlCases.owlCarousel({
+	loop:true,
+	dots: false,
+	margin: 0,
+	smartSpeed: 900,
+	// mouseDrag: false,
+	nav:true,
+	navText: [
+		'<div class="arrow-right"><img src="./icons/arrow_right.svg" alt="right-arrow"></div>',
+		'<div class="arrow-left"><img src="./icons/arrow_left.svg" alt="left-arrow"></div>'
+	],
+	items:3
+});
 
-	// Get header items
-	let sections = document.querySelector('.sections');
-	let logo = document.querySelector('.logo img');
-	let menuBtnItems = document.querySelectorAll('.menu-btn__bar');
+owlCases.on('change.owl.carousel', function(event) {
+	$('.cases-carousel .owl-item').addClass("hide-person");
+});
 
-	// Check if it is the slider section or not
-	if(this.scrollY <= 10) {
-		//Change header items to light theme
-		sections.style.color = "white";
-		logo.src = "images/logo.png";
-		Array.from(menuBtnItems).forEach(el => {
-			el.style.backgroundColor = 'white';
-		});
 
-	} else {
-		//Change header items to dark theme
-		sections.style.color = "black";
-		logo.src = "images/logo_dark.png";
-		Array.from(menuBtnItems).forEach(el => {
-			el.style.backgroundColor = 'black';
-		});
-	}
-};
-
-changeHeader();
-window.onscroll = () => {
-	changeHeader();
-};
 
