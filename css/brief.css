@@ -26,7 +26,7 @@
     z-index: 100 !important;
 }
 
-.file-delete-btn img {
+.file-delete-btn svg {
     width: calc(30 / 1920 * 100vw);
 }
 

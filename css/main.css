@@ -456,7 +456,7 @@
 
 }
 
-#portfolio-section .go-btn img{
+#portfolio-section .go-btn svg {
     margin-left: calc(30 / 1920 * 100vw);
     width: calc(35 / 1920 * 100vw);
 }

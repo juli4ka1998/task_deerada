@@ -2,19 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1382b0be-e7a1-45c7-b1a0-805400331c98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/icons/design-pic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/design-img-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/design-img-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/design-pic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/info.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/development-page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/down_arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/development-img-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/development-pic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/promotion-img-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/promotion-pic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/info-page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/promotion-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brief.html" beforeDir="false" afterPath="$PROJECT_DIR$/brief.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/brief.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/brief.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/design.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/design.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/shared.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/shared.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/design-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/design-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/design.svg" beforeDir="false" afterPath="$PROJECT_DIR$/icons/design.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/development.svg" beforeDir="false" afterPath="$PROJECT_DIR$/icons/development.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/promotion.svg" beforeDir="false" afterPath="$PROJECT_DIR$/icons/promotion.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/shared.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/shared.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,9 +29,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>

@@ -332,24 +332,24 @@ select:-webkit-autofill:focus {
     display: inline-block;
 }
 
-.go-btn img{
+.go-btn svg {
     margin-left: calc(10 / 1920 * 100vw);
     width: calc(46 / 1920 * 100vw);
     display: inline-block;
 }
 
-.back .go-btn {
-    right: auto;
-    left: 0;
-    display: flex;
-    align-items: flex-end;
-}
+/*.back .go-btn {*/
+/*    right: auto;*/
+/*    left: 0;*/
+/*    display: flex;*/
+/*    align-items: flex-end;*/
+/*}*/
 
-.back .go-btn img {
-    margin-left: 0;
-    margin-right: calc(20 / 1920 * 100vw);
-    margin-bottom: calc(-10 / 1920 * 100vw);
-}
+/*.back .go-btn img {*/
+/*    margin-left: 0;*/
+/*    margin-right: calc(20 / 1920 * 100vw);*/
+/*    margin-bottom: calc(-10 / 1920 * 100vw);*/
+/*}*/
 
 .social {
     writing-mode: vertical-rl;
@@ -596,4 +596,19 @@ select:-webkit-autofill:focus {
     to {
         width: calc(100 / 1920 * 100vw);
     }
+}
+
+.back {
+    display: flex;
+    align-items: flex-end;
+}
+
+.close-btn {
+    border: none;
+    background: none;
+}
+
+.close-btn img {
+    width: calc(23 / 1920 * 100vw);
+    margin-right: calc(20 / 1920 * 100vw);
 }
