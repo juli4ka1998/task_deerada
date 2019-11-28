@@ -146,7 +146,7 @@
     margin-top: calc(50 / 1920 * 100vw);
 }
 
-.technologies-container .column{
+.technologies-container .column {
     padding-left: calc(20 / 1920 * 100vw);
     padding-right: calc(20 / 1920 * 100vw);
     flex: 0 0 50%;

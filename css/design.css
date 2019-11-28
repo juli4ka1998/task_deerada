@@ -92,7 +92,7 @@ select {
     padding-top: 0;
     position: relative;
     height: 100%;
-    margin-bottom: calc(45 / 1920 * 100vw);
+    /*margin-bottom: calc(45 / 1920 * 100vw);*/
 }
 
 .page-content .left-title {
@@ -133,7 +133,7 @@ select {
     margin-left: calc(30 / 1920 * 100vw);
 }
 
-.page-content .title {
+.title {
     font-size: calc(82 / 1920 * 100vw);
     padding-left: calc(480 / 1920 * 100vw);
     padding-right: calc(380 / 1920 * 100vw);
@@ -220,13 +220,13 @@ select {
     line-height: 1.8;
 }
 
-.page-content .special-form-container {
-    margin-top: calc(100 / 1920 * 100vw);
-    padding-left: calc(150 / 1920 * 100vw);
-    padding-right: calc((350 / 1920 * 100vw) - (100vw - 100%));
+.special-form-container {
+    padding-top: calc(100 / 1920 * 100vw);
+    padding-left: calc(250 / 1920 * 100vw);
+    padding-right: calc((250 / 1920 * 100vw) - (100vw - 100%));
 }
 
-.page-content .special-form-container .title {
+.special-form-container .title {
     padding-left: 0;
     padding-right: 0;
     margin-top: calc(10 / 1920 * 100vw);
@@ -234,12 +234,12 @@ select {
     line-height: 1;
 }
 
-.page-content .special-form {
+.special-form {
     font-size: calc(24 / 1920 * 100vw);
     line-height: 3;
 }
 
-.page-content .special-form-item {
+.special-form-item {
     width: calc(350 / 1920 * 100vw);
     height: calc(40 / 1920 * 100vw);
     background: #000;
@@ -250,22 +250,22 @@ select {
     margin-right: calc(5 / 1920 * 100vw);
 }
 
-.page-content select.special-form-item {
+select.special-form-item {
     width: calc(400 / 1920 * 100vw);
     vertical-align: middle;
     line-height: 1.5;
 }
 
-.page-content select.special-form-item:focus ~ .down-arrow {
+select.special-form-item:focus ~ .down-arrow {
     transform: rotate(-180deg);
 }
 
-.page-content .select-container {
+.select-container {
     position: relative;
     display: inline-block;
 }
 
-.page-content .down-arrow {
+.down-arrow {
     width: calc(23 / 1920 * 100vw);
     fill: #fff;
     position: absolute;
@@ -274,11 +274,11 @@ select {
     /*z-index: 12;*/
 }
 
-.page-content .project-info {
+.project-info {
     width: calc(1280 / 1920 * 100vw);
 }
 
-.page-content .special-form-item::placeholder {
+.special-form-item::placeholder {
     color: #fff;
 }
 
@@ -301,33 +301,36 @@ select {
 
 }
 
-.page-content .cases {
+.cases {
     margin-top: calc(190 / 1920 * 100vw);
+    margin-bottom: calc(45 / 1920 * 100vw);
     position: relative;
+    padding-left: calc(100 / 1920 * 100vw);
+    padding-right: calc((100 / 1920 * 100vw) - (100vw - 100%));
 }
 
-.page-content .cases .title {
+.cases .title {
     padding-left: calc(160 / 1920 * 100vw);
     padding-right: 0;
 }
 
-.page-content .cases-carousel {
+.cases-carousel {
     width: calc(1440 / 1920 * 100vw);
     position: static;
 }
 
-.page-content .cases-carousel {
+.cases-carousel {
     width: calc(1440 / 1920 * 100vw);
     /*width: 100%;*/
     /*margin-right: calc(-280 / 1920 * 100vw);*/
     margin-top: calc(30 / 1920 * 100vw);
 }
 
-.page-content .cases-carousel .owl-item {
+.cases-carousel .owl-item {
     margin-left: calc(-0.1 / 1920 * 100vw);
 }
 
-.page-content .cases-carousel .owl-nav {
+.cases-carousel .owl-nav {
     position: absolute;
     display: flex;
     width: calc(120 / 1920 * 100vw);
@@ -335,12 +338,12 @@ select {
     align-items: flex-end;
     justify-content: space-between;
     flex-direction: row-reverse;
-    right: 0;
+    right: calc(100 / 1920 * 100vw);
     bottom: 0;
 }
 
-.page-content .cases-carousel .arrow-right,
-.page-content .cases-carousel .arrow-left {
+.cases-carousel .arrow-right,
+.cases-carousel .arrow-left {
     margin-bottom: calc(-10 / 1920 * 100vw);
 }
 
