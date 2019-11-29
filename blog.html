@@ -194,18 +194,20 @@
 
 	$(window).scroll (function () {
 			// console.log($(window).width());
-			console.log($(window).scrollTop());
+			// console.log($(window).scrollTop());
 			let gg = $("#articles").offset().top + $("#articles").height() - $(window).height();
 			// console.log($("#articles").offset().top);
 			if(($(window).scrollTop() > $(window).height()) && ($(window).scrollTop() < gg)){
               $("#blog-section .blog-nav").css({
-                "position": "fixed"
+                "position": "fixed",
+                left: "calc(220 / 1920 * 100vw)",
+                top: "calc(100 / 1920 * 100vw)"
               });
 			} else if ($(window).scrollTop() > gg){
               $("#blog-section .blog-nav").css({
                 "position": "absolute",
-                top: $("#articles").height() - $(this).height() + 100,
-                left: "calc(120 / 1920 * 100vw)"
+                top: $("#articles").height() - $(this).height() + 100 / 1920 * $(window).width(),
+                left: 0
               });
             } else {
               $("#blog-section .blog-nav").css({

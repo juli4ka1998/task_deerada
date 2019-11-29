@@ -9,7 +9,6 @@
 // });
 
 let currentPosition = 0;
-
 // Add event listener to menu button
 let menuBtn = $(".menu-btn");
 let menuBtnBar = $(".menu-btn__bar");
@@ -18,6 +17,7 @@ let header = $(".main-header");
 let content = $(".main-content");
 menuBtn.click(function () {
 		//Change menu-btn
+	console.log(9090);
 		menuBtn.toggleClass("menu-btn-clicked");
 
 		if(menuBtn.hasClass("menu-btn-clicked")){
@@ -129,3 +129,30 @@ owlCases.on('change.owl.carousel', function(event) {
 
 
 
+$(".big-btn-white").click(function () {
+	// console.log(9090);
+	// menuBtnBar.removeClass("menu-btn-show");
+	currentPosition = $(document).scrollTop();
+
+	$(".connect-popup").removeClass("hidden");
+	// header.css({
+	// 	zIndex: "auto",
+	// 	position: "absolute",
+	// 	top: "+=" + currentPosition
+	// });
+
+	$(".connect-popup").animate({
+		top: currentPosition,
+	}, 500, "linear", function () {
+		content.addClass("hidden");
+
+		$(".connect-popup").css({
+			top: 0
+		});
+
+		$(document).scrollTop(0);
+
+		// header.css({
+		// 	top: "-=" + currentPosition
+		});
+});
