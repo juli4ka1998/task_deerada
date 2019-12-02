@@ -2,18 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1382b0be-e7a1-45c7-b1a0-805400331c98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/article.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/article-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/article-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/article-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/article-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/article-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/case.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case-pic.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/shared.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/shared.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/design-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/cross.svg" beforeDir="false" afterPath="$PROJECT_DIR$/icons/cross.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/info-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/info-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/shared.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/shared.js" afterDir="false" />
@@ -28,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -97,7 +98,8 @@
       <workItem from="1574411509505" duration="22423000" />
       <workItem from="1574754090833" duration="21783000" />
       <workItem from="1574929710267" duration="19218000" />
-      <workItem from="1575018153353" duration="21779000" />
+      <workItem from="1575018153353" duration="22149000" />
+      <workItem from="1575275306071" duration="23440000" />
     </task>
     <task id="LOCAL-00001" summary="Change positioning elements in main, about and portfolio sections">
       <created>1573490134369</created>
@@ -176,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574954360953</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Create article page and popups">
+      <created>1575044543070</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1575044543071</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +216,7 @@
     <MESSAGE value="Create contacts section effects and update effects for menu" />
     <MESSAGE value="Create promotion, development and info pages" />
     <MESSAGE value="Create blog page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create blog page" />
+    <MESSAGE value="Create article page and popups" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create article page and popups" />
   </component>
 </project>

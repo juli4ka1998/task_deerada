@@ -393,11 +393,11 @@ select:-webkit-autofill:focus {
 /*    display: flex !important;*/
 /*}*/
 
-.menu {
-    display: flex;
-    padding: calc(100 / 1920 * 100vw);
-    padding-top: calc(120 / 1920 * 100vw);
-    padding-bottom: calc(70 / 1920 * 100vw);
+.menu-popup {
+    /*display: flex;*/
+    /*padding: calc(100 / 1920 * 100vw);*/
+    /*padding-top: calc(120 / 1920 * 100vw);*/
+    /*padding-bottom: calc(70 / 1920 * 100vw);*/
     position: absolute;
     z-index: 500;
     left: 0;
@@ -406,12 +406,40 @@ select:-webkit-autofill:focus {
     overflow-y: auto;
     overflow-x: hidden;
     background-color: rgb(44, 44, 44);
+    /*color: rgb(236, 236, 236);*/
+    /*flex-direction: column;*/
+    /*flex-wrap: wrap;*/
+    height: 100vh;
+    /*padding-right: 17px;*/
+    /*justify-content: center;*/
+}
+
+.menu {
+    display: flex;
+    padding: calc(100 / 1920 * 100vw);
+    padding-top: calc(120 / 1920 * 100vw);
+    padding-bottom: calc(70 / 1920 * 100vw);
+    /*padding-right: calc((100 / 1920 * 100vw) - (100vw - 100%));*/
+    /*position: absolute;*/
+    /*z-index: 500;*/
+    /*left: 0;*/
+    /*top: -140%;*/
+    position: relative;
+    width: 100%;
+    /*overflow-y: auto;*/
+    /*overflow-x: hidden;*/
+    /*background-color: rgb(44, 44, 44);*/
     color: rgb(236, 236, 236);
     flex-direction: column;
     /*flex-wrap: wrap;*/
-    height: 100vh;
+    height: 100%;
     justify-content: center;
 }
+
+/*::-webkit-scrollbar {*/
+/*    width: 0px;  !* Remove scrollbar space *!*/
+/*    background: transparent;  !* Optional: just make scrollbar invisible *!*/
+/*}*/
 
 .menu .languages {
     display: flex;
