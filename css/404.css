@@ -1,0 +1,65 @@
+.main-header .sections {
+    color: #fff;
+}
+
+.main-header .menu-btn__bar {
+    background: #fff;
+}
+
+.main-header {
+    position: fixed;
+}
+
+#unknown-page {
+    height: 100vh;
+    width: 100%;
+    background: black;
+    color: #fff;
+    display: flex;
+}
+
+#unknown-page .img-container {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: calc(100 / 1920 * 100vw);
+}
+
+
+#unknown-page .img-container img {
+    width: calc(700 / 1920 * 100vw);
+}
+
+#unknown-page .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 50%;
+    padding-left: calc(100 / 1920 * 100vw);
+}
+
+#unknown-page .text .problem {
+    font-size: calc(82 / 1920 * 100vw);
+    margin-bottom: calc(25 / 1920 * 100vw);
+    line-height: 1;
+}
+
+#unknown-page .text p {
+    color: #fff;
+    font-size: calc(24 / 1920 * 100vw);
+    padding-right: calc(200 / 1920 * 100vw);
+}
+
+#unknown-page .text .go-btn {
+    color: #b4c85a;
+    position: static;
+    font-size: calc(24 / 1920 * 100vw);
+    margin-top: calc(45 / 1920 * 100vw);
+}
+
+#unknown-page .text .go-btn svg {
+    fill: #b4c85a;
+    width: calc(31 / 1920 * 100vw);
+    margin-left: calc(30 / 1920 * 100vw);
+}

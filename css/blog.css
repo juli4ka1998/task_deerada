@@ -1,26 +1,11 @@
-.main-header .sections {
-    color: #000;
-}
-
-.main-header .menu-btn__bar {
-    background: #000;
-}
-
-.main-header {
-    position: absolute;
-}
-
 #blog-section {
     position: relative;
-    /*padding-right: 0;*/
     height: auto;
 }
 
 #blog-section .blog-title{
-    /*padding-bottom: calc(100 / 1920 * 100vw);*/
     display: flex;
     flex-direction: column;
-    /*justify-content: space-between;*/
 }
 
 #blog-section .section-title {
@@ -35,7 +20,7 @@
 #blog-section .blog-text {
     font-size: calc(16 / 1920 * 100vw);
     display: inline-block;
-    width: 25%;
+    width: 27%;
     line-height: 2;
     margin-top: calc(10 / 1920 * 100vw);
     margin-left: calc(20 / 1920 * 100vw);
@@ -89,18 +74,6 @@
     padding: 0 calc(220 / 1920 * 100vw);
     padding-bottom: calc(100 / 1920 * 100vw);
 }
-
-/*#blog-section .blog-nav {*/
-/*    font-size: calc(24 / 1920 * 100vw);*/
-/*    width: calc(360 / 1920 * 100vw);*/
-/*    height: calc(370 / 1920 * 100vw);*/
-/*    border: calc(2 / 1920 * 100vw) solid #000;*/
-/*    padding: calc(50 / 1920 * 100vw);*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: space-between;*/
-/*    margin-right: calc(280 / 1920 * 100vw);*/
-/*}*/
 
 #blog-section .blog-nav-container {
     position: relative;
@@ -213,7 +186,6 @@
 #article-page .article-content ul {
     margin-bottom: calc(25 / 1920 * 100vw);
     list-style: none;
-    /*margin-left: calc(25 / 1920 * 100vw);*/
 }
 
 #article-page .article-content li {

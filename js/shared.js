@@ -17,7 +17,6 @@ let header = $(".main-header");
 let content = $(".main-content");
 menuBtn.click(function () {
 		//Change menu-btn
-	// console.log(9090);
 		menuBtn.toggleClass("menu-btn-clicked");
 
 		if(menuBtn.hasClass("menu-btn-clicked")){
@@ -25,26 +24,20 @@ menuBtn.click(function () {
 			menuBtnBar.removeClass("menu-btn-show");
 			currentPosition = $(document).scrollTop();
 
-
-
-
 			menu.removeClass("hidden");
-			let scroll = ($(document).width() - menu.width()) ;
+
+			let scrollbarWidth = ($(document).width() - menu.width()) ;
+
+			header.addClass("menu-header");
 			header.css({
-				zIndex: "auto",
-				position: "absolute",
 				top: "+=" + currentPosition,
-				marginRight: scroll
-				// right: "calc((100 / 1920 * 100vw) + (100vw - 100%))"
+				marginRight: scrollbarWidth
 			});
 
-			$("body").css({
-				height: "100%",
-				overflowY: "hidden"
-			});
+			$("body").addClass("disable-content");
 
 			menu.css({
-				paddingRight: scroll
+				paddingRight: scrollbarWidth
 			});
 
 			menu.delay(400).animate({
@@ -52,16 +45,13 @@ menuBtn.click(function () {
 			}, 500, "linear", function () {
 				content.addClass("hidden");
 				menu.css({
-					top: 0,
-					// paddingRight: scroll
+					top: 0
 				});
 
 				$(document).scrollTop(0);
 
 				header.css({
-					top: "-=" + currentPosition,
-					// right: "calc((100 / 1920 * 100vw) + (100vw - 100%))"
-					// marginRight: scroll
+					top: "-=" + currentPosition
 				});
 			});
 		} else {
@@ -70,13 +60,11 @@ menuBtn.click(function () {
 			content.removeClass("hidden");
 
 			menu.css({
-				top: currentPosition,
-				// paddingRight: 0
+				top: currentPosition
 			});
 
 			header.css({
-				top: "+=" + currentPosition,
-				// marginRight: 0
+				top: "+=" + currentPosition
 			});
 
 			$(document).scrollTop(currentPosition);
@@ -89,20 +77,14 @@ menuBtn.click(function () {
 				});
 				menu.addClass("hidden");
 
-
+				header.removeClass("menu-header");
 				header.css({
-					position: "fixed",
-					"z-index": "300",
 					top: "-=" + currentPosition,
 					marginRight: 0
-					// right: "calc(100 / 1920 * 100vw)"
 				});
 
 				menuBtnBar.addClass("menu-btn-show");
-				$("body").css({
-					height: "auto",
-					overflow: "auto"
-				});
+				$("body").removeClass("disable-content");
 
 			});
 		}
@@ -128,7 +110,6 @@ owlPlan.owlCarousel({
 	dots: false,
 	margin: 30,
 	smartSpeed: 900,
-	// mouseDrag: false,
 	// nav:true,
 	// navText: [
 	// 	'<div class="arrow-right"><img src="./icons/arrow_right.svg" alt="right-arrow"></div>',
@@ -143,7 +124,6 @@ owlCases.owlCarousel({
 	dots: false,
 	margin: 0,
 	smartSpeed: 900,
-	// mouseDrag: false,
 	nav:true,
 	navText: [
 		'<div class="arrow-right"><img src="./icons/arrow_right.svg" alt="right-arrow"></div>',
@@ -177,7 +157,6 @@ $(".big-btn-white").click(function () {
 });
 
 $(".popup .close-btn").click(function () {
-	// currentPosition = $(document).scrollTop();
 	content.removeClass("hidden");
 	$(".connect-popup").css({
 		top: currentPosition
@@ -190,8 +169,5 @@ $(".popup .close-btn").click(function () {
 
 		$(".connect-popup").addClass("hidden");
 
-
-
-		// $(document).scrollTop(0);
 	});
 });

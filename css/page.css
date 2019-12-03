@@ -1,0 +1,48 @@
+#design-page .page-color {
+    background: #ff6767;
+}
+
+#design-page .page-color::before {
+    color: #ff6767 !important;
+}
+
+#development-page .page-color {
+    background: #00b5ff;
+}
+
+#development-page .page-color::before {
+    color: #00b5ff !important;
+}
+
+#promotion-page .page-color {
+    background: #b4c85a;
+}
+
+#promotion-page .page-color::before {
+    color: #b4c85a !important;
+}
+
+#promotion-page .page-content .result-items {
+    padding-right: calc(200 / 1920 * 100vw);
+    display: flex;
+}
+
+#promotion-page .page-content .result-item {
+    padding-right: calc(20 / 1920 * 100vw);
+    display: flex;
+    align-items: flex-end;
+}
+
+#promotion-page .page-content .result-item:before {
+    height: calc(70 / 1920 * 100vw);
+}
+
+#promotion-page .page-content .result-name {
+    font-size: calc(16 / 1920 * 100vw);
+    margin-bottom: 0;
+}
+
+#promotion-page .page-content .left-title {
+    transform: rotate(-90deg) translate(-100%, 50%);
+}
+

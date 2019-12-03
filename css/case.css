@@ -1,22 +1,123 @@
-.page-color {
+#case-page .page-color {
     background: #000;
 }
 
-.big-btn {
+#case-page .big-btn {
     color: #fff;
     margin-bottom: calc(50 / 1920 * 100vw);
 }
 
-.big-btn:hover {
+#case-page .big-btn:hover {
     color: #fff;
 }
 
-.big-btn svg {
+#case-page .big-btn svg {
     fill: #fff;
 }
 
-#case-page {
+#case-page .case-btn {
+    position: fixed;
+    top: 50vh;
+    transform: translateY(-50%);
+    z-index: 200;
+    cursor: pointer;
+}
 
+#case-page .case-btn a {
+    display: none;
+    width: calc(380 / 1920 * 100vw);
+    height: 100vh;
+    background: #ececec;
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#case-page .case-btn:hover {
+    height: 100vh;
+    top: 0;
+    transform: translateY(0%);
+    display: flex;
+    align-items: center;
+}
+
+#case-page .case-btn:hover a {
+    display: flex;
+}
+
+#case-page .case-btn .case-btn-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+#case-page .prev-case-btn {
+    left: calc(60 / 1920 * 100vw);
+}
+
+#case-page .prev-case-btn a {
+    left: calc(-60 / 1920 * 100vw);
+    padding-right: calc(30 / 1920 * 100vw);
+    padding-left: calc(90 / 1920 * 100vw);
+    text-align: right;
+}
+
+#case-page .next-case-btn {
+    right: calc((60 / 1920 * 100vw) - (100vw - 100%));
+}
+
+#case-page .next-case-btn a {
+    right: calc(-60 / 1920 * 100vw);
+    padding-right: calc(90 / 1920 * 100vw);
+    padding-left: calc(30 / 1920 * 100vw);
+}
+
+
+#case-page .case-btn .case-name {
+    display: block;
+    font-size: calc(24 / 1920 * 100vw);
+    margin-bottom: calc(5 / 1920 * 100vw);
+    margin-top: calc(20 / 1920 * 100vw);
+}
+
+#case-page .prev-case-btn .go-btn {
+    /*text-align: right;*/
+}
+
+#case-page .case-btn .go-btn {
+    position: static;
+    display: inline-block;
+    margin-top: calc(10 / 1920 * 100vw);
+}
+
+#case-page .case-btn .go-btn svg {
+    margin-left: 0;
+}
+
+#case-page .case-btn .case-img-container {
+    width: calc(540 / 1920 * 100vw);
+    height: calc(485 / 1920 * 100vw);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#case-page .case-btn .case-img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+#case-page .case-btn .case-text {
+    margin-top: calc(485 / 1920 * 100vw);
+    transform: translateY(50%);
+}
+
+#case-page .prev-case-btn .case-img-container {
+    left: 0;
+}
+
+#case-page .next-case-btn .case-img-container {
+    right: 0;
 }
 
 #case-page .case-title {
@@ -25,8 +126,8 @@
 }
 
 #case-page .case-title .img-container {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -65,7 +166,6 @@
 #case-page .case-content .main-info {
     width: calc(320 / 1920 * 100vw);
     line-height: 1.8;
-    /*flex: 25%*/
 }
 
 #case-page .case-content .case-info-item {
@@ -100,7 +200,6 @@
 }
 
 #case-page .case-content .case-main-page {
-    /*width: calc(31 / 1920 * 100vw);*/
     width: 100%;
     margin-top: calc(-165 / 1920 * 100vw);
     position: relative;
@@ -108,7 +207,6 @@
 }
 
 #case-page .case-content .case-main-page img {
-    /*width: calc(31 / 1920 * 100vw);*/
     width: 105%;
 }
 
@@ -147,7 +245,6 @@
     width: 93%;
 }
 
-
 #case-page .case-content .case-connect {
     padding-left: calc(565 / 1920 * 100vw);
     padding-right: calc(260 / 1920 * 100vw);
@@ -184,8 +281,6 @@
 }
 
 #case-page .case-content .case-mobile-img {
-    /*max-width: 50%;*/
-    /*flex: 0 0 50%;*/
     width: calc(375 / 1920 * 100vw);
     height: calc(720 / 1920 * 100vw);
 }
@@ -195,9 +290,6 @@
 }
 
 #case-page .case-content .case-mobile-img:first-of-type img {
-    /*max-width: 50%;*/
-    /*flex: 0 0 50%;*/
-    /*height: calc(700 / 1920 * 100vw);*/
     margin-left: calc(-225 / 1920 * 100vw);
     height: calc(707 / 1920 * 100vw);
 }

@@ -1,18 +1,8 @@
-.main-header .sections {
-    color: #000;
-}
 
-.main-header .menu-btn__bar {
-    background: #000;
-}
 
-.main-header {
-    position: absolute;
-}
-
-* {
-    color: #000;
-}
+/** {*/
+/*    color: #000;*/
+/*}*/
 
 .social {
     top: calc(60 / 1920 * 100vw);
@@ -45,7 +35,7 @@
     margin-right: calc(40 / 1920 * 100vw);
 }
 
-.brief-container .title {
+.brief-container .brief-title {
     font-size: calc(48 / 1920 * 100vw);
     margin-bottom: calc(20 / 1920 * 100vw);
 }
@@ -208,6 +198,7 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100%;
     height: calc(100 / 1920 * 100vw);
     margin-top: calc(100 / 1920 * 100vw);
+    margin-left: 0;
     border: none;
     font-size: calc(48 / 1920 * 100vw);
     margin-bottom: calc(100 / 1920 * 100vw);
