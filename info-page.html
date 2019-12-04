@@ -12,6 +12,13 @@
 </head>
 <body>
 <div class="menu-popup hidden">
+    <nav class="sections">
+        <a href="index.html#about-section" class="section">про нас</a>
+        <a href="index.html#portfolio-section" class="section">портфоліо</a>
+        <a href="index.html#team-section" class="section">команда</a>
+        <a href="index.html#contacts-section" class="section">контакти</a>
+        <a href="blog.html" class="blog-link section">блог</a>
+    </nav>
     <div class="menu">
         <h1 class="menu-title">чим займаємось <span>в <a href="index.html">deerada</a>?</span></h1>
         <div class="menu-content">
@@ -20,7 +27,7 @@
                 <a href="#">ru</a>
                 <a href="#">en</a>
             </div>
-            <button class="go-btn">
+            <button class="call-connect-popup go-btn">
                 <span>скажи привіт</span>
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      viewBox="0 0 294.8 294.8" style="enable-background:new 0 0 294.8 294.8;" xml:space="preserve">
@@ -78,7 +85,6 @@
         </div>
     </div>
 </div>
-
 <header class="main-header">
     <div class="back">
         <button class="close-btn">
@@ -91,14 +97,14 @@
         </button>
     </div>
     <div class="logo">
-        <a href="index.html">
+        <a href="index.html#slider-section">
             <img src="images/logo_dark.png" alt="logo">
         </a>
     </div>
     <button class="menu-btn">
-        <span class="menu-btn__bar menu-btn__line1"></span>
-        <span class="menu-btn__bar menu-btn__line2"></span>
-        <span class="menu-btn__bar menu-btn__line3"></span>
+        <span class="menu-btn__bar menu-btn__line1 menu-btn-show"></span>
+        <span class="menu-btn__bar menu-btn__line2 menu-btn-show"></span>
+        <span class="menu-btn__bar menu-btn__line3 menu-btn-show"></span>
     </button>
 </header>
 <div class="main-content" id="info-page">
@@ -207,11 +213,15 @@
             <h5 class="title">технології розробки</h5>
             <div class="technologies-container">
                 <div class="column">
-                    <div class="technology">
+                    <div class="technology" style="position: relative">
                         <span>wordpress</span>
+                        <div class="your_div_id" style="background: red; position: absolute; width: 50px; height: 50px;  z-index: 100">
+                        </div>
                     </div>
-                    <div class="technology">
+                    <div class="technology" style="position: relative">
                         <span>bootstrap</span>
+                        <div class="your_div_id" style="background: green; position: absolute; width: 50px; height: 50px;  z-index: 100">
+                        </div>
                     </div>
                     <div class="technology">
                         <span>css</span>
@@ -371,7 +381,7 @@
     </footer>
 
 </div>
-<div class="connect-popup popup hidden">
+<div class="contact-popup popup hidden">
     <button class="close-btn">
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              viewBox="0 0 31.112 31.112" style="enable-background:new 0 0 31.112 31.112;" xml:space="preserve">
@@ -413,7 +423,7 @@
         </form>
     </div>
 </div>
-<div class="send-info-popup popup hidden">
+<div class="info-popup popup hidden">
     <button class="close-btn">
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              viewBox="0 0 31.112 31.112" style="enable-background:new 0 0 31.112 31.112;" xml:space="preserve">
@@ -446,6 +456,38 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="js/shared.js"></script>
+<script src="js/carousels.js"></script>
+<script>
+	$(document).on('mousemove', function(e){
+			var parentOffset = $('.your_div_id').parent().offset();
+			// let k = 0;
+			// if((e.pageX - parentOffset.left) <= $('#your_div_id').parent().width()/2)
+            // {
+            // 	k = e.pageX - parentOffset.left + $('#your_div_id').parent().width()/2;
+            // } else {
+			// 	k = e.pageX - parentOffset.left;
+            // }
+      if((e.pageX - parentOffset.left) < 0 || (e.pageX - parentOffset.left) > $('.your_div_id').parent().width()){
+      	console.log("left");
+	      $('.your_div_id').css({
+		      display: "none"
+	      });
+      }
+      else if((e.pageY - parentOffset.top) < 0 || (e.pageY - parentOffset.top) > $('.your_div_id').parent().height()) {
+	      console.log("top");
+	      $('.your_div_id').css({
+		      display: "none"
+	      });
+      } else {
+	      $('.your_div_id').css({
+            display: "block",
+		      left:  e.pageX - parentOffset.left - $(".your_div_id").height()/2,
+		      top:   e.pageY - parentOffset.top - $(".your_div_id").height()/2
+	      });
+      }
+
+	});
+</script>
 </body>
 </html>
 

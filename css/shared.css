@@ -5,6 +5,7 @@
 
 html {
     width: 100vw;
+    /*scroll-behavior: smooth;*/
 }
 
 body {
@@ -387,12 +388,13 @@ input[type=number]::-webkit-outer-spin-button {
     position: absolute;
     z-index: 500;
     left: 0;
-    top: -140%;
+    top: -100%;
     width: 100%;
     overflow-y: auto;
     overflow-x: hidden;
     background-color: rgb(44, 44, 44);
     height: 100vh;
+    /*transform: translateY(-100%);*/
 }
 
 .menu-popup .sections {
@@ -555,13 +557,12 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: calc(24 / 1920 * 100vw);
     width: calc(900 / 1920 * 100vw);
 }
-/*-------------change name----------------*/
-.hide-person {
+
+.hide-active-item{
      opacity: 0;
 }
 
-/*------------change selector---------------*/
-.active {
+.owl-item.active {
     opacity: 1 !important;
     animation: none;
 }
@@ -611,7 +612,7 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100%;
     height: 100vh;
     background: #000;
-    top: -140%;
+    top: -100%;
     z-index: 800;
     display: flex;
     align-items: center;
@@ -690,11 +691,11 @@ input[type=number]::-webkit-outer-spin-button {
     color: #b4c85a;
 }
 
-
 .page-title {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .page-title .title-container {

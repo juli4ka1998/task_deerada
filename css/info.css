@@ -164,3 +164,12 @@
 #info-page .technologies-container .technology:first-of-type {
     border-top: calc(2 / 1920 * 100vw) solid #000;
 }
+
+/*.technology:hover div {*/
+/*    display: block !important;*/
+/*}*/
+
+.technology  span {
+    position: relative;
+    z-index: 200;
+}

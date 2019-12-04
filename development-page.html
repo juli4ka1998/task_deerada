@@ -11,30 +11,103 @@
     <link rel="stylesheet" href="css/page.css">
 </head>
 <body>
-
-<div class="main-content" id="development-page">
-    <header class="main-header">
-        <div class="back">
-            <button class="close-btn">
+<div class="menu-popup hidden">
+    <nav class="sections">
+        <a href="index.html#about-section" class="section">про нас</a>
+        <a href="index.html#portfolio-section" class="section">портфоліо</a>
+        <a href="index.html#team-section" class="section">команда</a>
+        <a href="index.html#contacts-section" class="section">контакти</a>
+        <a href="blog.html" class="blog-link section">блог</a>
+    </nav>
+    <div class="menu">
+        <h1 class="menu-title">чим займаємось <span>в <a href="index.html">deerada</a>?</span></h1>
+        <div class="menu-content">
+            <div class="languages">
+                <a href="#" class="lang-active">ua</a>
+                <a href="#">ru</a>
+                <a href="#">en</a>
+            </div>
+            <button class="call-connect-popup go-btn">
+                <span>скажи привіт</span>
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     viewBox="0 0 31.112 31.112" style="enable-background:new 0 0 31.112 31.112;" xml:space="preserve">
+                     viewBox="0 0 294.8 294.8" style="enable-background:new 0 0 294.8 294.8;" xml:space="preserve">
+                    <g>
+                        <path d="M215.1,73.4c-2.3,2.3-2.3,6.1,0,8.5l59.5,59.5H6.2c-3.3,0-6,2.7-6,6s2.7,6,6,6h268.4l-59.5,59.5c-2.3,2.3-2.3,6.1,0,8.5
+                            c2.3,2.3,6.1,2.3,8.5,0l69.8-69.8c1.2-1.2,1.8-2.7,1.8-4.2s-0.6-3.1-1.8-4.2l-69.8-69.8C221.2,71.1,217.4,71.1,215.1,73.4z"/>
+                    </g>
+            </svg>
+            </button>
+            <div class="menu-services">
+                <nav>
+                    <div class="menu-item-container">
+                        <a href="#" class="menu-services-item main-item"><span>розробка сайтів</span></a>
+                        <div class="menu-sub">
+                            <ul>
+                                <li><a href="#">розробка інтернет-магазину</a></li>
+                                <li><a href="#">розробка landing page</a></li>
+                                <li><a href="#">створення корпоративних сайтів</a></li>
+                                <li><a href="#">розробка веб-додатків</a></li>
+                                <li><a href="#">верстка email-шаблонів</a></li>
+                                <li><a href="#">розробка браузерних розширень</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu-item-container">
+                        <a href="#" class="menu-services-item main-item"><span>просування сайтів</span></a>
+                        <div class="menu-sub">
+                            <ul>
+                                <li><a href="#">створення корпоративних сайтів</a></li>
+                                <li><a href="#">верстка email-шаблонів</a></li>
+                                <li><a href="#">розробка браузерних розширень</a></li>
+                                <li><a href="#">розробка веб-додатків</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu-item-container">
+                        <a href="#" class="menu-services-item main-item"><span>маркетинг соціальних мереж</span></a>
+                        <div class="menu-sub">
+                            <ul>
+                                <li><a href="#">розробка веб-додатків</a></li>
+                                <li><a href="#">розробка інтернет-магазину</a></li>
+                                <li><a href="#">розробка landing page</a></li>
+                                <li><a href="#">розробка браузерних розширень</a></li>
+                                <li><a href="#">створення корпоративних сайтів</a></li>
+                                <li><a href="#">верстка email-шаблонів</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#" class="main-item"><span>підтримка сайтів</span></a>
+                    <a href="#" class="main-item"><span>просування в instagram</span></a>
+                    <a href="#" class="main-item"><span>налаштування рекламних</span><br><span> кампаній</span></a>
+                    <a href="#" class="main-item"><span>реклама в instagram</span></a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<header class="main-header">
+    <div class="back">
+        <button class="close-btn">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 31.112 31.112" style="enable-background:new 0 0 31.112 31.112;" xml:space="preserve">
                 <polygon points="31.112,1.414 29.698,0 15.556,14.142 1.414,0 0,1.414 14.142,15.556 0,29.698 1.414,31.112 15.556,16.97
                     29.698,31.112 31.112,29.698 16.97,15.556 "/>
                 </svg>
-                <span>закрити</span>
-            </button>
-        </div>
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/logo_dark.png" alt="logo">
-            </a>
-        </div>
-        <button class="menu-btn">
-            <span class="menu-btn__bar menu-btn__line1"></span>
-            <span class="menu-btn__bar menu-btn__line2"></span>
-            <span class="menu-btn__bar menu-btn__line3"></span>
+            <span>закрити</span>
         </button>
-    </header>
+    </div>
+    <div class="logo">
+        <a href="index.html#slider-section">
+            <img src="images/logo_dark.png" alt="logo">
+        </a>
+    </div>
+    <button class="menu-btn">
+        <span class="menu-btn__bar menu-btn__line1 menu-btn-show"></span>
+        <span class="menu-btn__bar menu-btn__line2 menu-btn-show"></span>
+        <span class="menu-btn__bar menu-btn__line3 menu-btn-show"></span>
+    </button>
+</header>
+<div class="main-content" id="development-page">
     <section class="page-title content">
         <div class="title-container">
             <img src="images/development-pic.png" alt="title-img">
@@ -246,6 +319,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="js/shared.js"></script>
+<script src="js/carousels.js"></script>
 </body>
 </html>
 

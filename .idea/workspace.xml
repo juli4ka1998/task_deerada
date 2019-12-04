@@ -2,22 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1382b0be-e7a1-45c7-b1a0-805400331c98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/404.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/404-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/next-case.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/carousels.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/article.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/brief.html" beforeDir="false" afterPath="$PROJECT_DIR$/brief.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case.html" beforeDir="false" afterPath="$PROJECT_DIR$/case.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/brief.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/brief.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/case.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/case.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/design.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/css/info.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/info.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/shared.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/shared.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/design-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/design-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/development-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/development-page.html" afterDir="false" />
@@ -36,9 +29,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -108,7 +101,8 @@
       <workItem from="1574929710267" duration="19218000" />
       <workItem from="1575018153353" duration="22149000" />
       <workItem from="1575275306071" duration="23581000" />
-      <workItem from="1575352427197" duration="21256000" />
+      <workItem from="1575352427197" duration="22100000" />
+      <workItem from="1575451475890" duration="23791000" />
     </task>
     <task id="LOCAL-00001" summary="Change positioning elements in main, about and portfolio sections">
       <created>1573490134369</created>
@@ -201,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575304079954</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update code, create 404 page, update menu and main-header">
+      <created>1575377153832</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1575377153833</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +235,7 @@
     <MESSAGE value="Create blog page" />
     <MESSAGE value="Create article page and popups" />
     <MESSAGE value="Create case page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create case page" />
+    <MESSAGE value="Update code, create 404 page, update menu and main-header" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update code, create 404 page, update menu and main-header" />
   </component>
 </project>

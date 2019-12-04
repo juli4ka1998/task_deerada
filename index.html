@@ -13,11 +13,11 @@
 <body>
 <div class="menu-popup hidden">
     <nav class="sections">
-        <a href="#about-section" class="section">про нас</a>
-        <a href="#portfolio-section" class="section">портфоліо</a>
-        <a href="#team-section" class="section">команда</a>
-        <a href="#contacts-section" class="section">контакти</a>
-        <a href="blog.html" class="section">блог</a>
+        <a href="index.html#about-section" class="section">про нас</a>
+        <a href="index.html#portfolio-section" class="section">портфоліо</a>
+        <a href="index.html#team-section" class="section">команда</a>
+        <a href="index.html#contacts-section" class="section">контакти</a>
+        <a href="blog.html" class="blog-link section">блог</a>
     </nav>
     <div class="menu">
         <h1 class="menu-title">чим займаємось <span>в <a href="index.html">deerada</a>?</span></h1>
@@ -27,7 +27,7 @@
                 <a href="#">ru</a>
                 <a href="#">en</a>
             </div>
-            <button class="go-btn">
+            <button class="call-connect-popup go-btn">
                 <span>скажи привіт</span>
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      viewBox="0 0 294.8 294.8" style="enable-background:new 0 0 294.8 294.8;" xml:space="preserve">
@@ -87,14 +87,14 @@
 </div>
 <header class="main-header">
     <nav class="sections">
-        <a href="#about-section" class="section">про нас</a>
-        <a href="#portfolio-section" class="section">портфоліо</a>
-        <a href="#team-section" class="section">команда</a>
-        <a href="#contacts-section" class="section">контакти</a>
-        <a href="blog.html" class="section">блог</a>
+        <a href="index.html#about-section" class="section">про нас</a>
+        <a href="index.html#portfolio-section" class="section">портфоліо</a>
+        <a href="index.html#team-section" class="section">команда</a>
+        <a href="index.html#contacts-section" class="section">контакти</a>
+        <a href="blog.html" class="blog-link section">блог</a>
     </nav>
     <div class="logo">
-        <a href="#slider-section">
+        <a href="index.html#slider-section">
             <img src="images/logo.png" alt="logo">
         </a>
     </div>
@@ -367,12 +367,84 @@
         </div>
     </div>
 </div>
+<div class="contact-popup popup hidden">
+    <button class="close-btn">
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 31.112 31.112" style="enable-background:new 0 0 31.112 31.112;" xml:space="preserve">
+                <polygon points="31.112,1.414 29.698,0 15.556,14.142 1.414,0 0,1.414 14.142,15.556 0,29.698 1.414,31.112 15.556,16.97
+                    29.698,31.112 31.112,29.698 16.97,15.556 "/>
+        </svg>
+    </button>
+    <div class="popup-content">
+        <h3 class="popup-title">залиш заявку</h3>
+        <span>і ми зв’яжемось з тобою у найближчий час або зателефонуй
+            нам за номером <a href="#" class="popup-link">+30 (050) 25-95-444</a></span>
+        <form class="form-data">
+            <div class="input-container">
+                <input type="text" id="popup-name" placeholder=" " class="form-input">
+                <label for="popup-name">введи своє ім’я</label>
+            </div>
+            <div class=" input-container">
+                <input type="number" id="popup-tel" placeholder=" " class="form-input">
+                <label for="popup-tel">введи свій номер телефону <sub>*</sub></label>
+            </div>
+            <div class=" input-container">
+                <input type="email" id="popup-email" placeholder=" " class="form-input">
+                <label for="popup-email">введи свою email адресу <sub>*</sub></label>
+            </div>
+            <div class="input-container">
+                <input type="text" id="popup-message" placeholder=" " class="form-input">
+                <label for="popup-message">напиши нам повідомлення</label>
+            </div>
+            <button class="go-right">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 294.8 294.8" style="enable-background:new 0 0 294.8 294.8;" xml:space="preserve">
+                    <g>
+                        <path d="M215.1,73.4c-2.3,2.3-2.3,6.1,0,8.5l59.5,59.5H6.2c-3.3,0-6,2.7-6,6s2.7,6,6,6h268.4l-59.5,59.5c-2.3,2.3-2.3,6.1,0,8.5
+                            c2.3,2.3,6.1,2.3,8.5,0l69.8-69.8c1.2-1.2,1.8-2.7,1.8-4.2s-0.6-3.1-1.8-4.2l-69.8-69.8C221.2,71.1,217.4,71.1,215.1,73.4z"/>
+                    </g>
+                </svg>
+            </button>
+
+        </form>
+    </div>
+</div>
+<div class="info-popup popup hidden">
+    <button class="close-btn">
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 31.112 31.112" style="enable-background:new 0 0 31.112 31.112;" xml:space="preserve">
+                <polygon points="31.112,1.414 29.698,0 15.556,14.142 1.414,0 0,1.414 14.142,15.556 0,29.698 1.414,31.112 15.556,16.97
+                    29.698,31.112 31.112,29.698 16.97,15.556 "/>
+        </svg>
+    </button>
+    <div class="popup-content">
+        <h3 class="popup-title">підпишись на нашу розсилку</h3>
+        <span>все, що тобі треба дізнатися про найновітніші технології,
+            тенденції в розробці та новинки ІТ-галузі. Без жодного спаму.</span>
+        <form class="form-data">
+            <div class=" input-container">
+                <input type="email" id="email-address" placeholder=" " class="form-input">
+                <label for="email-address">введи свою email адресу</label>
+            </div>
+            <button class="go-right">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 294.8 294.8" style="enable-background:new 0 0 294.8 294.8;" xml:space="preserve">
+                    <g>
+                        <path d="M215.1,73.4c-2.3,2.3-2.3,6.1,0,8.5l59.5,59.5H6.2c-3.3,0-6,2.7-6,6s2.7,6,6,6h268.4l-59.5,59.5c-2.3,2.3-2.3,6.1,0,8.5
+                            c2.3,2.3,6.1,2.3,8.5,0l69.8-69.8c1.2-1.2,1.8-2.7,1.8-4.2s-0.6-3.1-1.8-4.2l-69.8-69.8C221.2,71.1,217.4,71.1,215.1,73.4z"/>
+                    </g>
+                </svg>
+            </button>
+
+        </form>
+    </div>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 <script src="lib/jquery.scrollify.js"></script>
 <script src="js/shared.js"></script>
 <script src="js/main.js"></script>
-<script src="js/test.js"></script>
+<script src="js/carousels.js"></script>
 </body>
 </html>

@@ -67,52 +67,8 @@ leftBtn.addEventListener('click', () => {
 });
 
 
-// Team-section carousel
-let owl1 = $('.team-carousel');
-owl1.owlCarousel({
-	animateIn: 'fadeIn',
-	animateOut: 'fadeOut',
-	loop:true,
-	dots: false,
-	margin: 0,
-	smartSpeed: 900,
-	mouseDrag: false,
-	nav:true,
-	navText: [
-		'<div class="arrow-right"><img src="./icons/arrow_right.svg" alt="right-arrow"></div>',
-		'<div class="arrow-left"><img src="./icons/arrow_left.svg" alt="left-arrow"></div>'
-	],
-	items:2
-});
-
-owl1.on('change.owl.carousel', function(event) {
-	$('.team-carousel .owl-item').addClass("hide-person");
-});
 
 
-$(function() {
-	$.scrollify({
-		section : ".content",
-		easing: "easeInOutExpo",
-		scrollSpeed: 900,
-		offset : 0,
-		scrollbars: false,
-		setHeights: true,
-		overflowScroll: true,
-		updateHash: true,
-		touchScroll:true,
-		before:function() {
-			let current = $.scrollify.current();
-			current.removeClass("current-item");
-		},
-		after:function() {
-			let current = $.scrollify.current();
-			current.addClass("current-item");
-		},
-		afterResize:function() {},
-		afterRender:function() {}
-	});
-});
 
 // $(".slide img").hover(function(e){
 // 	let parentOffset = $(this).parent().offset();
@@ -168,3 +124,44 @@ changeHeader();
 window.onscroll = () => {
 	changeHeader();
 };
+
+// Scroll sections
+
+$(function() {
+	$.scrollify({
+		section : ".content",
+		easing: "easeInOutExpo",
+		scrollSpeed: 900,
+		offset : 0,
+		scrollbars: false,
+		setHeights: true,
+		overflowScroll: true,
+		updateHash: true,
+		touchScroll:true,
+		before:function() {
+			let current = $.scrollify.current();
+			current.removeClass("current-item");
+		},
+		after:function() {
+			let current = $.scrollify.current();
+			current.addClass("current-item");
+		},
+		afterResize:function() {},
+		afterRender:function() {
+			let current = $.scrollify.current();
+			current.addClass("current-item");
+		}
+	});
+
+
+	$(".sections a:not(.blog-link)").click(function() {
+		$.scrollify.move($(this).index() + 1);
+		if ($(this).parents('.menu-popup').length)
+			location.reload();
+	});
+
+	$(".logo a").click(function() {
+		$.scrollify.move($(this).index());
+	});
+});
+

@@ -11,15 +11,90 @@
     <link rel="stylesheet" href="css/blog.css">
 </head>
 <body>
+<div class="menu-popup hidden">
+    <nav class="sections">
+        <a href="index.html#about-section" class="section">про нас</a>
+        <a href="index.html#portfolio-section" class="section">портфоліо</a>
+        <a href="index.html#team-section" class="section">команда</a>
+        <a href="index.html#contacts-section" class="section">контакти</a>
+        <a href="blog.html" class="blog-link section">блог</a>
+    </nav>
+    <div class="menu">
+        <h1 class="menu-title">чим займаємось <span>в <a href="index.html">deerada</a>?</span></h1>
+        <div class="menu-content">
+            <div class="languages">
+                <a href="#" class="lang-active">ua</a>
+                <a href="#">ru</a>
+                <a href="#">en</a>
+            </div>
+            <button class="call-connect-popup go-btn">
+                <span>скажи привіт</span>
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 294.8 294.8" style="enable-background:new 0 0 294.8 294.8;" xml:space="preserve">
+                    <g>
+                        <path d="M215.1,73.4c-2.3,2.3-2.3,6.1,0,8.5l59.5,59.5H6.2c-3.3,0-6,2.7-6,6s2.7,6,6,6h268.4l-59.5,59.5c-2.3,2.3-2.3,6.1,0,8.5
+                            c2.3,2.3,6.1,2.3,8.5,0l69.8-69.8c1.2-1.2,1.8-2.7,1.8-4.2s-0.6-3.1-1.8-4.2l-69.8-69.8C221.2,71.1,217.4,71.1,215.1,73.4z"/>
+                    </g>
+            </svg>
+            </button>
+            <div class="menu-services">
+                <nav>
+                    <div class="menu-item-container">
+                        <a href="#" class="menu-services-item main-item"><span>розробка сайтів</span></a>
+                        <div class="menu-sub">
+                            <ul>
+                                <li><a href="#">розробка інтернет-магазину</a></li>
+                                <li><a href="#">розробка landing page</a></li>
+                                <li><a href="#">створення корпоративних сайтів</a></li>
+                                <li><a href="#">розробка веб-додатків</a></li>
+                                <li><a href="#">верстка email-шаблонів</a></li>
+                                <li><a href="#">розробка браузерних розширень</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu-item-container">
+                        <a href="#" class="menu-services-item main-item"><span>просування сайтів</span></a>
+                        <div class="menu-sub">
+                            <ul>
+                                <li><a href="#">створення корпоративних сайтів</a></li>
+                                <li><a href="#">верстка email-шаблонів</a></li>
+                                <li><a href="#">розробка браузерних розширень</a></li>
+                                <li><a href="#">розробка веб-додатків</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu-item-container">
+                        <a href="#" class="menu-services-item main-item"><span>маркетинг соціальних мереж</span></a>
+                        <div class="menu-sub">
+                            <ul>
+                                <li><a href="#">розробка веб-додатків</a></li>
+                                <li><a href="#">розробка інтернет-магазину</a></li>
+                                <li><a href="#">розробка landing page</a></li>
+                                <li><a href="#">розробка браузерних розширень</a></li>
+                                <li><a href="#">створення корпоративних сайтів</a></li>
+                                <li><a href="#">верстка email-шаблонів</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#" class="main-item"><span>підтримка сайтів</span></a>
+                    <a href="#" class="main-item"><span>просування в instagram</span></a>
+                    <a href="#" class="main-item"><span>налаштування рекламних</span><br><span> кампаній</span></a>
+                    <a href="#" class="main-item"><span>реклама в instagram</span></a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
 <header class="main-header">
     <nav class="sections">
-        <a href="#about-section" class="section">про нас</a>
-        <a href="#portfolio-section" class="section">портфоліо</a>
-        <a href="#team-section" class="section">команда</a>
-        <a href="#contacts-section" class="section">контакти</a>
+        <a href="index.html#about-section" class="section">про нас</a>
+        <a href="index.html#portfolio-section" class="section">портфоліо</a>
+        <a href="index.html#team-section" class="section">команда</a>
+        <a href="index.html#contacts-section" class="section">контакти</a>
+        <a href="blog.html" class="blog-link section">блог</a>
     </nav>
     <div class="logo">
-        <a href="#slider-section">
+        <a href="index.html#slider-section">
             <img src="images/logo_dark.png" alt="logo">
         </a>
     </div>
@@ -189,30 +264,30 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="js/shared.js"></script>
+<script src="js/carousels.js"></script>
 <script>
 
 	$(window).scroll (function () {
-			// console.log($(window).width());
-			// console.log($(window).scrollTop());
-			let gg = $("#articles").offset().top + $("#articles").height() - $(window).height();
-			// console.log($("#articles").offset().top);
-			if(($(window).scrollTop() > $(window).height()) && ($(window).scrollTop() < gg)){
-              $("#blog-section .blog-nav").css({
-                "position": "fixed",
-                left: "calc(220 / 1920 * 100vw)",
-                top: "calc(100 / 1920 * 100vw)"
-              });
-			} else if ($(window).scrollTop() > gg){
-              $("#blog-section .blog-nav").css({
-                "position": "absolute",
-                top: $("#articles").height() - $(this).height() + 100 / 1920 * $(window).width(),
-                left: 0
-              });
-            } else {
-              $("#blog-section .blog-nav").css({
-                "position": "static"
-              });
-            }
+      let articles = $("#articles");
+      let blogNav = $("#blog-section .blog-nav");
+      let scrollPosition = $(window).scrollTop();
+      let windowHeight = $(window).height();
+
+      let sectionEnd = articles.offset().top + articles.outerHeight() - windowHeight;
+
+      if(scrollPosition > windowHeight && scrollPosition < sectionEnd){
+        blogNav.addClass("fixed-nav");
+      } else if (scrollPosition > sectionEnd){
+        blogNav.removeClass("fixed-nav");
+        blogNav.css({
+          top: articles.outerHeight(true) - windowHeight
+        });
+      } else {
+        blogNav.removeClass("fixed-nav");
+        blogNav.css({
+          top: 0
+        });
+      }
     });
 
 </script>
