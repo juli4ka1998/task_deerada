@@ -805,14 +805,24 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100vw;
 }
 
+/*.page-content .plan-carousel ::after{*/
+/*    content: '';*/
+/*    display: block;*/
+/*    height: 100%;*/
+/*    padding-left: calc(160 / 1920 * 100vw);*/
+/*    margin-top: calc(50 / 1920 * 100vw);*/
+/*    width: calc(590 / 1920 * 100vw);*/
+/*    line-height: 1.6;*/
+/*}*/
+
 .page-content .plan-carousel .owl-item {
-    left: calc(420 / 1920 * 100vw);
+    left: calc(-70 / 1920 * 100vw);
     position: relative;
 }
 
-.page-content .plan-carousel .cloned {
-    opacity: 0;
-}
+/*.page-content .plan-carousel .cloned {*/
+/*    opacity: 0;*/
+/*}*/
 
 .page-content .plan-carousel .item-content {
     padding-left: calc(160 / 1920 * 100vw);
@@ -863,8 +873,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .special-form-container {
     padding-top: calc(100 / 1920 * 100vw);
-    padding-left: calc(250 / 1920 * 100vw);
-    padding-right: calc((250 / 1920 * 100vw) - (100vw - 100%));
+    padding-left: calc(260 / 1920 * 100vw);
+    padding-right: calc((260 / 1920 * 100vw) - (100vw - 100%));
 }
 
 .special-form-container .title {
@@ -878,6 +888,11 @@ input[type=number]::-webkit-outer-spin-button {
 .special-form {
     font-size: calc(24 / 1920 * 100vw);
     line-height: 3;
+}
+
+.special-form label {
+    display: inline-flex;
+    align-items: center;
 }
 
 .special-form-item {
@@ -914,8 +929,9 @@ select.special-form-item:focus ~ .down-arrow {
     right: calc(15 / 1920 * 100vw);
 }
 
-.project-info {
-    width: calc(1280 / 1920 * 100vw);
+.project-info,
+.project-info-label {
+    width: 100%;
 }
 
 .special-form-item::placeholder {

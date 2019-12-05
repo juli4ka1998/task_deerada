@@ -213,14 +213,16 @@
             <h5 class="title">технології розробки</h5>
             <div class="technologies-container">
                 <div class="column">
-                    <div class="technology" style="position: relative">
+                    <div class="technology">
                         <span>wordpress</span>
-                        <div class="your_div_id" style="background: red; position: absolute; width: 50px; height: 50px;  z-index: 100">
+                        <div class="moved-img hidden">
+                            <img src="icons/wordpress.svg" alt="wordpress">
                         </div>
                     </div>
-                    <div class="technology" style="position: relative">
+                    <div class="technology">
                         <span>bootstrap</span>
-                        <div class="your_div_id" style="background: green; position: absolute; width: 50px; height: 50px;  z-index: 100">
+                        <div class="moved-img hidden">
+                            <img src="icons/woocommerce.svg" alt="bootstrap">
                         </div>
                     </div>
                     <div class="technology">
@@ -323,8 +325,8 @@
                         <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 289.04"><title>down_arrow</title><g id="Шар_2" data-name="Шар 2"><g id="Layer_1" data-name="Layer 1"><path d="M246.1,191.91,62,7.86A27,27,0,0,0,24,7.86L7.86,24A27,27,0,0,0,7.86,62L227,281.19a27.15,27.15,0,0,0,38.19,0L484.14,62.25a27,27,0,0,0,0-38.07L468,8.06a27,27,0,0,0-38.06,0Z"/></g></g></svg>
                     </span>
                 для мого
-            </label>
-            <label>проекту
+            </label><br>
+            <label class="project-info-label">проекту
                 <input type="text" placeholder="опиши свій проект (необов’язково)" class="project-info special-form-item">.
             </label>
             <label>Зв’яжіться зі мною по email
@@ -458,35 +460,31 @@
 <script src="js/shared.js"></script>
 <script src="js/carousels.js"></script>
 <script>
-	$(document).on('mousemove', function(e){
-			var parentOffset = $('.your_div_id').parent().offset();
-			// let k = 0;
-			// if((e.pageX - parentOffset.left) <= $('#your_div_id').parent().width()/2)
-            // {
-            // 	k = e.pageX - parentOffset.left + $('#your_div_id').parent().width()/2;
-            // } else {
-			// 	k = e.pageX - parentOffset.left;
-            // }
-      if((e.pageX - parentOffset.left) < 0 || (e.pageX - parentOffset.left) > $('.your_div_id').parent().width()){
-      	console.log("left");
-	      $('.your_div_id').css({
-		      display: "none"
-	      });
-      }
-      else if((e.pageY - parentOffset.top) < 0 || (e.pageY - parentOffset.top) > $('.your_div_id').parent().height()) {
-	      console.log("top");
-	      $('.your_div_id').css({
-		      display: "none"
-	      });
-      } else {
-	      $('.your_div_id').css({
-            display: "block",
-		      left:  e.pageX - parentOffset.left - $(".your_div_id").height()/2,
-		      top:   e.pageY - parentOffset.top - $(".your_div_id").height()/2
-	      });
+    $(function () {
+      function moveElement(e, element) {
+        let parentOffset = element.parent().offset();
+        let offsetLeft = e.pageX - parentOffset.left;
+        let offsetTop = e.pageY - parentOffset.top;
+
+        if (offsetLeft > 0 && offsetLeft < element.parent().outerWidth()
+          && offsetTop > 0 && offsetTop < element.parent().outerHeight()) {
+          element.removeClass("hidden");
+          element.animate({
+            left:  offsetLeft - element.height()/2,
+            top:   offsetTop - element.height()/2
+          }, 0.0001);
+        } else {
+          element.addClass("hidden");
+        }
       }
 
-	});
+	    $(document).on('mousemove', function(event){
+          $('.moved-img').each(function() {
+            moveElement(event, $(this));
+          });
+	    });
+    });
+
 </script>
 </body>
 </html>

@@ -1,10 +1,32 @@
 let owlPlan = $('.plan-carousel');
 owlPlan.owlCarousel({
-	loop:true,
+	loop: false,
+	center: true,
 	dots: false,
 	margin: 30,
 	smartSpeed: 900,
-	items:2
+	items: 2
+});
+
+let index = 0;
+owlPlan.on('changed.owl.carousel', function(event) {
+	index = event.item.index;
+});
+
+owlPlan.on('mousewheel', '.owl-stage', function (e) {
+	if (e.originalEvent.deltaY > 0) {
+		if (index !== 3) {
+			owlPlan.trigger('next.owl', [2500]);
+			e.preventDefault();
+		}
+
+	} else {
+		if (index !== 0) {
+			owlPlan.trigger('prev.owl', [2500]);
+			e.preventDefault();
+		}
+
+	}
 });
 
 let owlCases = $('.cases-carousel');

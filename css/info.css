@@ -159,17 +159,40 @@
     border-bottom: calc(2 / 1920 * 100vw) solid #000;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 #info-page .technologies-container .technology:first-of-type {
     border-top: calc(2 / 1920 * 100vw) solid #000;
 }
 
-/*.technology:hover div {*/
-/*    display: block !important;*/
-/*}*/
-
-.technology  span {
+#info-page .technologies-container .technology span {
     position: relative;
     z-index: 200;
+    transition: color .1s linear;
+}
+
+#info-page .technologies-container .technology:hover span {
+    color: #b4c85a;
+}
+
+#info-page .technologies-container .moved-img {
+    position: absolute;
+    z-index: 100;
+    height: calc(100 / 1920 * 100vw);
+    opacity: 0;
+    animation: showImg .2s linear forwards;
+}
+
+#info-page .technologies-container .moved-img img {
+    height: 100%;
+}
+
+@keyframes showImg {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

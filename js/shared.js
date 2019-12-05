@@ -111,3 +111,8 @@ $(".popup .close-btn").click(function () {
 	});
 
 });
+
+$(".back .close-btn").click(function (event) {
+	event.preventDefault();
+	history.back();
+});
