@@ -1,14 +1,16 @@
-
-
-/** {*/
-/*    color: #000;*/
-/*}*/
-
 .social {
     top: calc(60 / 1920 * 100vw);
-    right: calc(-100 / 1920 * 100vw);
+    right: 0;
     width: calc(420 / 1920 * 100vw);
     height: calc(450 / 1920 * 100vw);
+}
+
+.file-upload-btn {
+    height: 100%;
+}
+
+.file-upload-btn svg {
+    margin-left: calc(10 / 1920 * 100vw);
 }
 
 .file-delete-btn {
@@ -21,18 +23,54 @@
 }
 
 .brief-container {
-    margin-top: calc(100 / 1920 * 100vw);
+    padding-top: calc(100 / 1920 * 100vw);
 }
 
 .brief-container .title-container {
     display: flex;
     align-items: center;
+    padding-top: calc(100 / 1920 * 100vw);
+    position: relative;
 }
 
-.brief-container .cube {
+.brief-container .boxes {
+    position: absolute;
+    left: calc(100 / 1920 * 100vw);
+    top: calc(110 / 1920 * 100vw);
+    width: calc(120 / 1920 * 100vw);
+    margin-right: calc(40 / 1920 * 100vw);
+    z-index: 100;
+    cursor: pointer;
+}
+
+.brief-container .boxes:hover .mini-box {
+    margin-top: calc(-100 / 1920 * 100vw);
+    animation: jumpDown .25s ease-in-out forwards .15s;
+}
+
+.brief-container .box {
     width: calc(120 / 1920 * 100vw);
     height: calc(120 / 1920 * 100vw);
-    margin-right: calc(40 / 1920 * 100vw);
+    margin-bottom: calc(40 / 1920 * 100vw);
+    z-index: 100;
+    position: relative;
+}
+
+.brief-container .mini-box {
+    display: block;
+    width: calc(60 / 1920 * 100vw);
+    margin-top: 0;
+    height: calc(60 / 1920 * 100vw);
+    margin-bottom: calc(20 / 1920 * 100vw);
+    animation: jumpUp .25s ease-in-out forwards .15s;
+}
+
+.brief-container .mini-box:first-of-type {
+    animation-delay: 0s;
+}
+
+.brief-container .boxes:hover .mini-box:last-of-type {
+    animation-delay: 0s;
 }
 
 .brief-container .brief-title {
@@ -51,8 +89,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: calc(40 / 1920 * 100vw);
-    padding-left: calc(160 / 1920 * 100vw);
-    padding-right: calc(320 / 1920 * 100vw);
+    padding-right: calc(420 / 1920 * 100vw);
 }
 
 .brief-container .separator {
@@ -283,4 +320,22 @@ input[type=number]::-webkit-outer-spin-button {
     height: 100%;
 }
 
+@keyframes jumpDown {
+    0% {
+        margin-top: calc(-100 / 1920 * 100vw);
+    }
 
+    100% {
+        margin-top: 0;
+    }
+}
+
+@keyframes jumpUp {
+    0% {
+        margin-top: 0;
+    }
+
+    100% {
+        margin-top: calc(-100 / 1920 * 100vw)
+    }
+}

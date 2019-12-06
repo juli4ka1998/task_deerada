@@ -5,27 +5,40 @@ owlPlan.owlCarousel({
 	dots: false,
 	margin: 30,
 	smartSpeed: 900,
+	rewind: false,
+	slideSpeed : 7000,
 	items: 2
 });
 
 let index = 0;
-owlPlan.on('changed.owl.carousel', function(event) {
+let prevIndex = -1;
+let count = 0;
+owlPlan.on('translated.owl.carousel', function(event) {
 	index = event.item.index;
+	count = event.item.count;
 });
 
 owlPlan.on('mousewheel', '.owl-stage', function (e) {
 	if (e.originalEvent.deltaY > 0) {
-		if (index !== 3) {
-			owlPlan.trigger('next.owl', [2500]);
+		if (index !== prevIndex && index !== count - 1) {
+			prevIndex = index;
+			owlPlan.trigger('next.owl', 500);
 			e.preventDefault();
+		} else if (index !== count - 1) {
+			e.preventDefault();
+		} else {
+			prevIndex = -1;
 		}
-
 	} else {
-		if (index !== 0) {
-			owlPlan.trigger('prev.owl', [2500]);
+		if (index !== prevIndex && index !== 0) {
+			prevIndex = index;
+			owlPlan.trigger('prev.owl', 500);
 			e.preventDefault();
+		} else if (index !== 0) {
+			e.preventDefault();
+		} else {
+			prevIndex = -1;
 		}
-
 	}
 });
 

@@ -52,14 +52,7 @@
 }
 
 #unknown-page .text .go-btn {
-    color: #b4c85a;
     position: static;
-    font-size: calc(24 / 1920 * 100vw);
     margin-top: calc(45 / 1920 * 100vw);
 }
 
-#unknown-page .text .go-btn svg {
-    fill: #b4c85a;
-    width: calc(31 / 1920 * 100vw);
-    margin-left: calc(30 / 1920 * 100vw);
-}

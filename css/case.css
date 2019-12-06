@@ -80,17 +80,15 @@
     margin-top: calc(20 / 1920 * 100vw);
 }
 
-#case-page .prev-case-btn .go-btn {
-    /*text-align: right;*/
-}
-
 #case-page .case-btn .go-btn {
     position: static;
     display: inline-block;
     margin-top: calc(10 / 1920 * 100vw);
+    transition: none;
 }
 
-#case-page .case-btn .go-btn svg {
+#case-page .case-btn .go-btn:hover {
+    margin-right: 0;
     margin-left: 0;
 }
 
@@ -123,7 +121,6 @@
 #case-page .case-title {
     position: relative;
     height: 100vh;
-    padding: 0 calc(260 / 1920 * 100vw);
 }
 
 #case-page .case-title .img-container {
@@ -159,8 +156,6 @@
 
 #case-page .case-content .case-info {
     display: flex;
-    padding-left: calc(260 / 1920 * 100vw);
-    padding-right: calc(260 / 1920 * 100vw);
 }
 
 #case-page .case-content .main-info {
@@ -187,23 +182,12 @@
 }
 
 #case-page .case-content .case-info .go-btn {
-    position: static;
-    font-size: calc(24 / 1920 * 100vw);
-    color: #b4c85a;
     margin-top: calc(20 / 1920 * 100vw);
-}
-
-#case-page .case-content .case-info .go-btn svg{
-    width: calc(31 / 1920 * 100vw);
-    margin-left: calc(30 / 1920 * 100vw);
-    fill: #b4c85a;
 }
 
 #case-page .case-content .case-main-page {
     /*width: 100%;*/
     margin-top: calc(-170 / 1920 * 100vw);
-    margin-left: calc(260 / 1920 * 100vw);
-    margin-right: calc(260 / 1920 * 100vw);
     position: relative;
     z-index: -1;
 }
@@ -215,8 +199,6 @@
 
 #case-page .case-content .case-description {
     margin-top: calc(120 / 1920 * 100vw);
-    padding-left: calc(580 / 1920 * 100vw);
-    padding-right: calc((580 / 1920 * 100vw) - (100vw - 100%));
     line-height: 1.8;
 }
 
@@ -230,8 +212,6 @@
     justify-content: center;
     margin-top: calc(100 / 1920 * 100vw);
     margin-bottom: calc(100 / 1920 * 100vw);
-    margin-left: calc(260 / 1920 * 100vw);
-    margin-right: calc(260 / 1920 * 100vw);
 }
 
 #case-page .case-content .case-img img {
@@ -240,8 +220,6 @@
 
 #case-page .case-content .main-screen {
     margin-bottom: calc(-250 / 1920 * 100vw);
-    margin-left: calc(260 / 1920 * 100vw);
-    margin-right: calc(260 / 1920 * 100vw);
 }
 
 #case-page .case-content  .main-screen img {
@@ -250,14 +228,13 @@
 }
 
 #case-page .case-content .case-connect {
-    padding-left: calc(565 / 1920 * 100vw);
-    padding-right: calc(260 / 1920 * 100vw);
     display: flex;
     align-items: center;
 }
 
 #case-page .case-content  .case-call-popup {
-    width: calc(750 / 1920 * 100vw);
+    width: calc(1055 / 1920 * 100vw);
+    padding-left: calc(305 / 1920 * 100vw);
     height: calc(480 / 1920 * 100vw);
     margin-right: calc(-90 / 1920 * 100vw);
 }
@@ -278,8 +255,6 @@
 #case-page .case-content .case-mobile-imgs {
     display: flex;
     justify-content: space-between;
-    padding-left: calc(580 / 1920 * 100vw);
-    padding-right: calc((580 / 1920 * 100vw) - (100vw - 100%));
     margin-top: calc(100 / 1920 * 100vw);
     margin-bottom: calc(80 / 1920 * 100vw);
 }
@@ -304,8 +279,6 @@
     display: flex;
     justify-content: space-between;
     margin-top: 0;
-    padding-left: calc(260 / 1920 * 100vw);
-    padding-right: calc((260 / 1920 * 100vw) - (100vw - 100%));
 }
 
 #case-page .case-content .design-items div {

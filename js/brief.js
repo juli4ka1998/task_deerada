@@ -33,7 +33,7 @@ $( function() {
 
 // File upload
 $('#file-upload').change(function() {
-	var file = $('#file-upload')[0].files[0];
+	let file = $('#file-upload')[0].files[0];
 	if(file) {
 		$('#file-upload ~ span').text(file.name);
 		$('.file-upload-btn ').addClass('hidden');

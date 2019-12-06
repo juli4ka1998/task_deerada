@@ -23,7 +23,7 @@
 }
 
 #promotion-page .page-content .result-items {
-    padding-right: calc(200 / 1920 * 100vw);
+    width: calc(100% + 255 / 1920 * 100vw);
     display: flex;
 }
 

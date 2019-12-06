@@ -29,13 +29,12 @@
 
 #info-page .main-title {
     height: auto;
-    padding-left: calc(580 / 1920 * 100vw);
+    padding-top: calc(100 / 1920 * 100vw);
 }
 
 #info-page .main-title h2 {
     margin-top: calc(130 / 1920 * 100vw);
     font-size: calc(82 / 1920 * 100vw);
-    width: 55%;
     margin-bottom: 0;
     line-height: 1.2;
 }
@@ -61,17 +60,10 @@
     margin-bottom: calc(40 / 1920 * 100vw);
 }
 
-#info-page .info-items + .go-btn {
-    color: #b4c85a;
-}
-
-#info-page .info-items + .go-btn svg {
-    fill: #b4c85a;
-}
-
 #info-page .result-items {
     display: flex;
     flex-wrap: wrap;
+    margin-top: calc(10 / 1920 * 100vw);
 }
 
 #info-page .result {
@@ -81,22 +73,21 @@
 
 #info-page .result-item {
     flex: 0 0 50%;
-    padding-left: calc(50 / 1920 * 100vw);
+    padding-left: calc(60 / 1920 * 100vw);
     color: inherit;
 }
 
 #info-page .result-item:nth-child(odd) {
-    padding-right: calc(50 / 1920 * 100vw);
+    padding-right: calc(60 / 1920 * 100vw);
     padding-left: 0;
 }
 
 #info-page .page-content .result {
     margin-top: calc(100 / 1920 * 100vw);
     width: 100vw;
-    margin-left: calc(-100 / 1920 * 100vw);
+    margin-left: calc(-580 / 1920 * 100vw);
     padding-top: calc(100 / 1920 * 100vw);
     padding-bottom: calc(100 / 1920 * 100vw);
-    padding-left: calc(100 / 1920 * 100vw);
 }
 
 #info-page .page-content .result .result-name {
@@ -125,7 +116,7 @@
 #info-page .page-content .btn-container {
     display: flex;
     width: 100vw;
-    margin-left: calc(-100 / 1920 * 100vw);
+    margin-left: calc(-580 / 1920 * 100vw);
 }
 
 #info-page .page-content .btn-container .big-btn{
@@ -139,8 +130,6 @@
 
 #info-page .technologies-container {
     display: flex;
-    padding-left: calc(480 / 1920 * 100vw);
-    padding-right: calc((680 / 1920 * 100vw) - (100vw - 100%));
     margin-top: calc(50 / 1920 * 100vw);
 }
 

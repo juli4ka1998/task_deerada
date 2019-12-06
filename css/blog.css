@@ -83,8 +83,6 @@
 #blog-section .blog-nav {
     z-index: 12;
     position: absolute;
-    /*top: calc(100 / 1920 * 100vw);*/
-    /*left: calc(220 / 1920 * 100vw);*/
     top: 0;
     left: 0;
     font-size: calc(24 / 1920 * 100vw);
@@ -145,11 +143,6 @@
     top: calc(100 / 1920 * 100vw) !important;
 }
 
-.center-text {
-    padding-left: calc(580 / 1920 * 100vw);
-    padding-right: calc((580 / 1920 * 100vw) - (100vw - 100%));
-}
-
 #article-page .article-title {
     padding-top: calc(100 / 1920 * 100vw);
     height: 100vh;
@@ -159,7 +152,6 @@
 }
 
 #article-page .article-title .title {
-    padding: 0 calc(260 / 1920 * 100vw);
     margin-top: calc(100 / 1920 * 100vw);
 }
 
@@ -221,7 +213,6 @@
 #article-page .next-article {
     display: flex;
     flex-direction: column;
-    padding: 0 calc(100 / 1920 * 100vw);
     margin-bottom: calc(45 / 1920 * 100vw);
 }
 
@@ -254,8 +245,6 @@
 }
 
 #article-page .picture {
-    padding-left: calc(260 / 1920 * 100vw);
-    padding-right: calc((260 / 1920 * 100vw) - (100vw - 100%));
     padding-top: calc(40 / 1920 * 100vw);
     padding-bottom: calc(40 / 1920 * 100vw);
 }

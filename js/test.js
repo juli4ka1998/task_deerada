@@ -3,7 +3,7 @@ $('.go-right').click(function () {
 
 
 	javascript:window.location.assign("./brief.html");
-	localStorage.setItem('brief-color', "#b29eca");
+	localStorage.setItem('brief-color', "#ff6767");
 
 });
 
@@ -14,15 +14,15 @@ $('.go-right').click(function () {
 //
 // });
 
-if(localStorage.getItem('brief-color') === '#b29eca') {
+if(localStorage.getItem('brief-color') === '#ff6767') {
 	$("head").append('<style type="text/css"></style>');
 	var newStyleElement = $("head").children(':last');
-	newStyleElement.html('.brief-color {background:#b29eca;}');
+	newStyleElement.html('.brief-color {background: #ff6767;}');
 	// localStorage.removeItem("brief-color")
 }
 else if(localStorage.getItem('brief-color') === 'green') {
 	$("head").append('<style type="text/css"></style>');
 	var newStyleElement = $("head").children(':last');
-	newStyleElement.html('.brief-color {background:#b29eca;}');
+	newStyleElement.html('.brief-color {background:#ff6767;}');
 	// localStorage.removeItem("brief-color")
 }
