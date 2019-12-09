@@ -2,6 +2,11 @@
     background: #000;
 }
 
+
+#info-page .page-color:not(span):hover {
+    background-color: rgba(0, 0, 0, .7);
+}
+
 #info-page .big-btn {
     color: #fff;
 }

@@ -119,9 +119,24 @@
     background: #b4c85a;
 }
 
+#blog-section .page-color:not(span):hover {
+    background-color: rgba(180, 200, 90, 0.7);
+}
+
 #blog-section .special-form-container {
     background: #000;
     color: #fff;
+    position: relative;
+}
+
+#blog-section .special-form-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(150 / 1920 * 100vw);
+    background: #ececec;
 }
 
 #blog-section .special-form-item {

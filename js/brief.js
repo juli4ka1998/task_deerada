@@ -41,6 +41,10 @@ $('#file-upload').change(function() {
 	}
 });
 
+	$('.file-upload-btn').click(function() {
+		$('#file-upload').click();
+	});
+
 // Remove chosen file
 $('.file-delete-btn').click(function() {
 	$('#file-upload').val('');

@@ -340,7 +340,7 @@ input[type=number]::-webkit-outer-spin-button {
     bottom: 0;
     right: 0;
     font-size: calc(24 / 1920 * 100vw);
-    transition: margin-left .2s linear;
+    transition: color .2s linear;
 }
 
 .go-btn span {
@@ -349,12 +349,20 @@ input[type=number]::-webkit-outer-spin-button {
 
 .go-btn svg {
     margin-left: calc(30 / 1920 * 100vw);
+    position: relative;
     width: calc(32 / 1920 * 100vw);
     display: inline-block;
+    right: 0;
+    transition: right .2s linear, fill .2s linear;
 }
 
 .go-btn:hover {
-    margin-left: calc(10 / 1920 * 100vw);
+    color: rgba(0, 0, 0, .5);
+}
+
+.go-btn:hover svg {
+    right: calc(-10 / 1920 * 100vw);
+    fill: rgba(0, 0, 0, .5);
 }
 
 .big-arrow-btn {
@@ -362,18 +370,19 @@ input[type=number]::-webkit-outer-spin-button {
     z-index: 20;
     bottom: 0;
     right: 0;
-    transition: margin-right .2s linear;
+    /*transition: margin-right .2s linear;*/
     height: calc(60 / 1920 * 100vw);
     font-size: calc(16 / 1920 * 100vw);
 }
 
 .big-arrow-btn:hover {
-    margin-right: calc(-10 / 1920 * 100vw);
+    /*margin-right: calc(-10 / 1920 * 100vw);*/
 }
 
 .big-arrow-btn svg {
     width: calc(46 / 1920 * 100vw);
-    margin-left: 0;
+    /*margin-left: 0;*/
+    fill: #000 !important;
 }
 
 .social {
@@ -388,7 +397,8 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: calc(20 / 1920 * 100vw);
 }
 
-.social a {
+.social a,
+.footer-social a {
     transition: color 0.1s linear;
 }
 
@@ -756,22 +766,39 @@ input[type=number]::-webkit-outer-spin-button {
     right: calc(100 / 1920 * 100vw);
 }
 
-.page-title .brief-btn span {
+.page-title .brief-btn {
+    position: absolute;
     width: calc(120 / 1920 * 100vw);
     height: calc(120 / 1920 * 100vw);
+    top: calc(200 / 1920 * 100vw);
+    right: calc(100 / 1920 * 100vw);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: calc(24 / 1920 * 100vw);
 }
 
-.page-title .brief-btn img {
+.page-title .brief-btn span {
+    width: 100%;
+    right: 0;
+    text-align: center;
+    font-size: calc(24 / 1920 * 100vw);
+    position: relative;
+    transition: right .2s linear;
+}
+
+.page-title .brief-btn svg {
     width: calc(32 / 1920 * 100vw);
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     right: calc(-22 / 1920 * 100vw);
 }
+
+.page-title .brief-btn:hover span {
+    right: calc(-10 / 1920 * 100vw);
+}
+
+/*.page-title .brief-btn:hover img {*/
+/*    right: calc(-100 / 1920 * 100vw);*/
+/*}*/
 
 .page-content {
     padding-top: 0;
@@ -897,6 +924,10 @@ input[type=number]::-webkit-outer-spin-button {
     margin-right: calc(5 / 1920 * 100vw);
 }
 
+.special-form-item:focus::placeholder {
+    opacity: .5;
+}
+
 select.special-form-item {
     width: calc(400 / 1920 * 100vw);
     vertical-align: middle;
@@ -937,16 +968,25 @@ select.special-form-item:focus ~ .down-arrow {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: static;
+    position: relative;
     margin-top: calc(90 / 1920 * 100vw);
+    transition: background-color .2s ease-in-out;
+    z-index: 1;
+    /*position: relative;*/
+
 }
 
 .big-btn:hover {
-    margin-left: calc(-260 / 1920 * 100vw);
+    color: #000;
+    /*opacity: .7;*/
 }
 
 .big-btn svg {
     margin-left: calc(40 / 1920 * 100vw);
+}
+
+.big-btn:hover svg {
+    fill: #000;
 }
 
 .cases {
@@ -1000,9 +1040,17 @@ select.special-form-item:focus ~ .down-arrow {
 }
 
 .main-footer .footer-contacts {
-    display: flex;
-    justify-content: space-between;
-    width: calc(400 / 1920 * 100vw);
+     display: flex;
+     justify-content: space-between;
+     width: calc(400 / 1920 * 100vw);
+ }
+
+.main-footer .footer-contacts a {
+    transition: opacity 0.1s linear;
+}
+
+.main-footer .footer-contacts a:hover {
+    opacity: .6;
 }
 
 .main-footer .footer-social {

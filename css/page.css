@@ -2,6 +2,10 @@
     background: #ff6767;
 }
 
+#design-page .page-color:not(.brief-btn):hover {
+    background-color: rgba(255, 103, 103, .7);
+}
+
 #design-page .page-color::before {
     color: #ff6767 !important;
 }
@@ -10,12 +14,20 @@
     background: #00b5ff;
 }
 
+#development-page .page-color:not(span):hover {
+    background-color: rgba(0, 181, 255, .7);
+}
+
 #development-page .page-color::before {
     color: #00b5ff !important;
 }
 
 #promotion-page .page-color {
     background: #b4c85a;
+}
+
+#promotion-page .page-color:not(span):hover {
+    background-color: rgba(180, 200, 90, .7);
 }
 
 #promotion-page .page-color::before {
