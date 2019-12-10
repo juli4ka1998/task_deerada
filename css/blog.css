@@ -119,7 +119,7 @@
     background: #b4c85a;
 }
 
-#blog-section .page-color:not(span):hover {
+#blog-section .page-color:hover {
     background-color: rgba(180, 200, 90, 0.7);
 }
 
@@ -146,6 +146,19 @@
 
 #blog-section .special-form-item::placeholder {
     color: #000;
+}
+
+#blog-section .down-arrow {
+    fill: #000;
+}
+
+#blog-section .select-option {
+    border-color: #000;
+}
+
+#blog-section .select-option:hover, #blog-section .select-option:focus {
+    color: #fff;
+    background-color: #000;
 }
 
 #blog-section .learn-more {

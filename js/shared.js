@@ -76,40 +76,61 @@ $('.menu-services-item').hover(function () {
 }, function () {});
 
 
-// Open popup
-function callPopup(popup) {
-	popup.removeClass("hidden");
+$(function () {
+	let currentPosition = $(document).scrollTop();
+	// Open popup
+	function callPopup(popup) {
+		$("body").addClass("disable-content");
+		popup.removeClass("hidden");
+		currentPosition = $(document).scrollTop();
+		popup.css({
+			top: "+=" + currentPosition
+		});
 
-	popup.animate({
-		top: 0
-	}, 300, "linear", function () {
-		menu.addClass("hidden");
-		content.addClass("hidden");
-	});
-}
+		popup.animate({
+			top: currentPosition
+		}, 300, "linear", function () {
+			menu.addClass("hidden");
+			content.addClass("hidden");
+			popup.css({
+				top: 0
+			});
+		});
+	};
 
-$(".call-connect-popup").click(function () {
-	callPopup(contactPopup);
-});
-
-$(".call-info-popup").click(function () {
-	callPopup(infoPopup);
-});
-
-// Close popup
-$(".popup .close-btn").click(function () {
-	if(menuBtn.hasClass("menu-btn-clicked")) {
-		menu.removeClass("hidden");
-	} else {
-		content.removeClass("hidden");
-	}
-
-	$(".popup").animate({
-		top: "-100%",
-	}, 300, "linear", function () {
-		$(".popup").addClass("hidden");
+	$(".call-connect-popup").click(function () {
+		callPopup(contactPopup);
 	});
 
+	$(".call-info-popup").click(function () {
+		callPopup(infoPopup);
+	});
+
+	let popup = $(".popup");
+
+	// Close popup
+	$(".popup .close-btn").click(function () {
+		popup.css({
+			top: currentPosition
+		});
+		$(document).scrollTop(currentPosition);
+		if(menuBtn.hasClass("menu-btn-clicked")) {
+			menu.removeClass("hidden");
+		} else {
+			content.removeClass("hidden");
+		}
+
+		popup.animate({
+			top: "-=100%",
+		}, 300, "linear", function () {
+			popup.css({
+				top: "-100%"
+			});
+			popup.addClass("hidden");
+			$("body").removeClass("disable-content");
+		});
+
+	});
 });
 
 $(".back .close-btn").click(function (event) {

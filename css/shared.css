@@ -375,14 +375,13 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: calc(16 / 1920 * 100vw);
 }
 
-.big-arrow-btn:hover {
-    /*margin-right: calc(-10 / 1920 * 100vw);*/
+.big-arrow-btn:hover svg {
+    fill: #000;
 }
 
 .big-arrow-btn svg {
     width: calc(46 / 1920 * 100vw);
-    /*margin-left: 0;*/
-    fill: #000 !important;
+    fill: #000;
 }
 
 .social {
@@ -416,6 +415,10 @@ input[type=number]::-webkit-outer-spin-button {
 
 .brief-color {
     background: #ff6767;
+}
+
+.big-btn.brief-color:hover {
+    background: rgba(255, 103, 103, .7);
 }
 
 .color_1 {
@@ -793,12 +796,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .page-title .brief-btn:hover span {
-    right: calc(-10 / 1920 * 100vw);
+    right: calc(-28 / 1920 * 100vw);
 }
 
-/*.page-title .brief-btn:hover img {*/
-/*    right: calc(-100 / 1920 * 100vw);*/
-/*}*/
 
 .page-content {
     padding-top: 0;
@@ -908,7 +908,7 @@ input[type=number]::-webkit-outer-spin-button {
     line-height: 3;
 }
 
-.special-form label {
+.special-form > label {
     display: inline-flex;
     align-items: center;
 }
@@ -928,27 +928,84 @@ input[type=number]::-webkit-outer-spin-button {
     opacity: .5;
 }
 
-select.special-form-item {
-    width: calc(400 / 1920 * 100vw);
-    vertical-align: middle;
-    line-height: 1.5;
-}
-
-select.special-form-item:focus ~ .down-arrow {
-    transform: rotate(-180deg);
-}
-
-.select-container {
+.select-box {
     position: relative;
     display: inline-block;
+    padding: 0;
+    width: calc(400 / 1920 * 100vw);
+}
+
+.select-box-current {
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+    outline: none;
+}
+
+.select-box-current:focus + .select-box-list {
+    opacity: 1;
+    animation-name: none;
+}
+
+.select-box-current:focus .down-arrow {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.select-value {
+    display: flex;
+}
+
+.select-input {
+    display: none;
+}
+
+.select-input:checked + .select-input-text {
+    display: flex;
+}
+
+.select-input-text {
+    display: none;
+    width: 100%;
+    margin: 0;
+    align-items: center;
+}
+
+.select-box-list {
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    animation-name: HideList;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: step-start;
+}
+
+.select-option {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    border-top: 1px solid #fff;
+    cursor: pointer;
+}
+
+.select-option:hover, .select-option:focus {
+    color: #000;
+    background-color: #fff;
 }
 
 .down-arrow {
     width: calc(23 / 1920 * 100vw);
     fill: #fff;
     position: absolute;
-    top: 45%;
+    top: 50%;
+    transform: translateY(-50%);
     right: calc(15 / 1920 * 100vw);
+    transition: transform .2s ease-in-out;
 }
 
 .project-info,
@@ -1116,3 +1173,13 @@ select.special-form-item:focus ~ .down-arrow {
     }
 }
 
+@keyframes HideList {
+    from {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    to {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+}

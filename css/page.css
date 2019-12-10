@@ -14,7 +14,7 @@
     background: #00b5ff;
 }
 
-#development-page .page-color:not(span):hover {
+#development-page .page-color:not(.brief-btn):hover {
     background-color: rgba(0, 181, 255, .7);
 }
 
@@ -26,7 +26,7 @@
     background: #b4c85a;
 }
 
-#promotion-page .page-color:not(span):hover {
+#promotion-page .page-color:not(.brief-btn):hover {
     background-color: rgba(180, 200, 90, .7);
 }
 

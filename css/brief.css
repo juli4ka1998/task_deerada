@@ -20,6 +20,8 @@
 
 .file-delete-btn svg {
     width: calc(30 / 1920 * 100vw);
+    margin-left: calc(10 / 1920 * 100vw);
+    right: 0 !important;
 }
 
 .brief-container {
@@ -215,7 +217,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .brief-container .form-items .go-btn {
-    z-index: -1;
+    color: #000;
 }
 
 .brief-container .form-items .personal-info {
@@ -232,32 +234,22 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .brief-container .big-btn {
-    width: 100%;
+/*    width: 100%;*/
     height: calc(100 / 1920 * 100vw);
     margin-top: calc(100 / 1920 * 100vw);
     margin-left: 0;
-    border: none;
-    font-size: calc(48 / 1920 * 100vw);
+/*    border: none;*/
+/*    font-size: calc(48 / 1920 * 100vw);*/
     margin-bottom: calc(100 / 1920 * 100vw);
-    transition: background-color .3s ease-in-out;
-    position: relative;
-    background: transparent;
+/*    transition: background-color .3s ease-in-out;*/
+/*    position: relative;*/
+/*    background: transparent;*/
 }
 
-.brief-container .big-btn span {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity .3s ease-in-out;
-    z-index: -1;
-}
 
-.brief-container .big-btn:hover span {
-    opacity: 0.7;
-}
+/*.brief-container .big-btn:hover span {*/
+/*    opacity: 0.7;*/
+/*}*/
 
 .brief-container .form-items .budget-items .item-container {
     border: none;

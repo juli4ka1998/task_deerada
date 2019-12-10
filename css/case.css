@@ -2,7 +2,7 @@
     background: #000;
 }
 
-#case-page .page-color:not(span):hover {
+#case-page .page-color:hover {
     background-color: rgba(0, 0, 0, .7);
 }
 
