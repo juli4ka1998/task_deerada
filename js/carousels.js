@@ -45,12 +45,12 @@ owlPlan.on('mousewheel', '.owl-stage', function (e) {
 let owlCases = $('.cases-carousel');
 let owlTeam = $('.team-carousel');
 
-function initCarousel(owl, i, owlName) {
+function initCarousel(owl, i, owlName, speed) {
 	owl.owlCarousel({
 	loop:true,
 	dots: false,
 	margin: 0,
-	smartSpeed: 900,
+	smartSpeed: speed,
 	mouseDrag: false,
 	nav:true,
 	navText: [
@@ -64,5 +64,5 @@ function initCarousel(owl, i, owlName) {
 	});
 }
 
-initCarousel(owlTeam, 2, ".team-carousel");
-initCarousel(owlCases, 3, ".cases-carousel");
+initCarousel(owlTeam, 2, ".team-carousel", 1100);
+initCarousel(owlCases, 3, ".cases-carousel", 900);

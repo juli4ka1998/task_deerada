@@ -1,7 +1,13 @@
 // SLIDER SECTION
 
+// Slide info and number animation
+function restartAnimation(element) {
+	element.classList.remove("show-slide-number");
+	void element.offsetWidth;
+	element.classList.add("show-slide-number");
+}
+
 let changeSlide = (type) => {
-	let i;
 
 	//Get elements that should be changed
 	let slide = document.getElementsByClassName("slide");
@@ -9,10 +15,15 @@ let changeSlide = (type) => {
 	let infoNumber = document.querySelector(".slide-info__number");
 	let infoName = document.querySelector(".slide-info__name");
 
+
+
 	// Hide all slides
-	if(slide[slideIndex-1]) {
+	if(slide[slideIndex - 1]) {
 		slide[slideIndex - 1].classList.remove("show-next-element");
 		slide[slideIndex - 1].classList.remove("show-prev-element");
+		slide[slideIndex - 1].classList.remove("disable-animation");
+	} else {
+		slide[slideIndex].classList.add("disable-animation");
 	}
 
 	// Find direction
@@ -42,6 +53,9 @@ let changeSlide = (type) => {
 	number.innerHTML = `0${slideIndex}`;
 	infoNumber.innerHTML = `0${slideIndex}`;
 
+	restartAnimation(infoName);
+	restartAnimation(number);
+	restartAnimation(infoNumber);
 };
 
 let slideIndex = 0;

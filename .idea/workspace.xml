@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1382b0be-e7a1-45c7-b1a0-805400331c98" name="Default Changelist" comment="">
+    <list default="true" id="1382b0be-e7a1-45c7-b1a0-805400331c98" name="Default Changelist" comment="Create hover effects, change slider-section">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief.html" beforeDir="false" afterPath="$PROJECT_DIR$/brief.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case.html" beforeDir="false" afterPath="$PROJECT_DIR$/case.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/article.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/brief.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/brief.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/case.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/case.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/info.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/info.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/shared.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/shared.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/design-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/design-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/development-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/development-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/info-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/info-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/shared.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/shared.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/carousels.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/carousels.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/promotion-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/promotion-page.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,7 +103,9 @@
       <workItem from="1575534710194" duration="20777000" />
       <workItem from="1575621299205" duration="25261000" />
       <workItem from="1575881057376" duration="19826000" />
-      <workItem from="1575956845075" duration="22079000" />
+      <workItem from="1575956845075" duration="22236000" />
+      <workItem from="1576053842492" duration="12340000" />
+      <workItem from="1576076079513" duration="460000" />
     </task>
     <task id="LOCAL-00001" summary="Change positioning elements in main, about and portfolio sections">
       <created>1573490134369</created>
@@ -232,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575908287624</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Create effect for buttons and dropdown in special-form">
+      <created>1575984127259</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1575984127259</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +278,8 @@
     <MESSAGE value="Update sliders on design page" />
     <MESSAGE value="Update sliders and create classes for padding" />
     <MESSAGE value="Update buttons, create case-btn hover animation, create hover effects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update buttons, create case-btn hover animation, create hover effects" />
+    <MESSAGE value="Create effect for buttons and dropdown in special-form" />
+    <MESSAGE value="Create hover effects, change slider-section" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create hover effects, change slider-section" />
   </component>
 </project>

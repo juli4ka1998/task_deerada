@@ -74,8 +74,6 @@
 
 #case-page .next-case-btn a {
     right: calc(-60 / 1920 * 100vw);
-    /*padding-right: calc(90 / 1920 * 100vw);*/
-    /*padding-left: calc(30 / 1920 * 100vw);*/
 }
 
 
@@ -129,11 +127,11 @@
 #case-page .prev-case-btn .case-text-container {
     text-align: right;
     align-items: flex-end;
-    animation: showRight .2s linear forwards .4s;
+    animation: showRight .3s linear forwards .4s;
 }
 
 #case-page .next-case-btn .case-text-container {
-    animation: showLeft .2s linear forwards .4s;
+    animation: showLeft .3s linear forwards .4s;
 }
 
 #case-page .case-btn .case-text {

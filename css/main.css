@@ -182,6 +182,7 @@
 #slider-section .slide-number span {
     display: inline-block;
     line-height: calc(120 / 1920 * 100vw);
+    opacity: 0;
 }
 
 #slider-section .static-line1 {
@@ -210,11 +211,27 @@
     font-size: calc(16 / 1920 * 100vw);
     bottom: 24%;
     right: calc(45 / 1920 * 100vw);
+
+    /*animation: showw .9s linear forwards;*/
+}
+
+.show-slide-number {
+    animation: showNumber 1s linear forwards;
+}
+
+@keyframes showNumber {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 #slider-section .slide-info__name {
     display: block;
     writing-mode: vertical-rl;
+    opacity: 0;
 }
 
 #slider-section .slide-info__line {
@@ -227,6 +244,7 @@
 #slider-section .slide-info__number {
     writing-mode: horizontal-tb;
     display: block;
+    opacity: 0;
 }
 
 #about-section {
@@ -261,6 +279,7 @@
 }
 
 #about-section .icon {
+    display: block;
     max-width: 33.333%;
     flex: 0 0 33.333%;
     position: relative;
@@ -332,15 +351,15 @@
 }
 
 #about-section .icon li:nth-child(1) {
-    animation-delay: .2s;
+    /*animation-delay: .2s;*/
 }
 
 #about-section .icon li:nth-child(2) {
-    animation-delay: .6s;
+    animation-delay: .4s;
 }
 
 #about-section .icon li:nth-child(3) {
-    animation-delay: 1s;
+    animation-delay: .8s;
 }
 
 #portfolio-section {
@@ -691,7 +710,16 @@
     left: calc(157 / 1920 * 100vw) !important;
 }
 
+.disable-animation {
+    right: 0 !important;
+    animation: none !important;
+}
 
+.disable-animation .slide-image,
+.disable-animation .slide-title,
+.disable-animation .slide-text {
+    transition: none !important;
+}
 
 @keyframes from-left {
     from {

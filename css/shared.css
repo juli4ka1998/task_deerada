@@ -482,6 +482,10 @@ input[type=number]::-webkit-outer-spin-button {
     text-orientation: upright;
 }
 
+.menu .languages a:hover {
+    color: #b4c85a;
+}
+
 .menu .languages .lang-active {
     color: #b4c85a;
 }
@@ -490,11 +494,6 @@ input[type=number]::-webkit-outer-spin-button {
     right: calc(100 / 1920 * 100vw);
     bottom: calc(100 / 1920 * 100vw);
     position: absolute;
-    transition: margin-right .2s linear;
-}
-
-.menu .go-btn:hover {
-    margin-right: calc(-10 / 1920 * 100vw);
 }
 
 .menu .menu-title {
@@ -507,8 +506,8 @@ input[type=number]::-webkit-outer-spin-button {
     max-width: 0;
     overflow: hidden;
     white-space: nowrap;
-    animation: showItem .7s linear forwards;
-    animation-delay: 1s;
+    animation: showItem .5s linear forwards;
+    animation-delay: .8s;
     width: 100%;
 }
 
@@ -627,11 +626,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .current-item .icon .polygon {
-    animation: drawPolygon 1s linear forwards 1s;
+    animation: drawPolygon 1s linear forwards .9s;
 }
 
 .current-item .icon li {
-    animation: showItem .3s ease-in-out forwards .2s;
+    animation: showItem .3s ease-in-out forwards;
 }
 
 .current-item .person-info__decor {
@@ -646,11 +645,16 @@ input[type=number]::-webkit-outer-spin-button {
 .close-btn {
     border: none;
     background: none;
+    transition: opacity .1s linear;
 }
 
 .close-btn svg {
     width: calc(23 / 1920 * 100vw);
     margin-right: calc(20 / 1920 * 100vw);
+}
+
+.close-btn:hover {
+    opacity: .5;
 }
 
 .popup {
@@ -866,6 +870,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .page-content .result .result-item {
+    display: block;
     counter-increment: item-counter;
     margin-top: calc(35 / 1920 * 100vw);
     background: transparent !important;

@@ -51,7 +51,7 @@
 
 #promotion-page .page-content .result-name {
     font-size: calc(16 / 1920 * 100vw);
-    margin-bottom: 0;
+    margin-bottom: calc(3 / 1920 * 100vw);
 }
 
 #promotion-page .page-content .left-title {
