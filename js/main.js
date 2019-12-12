@@ -80,32 +80,6 @@ leftBtn.addEventListener('click', () => {
 	interval = setInterval(() => {changeSlide("next")}, 5000);
 });
 
-
-
-
-
-// $(".slide img").hover(function(e){
-// 	let parentOffset = $(this).parent().offset();
-// 	//or $(this).offset(); if you really just want the current element's offset
-// 	let relX = e.pageX - parentOffset.left;
-// 	let relY = e.pageY - parentOffset.top;
-// 	// if(relY > ($(this).height() / 2)) {
-// 	// 	// console.log($(this).height());
-// 	// 	// console.log(relY);
-// 	// }
-// 	// if(relX > ($(this).width() / 2)) {
-// 	// }
-// 	let x = relX - ($(this).width()/2);
-// 	let y = relY - ($(this).height()/2);
-// 	if(Math.abs(x) < Math.abs(y)){
-// 		console.log("x");
-// 	} else {
-// 		console.log("y");
-// 	}
-// 	console.log(x + ' ' + y);
-// });
-
-
 // HEADER
 
 const changeHeader = () => {

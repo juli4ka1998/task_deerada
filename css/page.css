@@ -36,12 +36,18 @@
 
 #promotion-page .page-content .result-items {
     width: calc(100% + 255 / 1920 * 100vw);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 #promotion-page .page-content .result-item {
     padding-right: calc(20 / 1920 * 100vw);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
 }
 
@@ -55,6 +61,7 @@
 }
 
 #promotion-page .page-content .left-title {
+    -webkit-transform: rotate(-90deg) translate(-100%, 50%);
+    -ms-transform: rotate(-90deg) translate(-100%, 50%);
     transform: rotate(-90deg) translate(-100%, 50%);
 }
-

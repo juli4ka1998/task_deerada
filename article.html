@@ -224,8 +224,8 @@
                     <span class="date">26.11.2019</span>
                 </div>
                 <div class="new-articles-info">Хочеш отримувати сповіщення
-                    про нові статті? <a href="#">Залиш свою
-                    email адресу тут</a></div>
+                    про нові статті? <span class="call-info-popup">Залиш свою
+                    email адресу тут</span></div>
             </div>
             <div class="next-article small-padding">
                 <a href="#" class="main-article">
@@ -250,6 +250,72 @@
                 <a href="https://www.instagram.com" class="instagram">instagram</a>
             </div>
         </footer>
+    </div>
+</div>
+<div class="contact-popup popup hidden">
+    <button class="close-btn">
+        <span class="close-btn__bar "></span>
+        <span class="close-btn__bar close-btn__bar2"></span>
+    </button>
+    <div class="popup-content">
+        <h3 class="popup-title">залиш заявку</h3>
+        <span>і ми зв’яжемось з тобою у найближчий час або зателефонуй
+            нам за номером <a href="#" class="popup-link">+30 (050) 25-95-444</a></span>
+        <form class="form-data">
+            <div class="input-container">
+                <input type="text" id="popup-name" placeholder=" " class="form-input">
+                <label for="popup-name">введи своє ім’я</label>
+            </div>
+            <div class=" input-container">
+                <input type="number" id="popup-tel" placeholder=" " class="form-input">
+                <label for="popup-tel">введи свій номер телефону <sub>*</sub></label>
+            </div>
+            <div class=" input-container">
+                <input type="email" id="popup-email" placeholder=" " class="form-input">
+                <label for="popup-email">введи свою email адресу <sub>*</sub></label>
+            </div>
+            <div class="input-container">
+                <input type="text" id="popup-message" placeholder=" " class="form-input">
+                <label for="popup-message">напиши нам повідомлення</label>
+            </div>
+            <button class="big-arrow-btn go-btn">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 294.8 294.8" style="enable-background:new 0 0 294.8 294.8;" xml:space="preserve">
+                    <g>
+                        <path d="M215.1,73.4c-2.3,2.3-2.3,6.1,0,8.5l59.5,59.5H6.2c-3.3,0-6,2.7-6,6s2.7,6,6,6h268.4l-59.5,59.5c-2.3,2.3-2.3,6.1,0,8.5
+                            c2.3,2.3,6.1,2.3,8.5,0l69.8-69.8c1.2-1.2,1.8-2.7,1.8-4.2s-0.6-3.1-1.8-4.2l-69.8-69.8C221.2,71.1,217.4,71.1,215.1,73.4z"/>
+                    </g>
+                </svg>
+            </button>
+
+        </form>
+    </div>
+</div>
+<div class="info-popup popup hidden">
+    <button class="close-btn">
+        <span class="close-btn__bar "></span>
+        <span class="close-btn__bar close-btn__bar2"></span>
+    </button>
+    <div class="popup-content">
+        <h3 class="popup-title">підпишись на нашу розсилку</h3>
+        <span>все, що тобі треба дізнатися про найновітніші технології,
+            тенденції в розробці та новинки ІТ-галузі. Без жодного спаму.</span>
+        <form class="form-data">
+            <div class=" input-container">
+                <input type="email" id="email-address" placeholder=" " class="form-input">
+                <label for="email-address">введи свою email адресу</label>
+            </div>
+            <button class="big-arrow-btn go-btn">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 294.8 294.8" style="enable-background:new 0 0 294.8 294.8;" xml:space="preserve">
+                    <g>
+                        <path d="M215.1,73.4c-2.3,2.3-2.3,6.1,0,8.5l59.5,59.5H6.2c-3.3,0-6,2.7-6,6s2.7,6,6,6h268.4l-59.5,59.5c-2.3,2.3-2.3,6.1,0,8.5
+                            c2.3,2.3,6.1,2.3,8.5,0l69.8-69.8c1.2-1.2,1.8-2.7,1.8-4.2s-0.6-3.1-1.8-4.2l-69.8-69.8C221.2,71.1,217.4,71.1,215.1,73.4z"/>
+                    </g>
+                </svg>
+            </button>
+
+        </form>
     </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
