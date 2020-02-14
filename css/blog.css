@@ -162,7 +162,7 @@
     background: #ececec;
 }
 
-#blog-section .special-form-item {
+#blog-section .special-form-item, .ui-selectmenu-button.ui-button {
     background: #fff;
     color: #000;
 }
@@ -187,17 +187,20 @@
     color: #000;
 }
 
-#blog-section .down-arrow {
-    fill: #000;
+#blog-section .ui-button .ui-icon  {
+    -webkit-filter: invert(0);
+    filter: invert(0);
 }
 
-#blog-section .select-option {
+.ui-menu .ui-menu-item-wrapper {
+    background: #fff;
+    color: #000;
     border-color: #000;
 }
 
-#blog-section .select-option:hover, #blog-section .select-option:focus {
+.ui-menu .ui-menu-item-wrapper.ui-state-active {
+    background: #000;
     color: #fff;
-    background-color: #000;
 }
 
 #blog-section .learn-more {

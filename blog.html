@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/shared.css">
     <link rel="stylesheet" href="css/blog.css">
 </head>
@@ -195,42 +196,14 @@
                 <label>Привіт, мене звати
                     <input type="text" placeholder="введи своє ім’я" class="special-form-item">
                 </label>
-                <label>. Мене цікавить</label>
-                <div class="special-form-item select-box">
-                    <div class="select-box-current" tabindex="1">
-                        <div class="select-value">
-                            <input class="select-input" type="radio" id="0" value="1" name="option" checked="checked"/>
-                            <p class="special-form-item select-input-text">обери варіант</p>
-                        </div>
-                        <div class="select-value">
-                            <input class="select-input" type="radio" id="1" value="2" name="option" />
-                            <p class="special-form-item select-input-text">дизайн</p>
-                        </div>
-                        <div class="select-value">
-                            <input class="select-input" type="radio" id="2" value="3" name="option" />
-                            <p class="special-form-item select-input-text">розробка</p>
-                        </div>
-                        <div class="select-value">
-                            <input class="select-input" type="radio" id="3" value="4" name="option" />
-                            <p class="special-form-item select-input-text">просування</p>
-                        </div>
-                        <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 289.04"><title>down_arrow</title><g id="Шар_2" data-name="Шар 2"><g id="Layer_1" data-name="Layer 1"><path d="M246.1,191.91,62,7.86A27,27,0,0,0,24,7.86L7.86,24A27,27,0,0,0,7.86,62L227,281.19a27.15,27.15,0,0,0,38.19,0L484.14,62.25a27,27,0,0,0,0-38.07L468,8.06a27,27,0,0,0-38.06,0Z"/></g></g></svg>
-                    </div>
-                    <ul class="select-box-list">
-                        <li>
-                            <label class="select-option special-form-item" for="0">обери варіант</label>
-                        </li>
-                        <li>
-                            <label class="select-option special-form-item" for="1">дизайн</label>
-                        </li>
-                        <li>
-                            <label class="select-option special-form-item" for="2">розробка</label>
-                        </li>
-                        <li>
-                            <label class="select-option special-form-item" for="3">просування</label>
-                        </li>
-                    </ul>
-                </div>
+                <label>. Мене цікавить
+                    <select name="chose_option" id="item-select">
+                        <option selected="selected" value="chose_option">обери варіант</option>
+                        <option>дизайн</option>
+                        <option>розробка</option>
+                        <option>просування</option>
+                    </select>
+                </label>
                 <label>для мого</label><br>
                 <label class="project-info-label">проекту
                     <input type="text" placeholder="опиши свій проект (необов’язково)" class="project-info special-form-item">.
@@ -356,6 +329,7 @@
     </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="js/shared.js"></script>
 <script src="js/carousels.js"></script>

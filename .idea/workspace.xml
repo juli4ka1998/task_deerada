@@ -2,34 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1382b0be-e7a1-45c7-b1a0-805400331c98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/111.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/article.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brief.html" beforeDir="false" afterPath="$PROJECT_DIR$/brief.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case.html" beforeDir="false" afterPath="$PROJECT_DIR$/case.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/404.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/404.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/brief.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/brief.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/case.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/case.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/info.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/info.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/shared.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/shared.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/design-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/design-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/development-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/development-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/design-pic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/menu-arrow1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/menu-arrow2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/menu-arrow3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/info-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/info-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-pref.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/shared.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/shared.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/promotion-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/promotion-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,20 +39,26 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\progects\deerada" />
+      <recent name="D:\progects\deerada\lib" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\progects\deerada\lib" />
       <recent name="D:\progects\deerada\js" />
       <recent name="D:\progects\deerada\fonts" />
       <recent name="D:\progects\deerada\css" />
       <recent name="D:\Julia_work\Task\images" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\progects\deerada" />
-      <recent name="D:\progects\deerada\lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -84,6 +72,32 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.blog.html">
+    <configuration name="404.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/deerada/404.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="article.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/deerada/article.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="blog.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/deerada/blog.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="brief.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/deerada/brief.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="development-page.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/deerada/development-page.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.blog.html" />
+        <item itemvalue="JavaScript Debug.404.html" />
+        <item itemvalue="JavaScript Debug.article.html" />
+        <item itemvalue="JavaScript Debug.brief.html" />
+        <item itemvalue="JavaScript Debug.development-page.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -120,7 +134,8 @@
       <workItem from="1575956845075" duration="22236000" />
       <workItem from="1576053842492" duration="12340000" />
       <workItem from="1576076079513" duration="894000" />
-      <workItem from="1576154036546" duration="3238000" />
+      <workItem from="1576154036546" duration="4846000" />
+      <workItem from="1581675151842" duration="8755000" />
     </task>
     <task id="LOCAL-00001" summary="Change positioning elements in main, about and portfolio sections">
       <created>1573490134369</created>
@@ -262,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576076567324</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Add prefixes to css">
+      <created>1576158230368</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1576158230369</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,6 +324,7 @@
     <MESSAGE value="Update buttons, create case-btn hover animation, create hover effects" />
     <MESSAGE value="Create effect for buttons and dropdown in special-form" />
     <MESSAGE value="Create hover effects, change slider-section" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create hover effects, change slider-section" />
+    <MESSAGE value="Add prefixes to css" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add prefixes to css" />
   </component>
 </project>

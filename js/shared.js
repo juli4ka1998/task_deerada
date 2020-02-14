@@ -137,3 +137,13 @@ $(".back .close-btn").click(function (event) {
 	event.preventDefault();
 	history.back();
 });
+
+// Select item in popup
+$( "#item-select" )
+	.selectmenu()
+	.selectmenu("menuWidget")
+	.addClass( "overflow" );
+
+$('.ui-icon').click(function() {
+	$('#chose_option').val('chose_option');
+});

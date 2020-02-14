@@ -1100,14 +1100,14 @@ input[type=number]::-webkit-outer-spin-button {
     align-items: center;
 }
 
-.special-form-item {
+.special-form-item, .ui-selectmenu-button.ui-button {
     width: calc(350 / 1920 * 100vw);
     height: calc(40 / 1920 * 100vw);
     background: #000;
     color: #fff;
     border: none;
     padding-left: calc(10 / 1920 * 100vw);
-    margin-left: calc(10 / 1920 * 100vw);
+    margin-left: calc(15 / 1920 * 100vw);
     margin-right: calc(5 / 1920 * 100vw);
 }
 
@@ -1131,108 +1131,95 @@ input[type=number]::-webkit-outer-spin-button {
     opacity: .5;
 }
 
-.select-box {
+
+.ui-selectmenu-button.ui-button {
     position: relative;
-    display: inline-block;
-    padding: 0;
+    z-index: 600;
     width: calc(400 / 1920 * 100vw);
+    padding: 0 calc(10 / 1920 * 100vw);
+    line-height: 1;
+    border-radius: 0;
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-family: inherit;
+    font-weight: 500;
 }
 
-.select-box-current {
-    position: relative;
-    height: 100%;
-    cursor: pointer;
+.ui-selectmenu-button.ui-button:focus {
     outline: none;
 }
 
-.select-box-current:focus + .select-box-list {
-    opacity: 1;
-    -webkit-animation-name: none;
-    animation-name: none;
-}
-
-.select-box-current:focus .down-arrow {
-    -webkit-transform: translateY(-50%) rotate(180deg);
-    -ms-transform: translateY(-50%) rotate(180deg);
-    transform: translateY(-50%) rotate(180deg);
-}
-
-.select-value {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.select-input {
-    display: none;
-}
-
-.select-input:checked + .select-input-text {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.select-input-text {
-    display: none;
-    width: 100%;
-    margin: 0;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.select-box-list {
-    z-index: 100;
-    position: absolute;
-    width: 100%;
-    padding: 0;
-    list-style: none;
-    opacity: 0;
-    -webkit-animation-name: HideList;
-    animation-name: HideList;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-timing-function: step-start;
-    animation-timing-function: step-start;
-}
-
-.select-option {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-left: 0;
-    border-top: 1px solid #fff;
-    cursor: pointer;
-}
-
-.select-option:hover, .select-option:focus {
-    color: #000;
-    background-color: #fff;
-}
-
-.down-arrow {
+.ui-button .ui-icon  {
+    background-image: url("../icons/down_arrow.svg") !important;
+    background-position: 0 0 !important;
     width: calc(23 / 1920 * 100vw);
-    fill: #fff;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    right: calc(15 / 1920 * 100vw);
-    -webkit-transition: -webkit-transform .2s ease-in-out;
-    transition: -webkit-transform .2s ease-in-out;
-    -o-transition: transform .2s ease-in-out;
-    transition: transform .2s ease-in-out;
-    transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+    height: calc(14 / 1920 * 100vw);
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    -webkit-transition: -webkit-transform .1s ease-in-out;
+    transition: -webkit-transform .1s ease-in-out;
+    -o-transition: transform .1s ease-in-out;
+    transition: transform .1s ease-in-out;
+    transition: transform .1s ease-in-out, -webkit-transform .1s ease-in-out;
+}
+
+.ui-selectmenu-button-open .ui-icon {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.ui-selectmenu-text {
+    margin: 0;
+    width: 100%;
+}
+
+.ui-selectmenu-menu {
+    z-index: 500;
+    overflow: hidden;
+    -webkit-animation: showList .2s linear forwards;
+    animation: showList .2s linear forwards;
+    -webkit-box-shadow: 1px 1px 10px #000;
+    box-shadow: 1px 1px 10px #000;
+}
+
+.ui-menu {
+    border: none !important;
+    font-family: inherit !important;
+    padding: 0 !important;
+}
+
+.ui-menu-item:first-child {
+    display: none;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+    padding: 0 calc(10 / 1920 * 100vw);
+    background: #000;
+    color: #fff;
+    height: calc(40 / 1920 * 100vw);
+    font-size: calc(24 / 1920 * 100vw) !important;
+    font-family: inherit !important;
+    border: none;
+    border-top: 1px solid #fff;
+    margin: 0;
+}
+
+.ui-menu .ui-menu-item-wrapper.ui-state-active {
+    background: #fff;
+    color: #000;
 }
 
 .project-info,
@@ -1480,24 +1467,33 @@ input[type=number]::-webkit-outer-spin-button {
     }
 }
 
-@-webkit-keyframes HideList {
-    from {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    to {
-        -webkit-transform: scaleY(0);
-        transform: scaleY(0);
-    }
-}
 
-@keyframes HideList {
+@keyframes showList {
     from {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
+        opacity: 0;
     }
     to {
-        -webkit-transform: scaleY(0);
-        transform: scaleY(0);
+        opacity: 1;
     }
 }
+/*@-webkit-keyframes HideList {*/
+/*    from {*/
+/*        -webkit-transform: scaleY(1);*/
+/*        transform: scaleY(1);*/
+/*    }*/
+/*    to {*/
+/*        -webkit-transform: scaleY(0);*/
+/*        transform: scaleY(0);*/
+/*    }*/
+/*}*/
+
+/*@keyframes HideList {*/
+/*    from {*/
+/*        -webkit-transform: scaleY(1);*/
+/*        transform: scaleY(1);*/
+/*    }*/
+/*    to {*/
+/*        -webkit-transform: scaleY(0);*/
+/*        transform: scaleY(0);*/
+/*    }*/
+/*}*/
